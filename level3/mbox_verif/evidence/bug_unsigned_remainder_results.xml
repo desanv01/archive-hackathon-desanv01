@@ -1,0 +1,17 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1784596562" />
+    <testcase name="test_divider_baseline" classname="test_divider" file="/home/vsysuser/workspace/hackathon-desanv01/level3/mbox_verif/test_divider.py" lineno="87" time="0" sim_time_ns="0" ratio_time="0">
+      <skipped />
+    </testcase>
+    <testcase name="test_bug_unsigned_remainder" classname="test_divider" file="/home/vsysuser/workspace/hackathon-desanv01/level3/mbox_verif/test_divider.py" lineno="101" time="0.017072200775146484" sim_time_ns="715.0" ratio_time="41880.95075831634">
+      <failure error_type="AssertionError" error_msg="remu_100_by_7: DUT=0x0000000000000001, model=0x0000000000000002&#10;assert 1 == 2" />
+    </testcase>
+    <testcase name="test_bug_signed_div_negative_dividend" classname="test_divider" file="/home/vsysuser/workspace/hackathon-desanv01/level3/mbox_verif/test_divider.py" lineno="108" time="0" sim_time_ns="0" ratio_time="0">
+      <skipped />
+    </testcase>
+    <testcase name="test_bug_signed_div_both_negative" classname="test_divider" file="/home/vsysuser/workspace/hackathon-desanv01/level3/mbox_verif/test_divider.py" lineno="115" time="0" sim_time_ns="0" ratio_time="0">
+      <skipped />
+    </testcase>
+  </testsuite>
+</testsuites>
