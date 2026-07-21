@@ -1,7 +1,7 @@
 #include "riscv_test.h"
 #include "test_macros.h"
 
-RVTEST_RV32M
+RVTEST_RV64M
 RVTEST_CODE_BEGIN
 
   .align 2
@@ -12,17 +12,17 @@ RVTEST_CODE_BEGIN
   li t5, 3
 
 loop:
-	lw t1, (t0)
+  lw t1, (t0)
   lw t2, 4(t0)
   lw t3, 8(t0)
   add t4, t1, t2
   addi t0, t0, 12
   beq t3, t4, continue_loop
-
+  j fail
 
 continue_loop:
-  addi t5, t5, 1
-  bgtz t5, loop
+  addi t5, t5, -1
+  bnez t5, loop
   j test_end
 
 
