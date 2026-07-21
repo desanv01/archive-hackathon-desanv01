@@ -1,59 +1,119 @@
-# Simple tests for an adder module
 import cocotb
-from mkintegerModel import divider_model
-import random
-import os
-
 from cocotb.clock import Clock
-# from cocotb.decorators import coroutine
-from cocotb.triggers import Timer, RisingEdge, ReadOnly, FallingEdge
-from cocotb_bus.monitors import Monitor
-from cocotb_bus.drivers import BitDriver
-from cocotb.types import LogicArray
-from cocotb.regression import TestFactory
-from cocotb_bus.scoreboard import Scoreboard
-# from cocotb.result import TestFailure, TestSuccess
+from cocotb.triggers import FallingEdge, ReadOnly, RisingEdge
 
-#------------------------------------Test for signed Division------------------------------------------------------
-count = int(os.environ['COUNT'])
-@cocotb.test()
-async def divider_basic_signed_DIV_test(dut):  #14
+from mkintegerModel import MASK64, divider_model
 
-    cocotb.start_soon(Clock(dut.CLK, 10,).start())
 
-    dut.ma_set_flush_c.value = 1
-    dut.EN_ma_set_flush.value = 1
+DIV_OPCODE = 12
+DIV = 4
+DIVU = 5
+REM = 6
+REMU = 7
+
+
+async def reset_dut(dut):
+    cocotb.start_soon(Clock(dut.CLK, 10, unit="ns").start())
+
     dut.RST_N.value = 0
-    clkedge = RisingEdge(dut.CLK)
+    dut.EN_ma_start.value = 0
+    dut.EN_mav_result.value = 0
+    dut.EN_ma_set_flush.value = 0
+    dut.ma_set_flush_c.value = 0
+    dut.ma_start_dividend.value = 0
+    dut.ma_start_divisor.value = 0
+    dut.ma_start_opcode.value = 0
+    dut.ma_start_funct3.value = 0
+
+    for _ in range(3):
+        await RisingEdge(dut.CLK)
+
+    await FallingEdge(dut.CLK)
+    dut.RST_N.value = 1
+    await RisingEdge(dut.CLK)
 
 
-    for i in range(1):
-        await clkedge
+async def divide(dut, dividend: int, divisor: int, funct3: int) -> int:
+    for _ in range(10):
+        if int(dut.RDY_ma_start.value) == 1:
+            break
+        await RisingEdge(dut.CLK)
+    else:
+        raise AssertionError("divider did not become ready for a request")
 
-    for it in range(count):
-        A =  random.randrange(0,500)
-        B = random.randrange(0,50)
+    await FallingEdge(dut.CLK)
+    dut.ma_start_dividend.value = dividend & MASK64
+    dut.ma_start_divisor.value = divisor & MASK64
+    dut.ma_start_opcode.value = DIV_OPCODE
+    dut.ma_start_funct3.value = funct3
+    dut.EN_ma_start.value = 1
 
-        opcode = 12
-        funct3 = 5
+    await RisingEdge(dut.CLK)
+    await FallingEdge(dut.CLK)
+    dut.EN_ma_start.value = 0
 
-        clkedge = RisingEdge(dut.CLK)
+    for _ in range(80):
+        await RisingEdge(dut.CLK)
+        await ReadOnly()
+        packed = int(dut.mav_result.value)
+        if (packed >> 64) & 1:
+            result = packed & MASK64
+            await FallingEdge(dut.CLK)
+            dut.EN_mav_result.value = 1
+            await RisingEdge(dut.CLK)
+            await FallingEdge(dut.CLK)
+            dut.EN_mav_result.value = 0
+            return result
 
-        dut.EN_ma_start.value = 1
-        dut.RST_N.value = 1
-        dut.ma_start_opcode.value = opcode
-        dut.ma_start_funct3.value = funct3
-        dut.ma_start_dividend.value = A
-        dut.ma_start_divisor.value = B
-        await clkedge
+    raise AssertionError("divider result-valid bit did not assert within 80 cycles")
 
-        #dut.EN_ma_start = 0
-        while(dut.mav_result.value == 0):
-            await clkedge
 
-        dutResultBin = int(dut.mav_result.value)
-        modelResultBin = divider_model(A,B,opcode,funct3)
-        cocotb.log.info("TEST NO : %d", it + 1)
-        assert modelResultBin == dutResultBin, "Incorrect signed division: divident={0} divisor={1} dut_result={2} exp_result={3}".format(A, B, hex(dutResultBin), hex(modelResultBin))
-        cocotb.log.info('Pass: Divident={0} divisor={1} dut_result={2} exp_result={3}'.format(A, B, hex(dutResultBin), hex(modelResultBin)))
+async def check_case(dut, name, dividend, divisor, funct3):
+    expected = divider_model(dividend, divisor, DIV_OPCODE, funct3)
+    observed = await divide(dut, dividend, divisor, funct3)
+    dut._log.info(
+        "%s dividend=0x%016x divisor=0x%016x observed=0x%016x expected=0x%016x",
+        name,
+        dividend & MASK64,
+        divisor & MASK64,
+        observed,
+        expected,
+    )
+    assert observed == expected, (
+        f"{name}: DUT=0x{observed:016x}, model=0x{expected:016x}"
+    )
 
+
+@cocotb.test()
+async def test_divider_baseline(dut):
+    """Establish that request/result handshakes and basic quotient paths work."""
+    await reset_dut(dut)
+    cases = (
+        ("divu", 100, 7, DIVU),
+        ("div_positive", 100, 7, DIV),
+        ("div_positive_negative", 20, -3, DIV),
+        ("divu_by_zero", 25, 0, DIVU),
+    )
+    for case in cases:
+        await check_case(dut, *case)
+
+
+@cocotb.test()
+async def test_bug_unsigned_remainder(dut):
+    """Capture the observed REMU off-by-one result."""
+    await reset_dut(dut)
+    await check_case(dut, "remu_100_by_7", 100, 7, REMU)
+
+
+@cocotb.test()
+async def test_bug_signed_div_negative_dividend(dut):
+    """Expose the missing dividend sign in signed quotient polarity."""
+    await reset_dut(dut)
+    await check_case(dut, "signed_div_negative_positive", -20, 3, DIV)
+
+
+@cocotb.test()
+async def test_bug_signed_div_both_negative(dut):
+    """Two negative operands should produce a positive quotient."""
+    await reset_dut(dut)
+    await check_case(dut, "signed_div_both_negative", -20, -3, DIV)
