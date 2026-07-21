@@ -8,7 +8,7 @@ gen: clean
 
 compile:
 	@echo '[UpTickPro] Test Compilation ------'
-	riscv32-unknown-elf-gcc -march=rv32i -mabi=ilp32 -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I$(PWD)/work/common -T$(PWD)/test.ld test.S $(PWD)/work/common/crt.S -o test.elf
+	riscv32-unknown-elf-gcc -march=rv32i_zicsr_zifencei -mabi=ilp32 -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I$(PWD)/work/common -T$(PWD)/test.ld test.S $(PWD)/work/common/crt.S -o test.elf
 
 disass: compile
 	@echo '[UpTickPro] Test Disassembly ------'
@@ -16,8 +16,8 @@ disass: compile
 
 spike: compile
 	@echo '[UpTickPro] Spike Run ------'
-	spike --isa=rv32i test.elf
-	spike --log-commits --log  test_spike.dump --isa=rv32i +signature=test_spike_signature.log test.elf
+	spike --isa=rv32i_zicsr_zifencei test.elf
+	spike --log-commits --log  test_spike.dump --isa=rv32i_zicsr_zifencei +signature=test_spike_signature.log test.elf
 
 clean:
 	@echo '[UpTickPro] Clean ------'
