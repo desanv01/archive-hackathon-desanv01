@@ -1,0 +1,43 @@
+-------------------------------------------------------------------------
+Compiling ./tests/branch_hazard.S
+MODE = p
+-------------------------------------------------------------------------
+mkdir -p /home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard
+rm -rf /home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard/*
+riscv64-unknown-elf-gcc -march=rv64imafdczicsr_zifencei -mabi=lp64 -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -DENTROPY=0x9629af2 -std=gnu99 -O2 -I/home/vsysuser/workspace/hackathon-desanv01/level4/env -T/home/vsysuser/workspace/hackathon-desanv01/level4/env/link.ld \
+ \
+tests/branch_hazard.S \
+-o /home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard/branch_hazard.elf
+-------------------------------------------------------------------------
+Disassembly Generation
+-------------------------------------------------------------------------
+riscv64-unknown-elf-objdump --disassemble-all --disassemble-zeroes \
+	--section=.text --section=.text.startup --section=.text.init --section=.data \
+	/home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard/branch_hazard.elf > /home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard/branch_hazard.disass
+-------------------------------------------------------------------------
+Running on Spike
+-------------------------------------------------------------------------
+timeout --foreground 10s spike --log-commits --log /home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard/branch_hazard.dump \
+	--isa=rv64gcZicsr_Zifencei \
+	+signature=/home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard/spike_signature.txt \
+	+signature-granularity=4 /home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard/branch_hazard.elf
+-------------------------------------------------------------------------
+Running Tests on C-CLASS 
+-------------------------------------------------------------------------
+Copying design files from /home/vsysuser/workspace/riscv-desanv01/cclass_bin
+cp -r "/home/vsysuser/workspace/riscv-desanv01/cclass_bin"/. /home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard/
+elf2hex  8  4194304  /home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard/branch_hazard.elf 2147483648 > /home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard/code.mem
+cd /home/vsysuser/workspace/hackathon-desanv01/level4/work/p/branch_hazard && \
+timeout --foreground 60s ./out +rtldump
+%Warning: code.mem:4194304: $readmem file ended before specified final address (IEEE 1800-2023 21.4)
+- build/hw/verilog/mksign_dump.v:1148: Verilog $finish
+-------------------------------------------------------------------------
+RTL RUN COMPLETED
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Comparing Spike and RTL Dumps
+-------------------------------------------------------------------------
+PASS : Spike and RTL match
+-------------------------------------------------------------------------
+VERIFICATION COMPLETED SUCCESSFULLY
+-------------------------------------------------------------------------

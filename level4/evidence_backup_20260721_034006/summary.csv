@@ -1,0 +1,10 @@
+mode,test,status,diff
+p,baseline_add,PASS,
+p,alu_word_edge,PASS,
+p,branch_hazard,PASS,
+p,load_store_edge,PASS,
+p,mul_div_edge,PASS,
+p,atomic_edge,PASS,
+p,csr_hazard,PASS,
+p,compressed_edge,PASS,
+p,fp_edge,MISMATCH,work/p/fp_edge/dump.diff

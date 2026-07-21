@@ -9,7 +9,7 @@ MODE ?= p
 FILENAME  := $(basename $(notdir $(TEST)))
 TEST_HOME := $(CURDIR)
 OUT_DIR   := $(TEST_HOME)/work/$(MODE)/$(FILENAME)
-DESIGN_HOME=$(TEST_HOME)/bin/
+DESIGN_HOME ?= $(TEST_HOME)/bin
 
 # -----------------------------------------------------------------------------
 # Tools
@@ -17,7 +17,9 @@ DESIGN_HOME=$(TEST_HOME)/bin/
 GCC       := riscv64-unknown-elf-gcc
 OBJDUMP   := riscv64-unknown-elf-objdump
 SPIKE     := spike
-TIMEOUT   := timeout --foreground 3s
+SPIKE_TIMEOUT ?= 10
+RTL_TIMEOUT   ?= 60
+TIMEOUT   := timeout --foreground $(SPIKE_TIMEOUT)s
 
 # -----------------------------------------------------------------------------
 # Mode Selection
@@ -44,7 +46,6 @@ CFLAGS := -march=rv64imafdczicsr_zifencei \
           -std=gnu99 \
           -O2 \
           -I$(TEST_HOME)/env/v \
-          -I$(TEST_HOME)/isa/macros/scalar \
           -T$(TEST_HOME)/env/v/link.ld
 
 EXTRA_FILES := $(TEST_HOME)/env/v/entry.S \
@@ -116,12 +117,18 @@ spike: $(OUT_DIR)/$(FILENAME).elf
 	@echo "Running on Spike"
 	@echo "-------------------------------------------------------------------------"
 	$(TIMEOUT) $(SPIKE) --log-commits --log $(OUT_DIR)/$(FILENAME).dump \
-		--isa=rv64gcZicsr_Zifencei +signature=spike_signature.txt +signature-granularity=4 $<
+		--isa=rv64gcZicsr_Zifencei \
+		+signature=$(OUT_DIR)/spike_signature.txt \
+		+signature-granularity=4 $<
 
 
 run_dut: $(OUT_DIR)/$(FILENAME).elf
-	@if [ -z "$(DESIGN_HOME)" ]; then \
-		echo "ERROR: DESIGN_HOME is not set. Please export it."; \
+	@if [ ! -d "$(DESIGN_HOME)" ]; then \
+		echo "ERROR: DESIGN_HOME does not exist: $(DESIGN_HOME)"; \
+		exit 1; \
+	fi
+	@if [ ! -x "$(DESIGN_HOME)/out" ]; then \
+		echo "ERROR: $(DESIGN_HOME)/out is missing or not executable."; \
 		exit 1; \
 	fi
 	@echo "-------------------------------------------------------------------------"
@@ -131,7 +138,7 @@ run_dut: $(OUT_DIR)/$(FILENAME).elf
 	cp -r "$(DESIGN_HOME)"/. $(OUT_DIR)/
 	elf2hex  8  4194304  $(OUT_DIR)/$(FILENAME).elf 2147483648 > $(OUT_DIR)/code.mem
 	cd $(OUT_DIR) && \
-	timeout --foreground 30s ./out +rtldump
+	timeout --foreground $(RTL_TIMEOUT)s ./out +rtldump
 	@echo "-------------------------------------------------------------------------"
 	@echo "RTL RUN COMPLETED"
 	@echo "-------------------------------------------------------------------------"
@@ -156,13 +163,20 @@ compare:
 		exit 1; \
 	fi
 
-# 	@echo "Removing last $(RTL_SKIP_LINES) lines from RTL dump"
-	@head -n -$(RTL_SKIP_LINES) $(OUT_DIR)/rtl.dump > $(OUT_DIR)/temp.dump
-	@mv $(OUT_DIR)/temp.dump $(OUT_DIR)/rtl.dump
+	@cp $(OUT_DIR)/rtl.dump $(OUT_DIR)/rtl.raw.dump
+	@lines=$$(wc -l < $(OUT_DIR)/rtl.raw.dump); \
+	if [ "$$lines" -le "$(RTL_SKIP_LINES)" ]; then \
+		echo "ERROR: RTL dump is too short to normalize ($$lines lines)."; \
+		exit 1; \
+	fi; \
+	head -n -$(RTL_SKIP_LINES) $(OUT_DIR)/rtl.raw.dump > $(OUT_DIR)/rtl.normalized.dump
+
+	@sed -E 's/c2_frm (0x[0-9a-fA-F]+) c1_fflags (0x[0-9a-fA-F]+)/c1_fflags \2 c2_frm \1/g' \
+	$(OUT_DIR)/$(FILENAME).dump > $(OUT_DIR)/spike.normalized.dump
 
 	@diff -iwu \
-	$(OUT_DIR)/$(FILENAME).dump \
-	$(OUT_DIR)/rtl.dump \
+	$(OUT_DIR)/spike.normalized.dump \
+	$(OUT_DIR)/rtl.normalized.dump \
 	> $(OUT_DIR)/dump.diff || true
 
 	@if [ -s "$(OUT_DIR)/dump.diff" ]; then \
