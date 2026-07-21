@@ -1,0 +1,6 @@
+>> [1/3] assembling challenge3_negative.S
+>> [2/3] disassembly -> work/challenge3_negative/challenge3_negative.disass
+>> [3/3] running on spike (bare metal)
+*** FAILED *** (tohost = 2)
+>> FAIL (exit 2)
+>> disassembly: work/challenge3_negative/challenge3_negative.disass   commit log: work/challenge3_negative/challenge3_negative.dump

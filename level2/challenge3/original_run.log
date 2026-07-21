@@ -1,0 +1,5 @@
+>> [1/3] assembling challenge3.S
+>> [2/3] disassembly -> work/challenge3/challenge3.disass
+>> [3/3] running on spike (bare metal)
+>> FAIL (exit 124)
+>> disassembly: work/challenge3/challenge3.disass   commit log: work/challenge3/challenge3.dump

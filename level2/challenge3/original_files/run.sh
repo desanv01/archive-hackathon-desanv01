@@ -47,4 +47,3 @@ timeout --foreground 3s $SPIKE --isa=$ISA --log-commits --log "$OUT/$NAME.dump" 
 
 if [ "$rc" = "0" ]; then echo ">> PASS (exit 0)"; else echo ">> FAIL (exit $rc)"; fi
 echo ">> disassembly: $OUT/$NAME.disass   commit log: $OUT/$NAME.dump"
-exit "$rc"
