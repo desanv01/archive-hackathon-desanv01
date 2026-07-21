@@ -1,0 +1,12 @@
+test_cases:
+  .word 0x20
+  .word 0x20
+  .word 0x40
+  .word 0x03034078
+  .word 0x5d70344d
+  .word 0x607374C5
+  .word 0xcafe
+  .word 0x1
+  .word 0xcaff
+
+RVTEST_DATA_END

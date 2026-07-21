@@ -1,0 +1,26 @@
+Level 1 Challenge 2: PASS
+Compile status: 0
+Spike status: 0
+--- Corrected source ---
+18:  li t3, 0x10000
+26:  la s0, amo_target
+28:  amoswap.w t0, t1, (s0)
+38:  csrr t0, mcause
+44:  addi t0, t0, 4
+54:amo_target:
+--- Trap handler disassembly ---
+0000000080000300 <mtvec_handler>:
+    80000300:	342022f3          	csrr	t0,mcause
+    80000304:	00200313          	li	t1,2
+    80000308:	ee6292e3          	bne	t0,t1,800001ec <fail>
+    8000030c:	341022f3          	csrr	t0,mepc
+    80000310:	00428293          	add	t0,t0,4
+    80000314:	34129073          	csrw	mepc,t0
+    80000318:	30200073          	mret
+    8000031c:	c0001073          	unimp
+--- Spike trap and AMO activity ---
+--- Generated artifacts ---
+-rw-r--r-- 1 vsysuser vsysuser  11K Jul 20 11:12 work/test.disass
+-rwxr-xr-x 1 vsysuser vsysuser  14K Jul 20 11:12 work/test.elf
+-rw-r--r-- 1 vsysuser vsysuser 334K Jul 20 11:14 work/test_spike.dump
+-rw-r--r-- 1 vsysuser vsysuser   33 Jul 20 11:14 work/test_spike_signature.log

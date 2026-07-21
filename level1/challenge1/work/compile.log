@@ -1,0 +1,1 @@
+riscv64-unknown-elf-gcc -march=rv64gc -mabi=lp64d -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I/home/vsysuser/workspace/hackathon-desanv01/level1/challenge1/common -T/home/vsysuser/workspace/hackathon-desanv01/level1/challenge1/common/link.ld test.S -o work/test.elf

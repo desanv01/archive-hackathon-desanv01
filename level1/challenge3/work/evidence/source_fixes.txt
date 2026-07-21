@@ -1,0 +1,6 @@
+4:RVTEST_RV64M
+12:  li t5, 3
+21:  j fail
+24:  addi t5, t5, -1
+25:  bnez t5, loop
+26:  j test_end
