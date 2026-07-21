@@ -1,7 +1,8 @@
 #include "riscv_test.h"
 
-RVTEST_RV64U
+RVTEST_RV64M
 RVTEST_CODE_BEGIN
+  RVTEST_FP_ENABLE
 
   la    s0, tdat
   li    t2, 617
@@ -4998,7 +4999,8 @@ RVTEST_CODE_BEGIN
   divw  s5, a6, a5
   remw  t1, t3, s10
   sd    a0, 0(s0)
-  addi  a1, a0, 5000
+  li    a1, 5000
+  add   a1, a0, a1
   ld    a2, 0(s0)
   sw    a3, 0(s0)
   lw    t3, 0(s0)
@@ -9994,7 +9996,7 @@ RVTEST_CODE_BEGIN
   fcvt.s.d  f5, f11
   fcvt.w.s  t2, f2, rtz
   fcvt.l.d  s4, f4, rtz
-  ld    a0, tdat, 0(s0)
+  ld    a0, 0(s0)
   feq.d     t4, f10, f1
   flt.s     s8, f1, f10
   fclass.d  s4, f2
@@ -14990,7 +14992,7 @@ RVTEST_CODE_BEGIN
   sltu  s8, t5, a0
   sltiu a2, t2, 323
   lui   a7, 0x39690
-  fcvt.q.d f2, f3
+  fcvt.s.d f2, f3
   auipc a4, 0x15
   addw  s3, s6, s7
   subw  a0, s2, s10
