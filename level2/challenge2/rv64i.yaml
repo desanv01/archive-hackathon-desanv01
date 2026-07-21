@@ -178,7 +178,7 @@ d-cache:
 exception-generation:
   ecause00: 0
   ecause01: 0
-  ecause02: 0
+  ecause02: 10
   ecause03: 0
   ecause04: 0
   ecause05: 0

@@ -1,0 +1,3138 @@
+core   0: 0x0000000000001000 (0x00000297) auipc   t0, 0x0
+core   0: 0x0000000000001004 (0x02028593) addi    a1, t0, 32
+core   0: 0x0000000000001008 (0xf1402573) csrr    a0, mhartid
+core   0: 0x000000000000100c (0x0182b283) ld      t0, 24(t0)
+core   0: 0x0000000000001010 (0x00028067) jr      t0
+core   0: >>>>  _start
+core   0: 0x0000000080000000 (0x00091117) auipc   sp, 0x91
+core   0: 0x0000000080000004 (0x00010113) mv      sp, sp
+core   0: 0x0000000080000008 (0x00006082) c.ldsp  ra, 0(sp)
+core   0: 0x000000008000000a (0x000061a2) c.ldsp  gp, 8(sp)
+core   0: 0x000000008000000c (0x00006242) c.ldsp  tp, 16(sp)
+core   0: 0x000000008000000e (0x000062e2) c.ldsp  t0, 24(sp)
+core   0: 0x0000000080000010 (0x00007302) c.ldsp  t1, 32(sp)
+core   0: 0x0000000080000012 (0x000073a2) c.ldsp  t2, 40(sp)
+core   0: 0x0000000080000014 (0x00007442) c.ldsp  s0, 48(sp)
+core   0: 0x0000000080000016 (0x000074e2) c.ldsp  s1, 56(sp)
+core   0: 0x0000000080000018 (0x00006506) c.ldsp  a0, 64(sp)
+core   0: 0x000000008000001a (0x000065a6) c.ldsp  a1, 72(sp)
+core   0: 0x000000008000001c (0x00006646) c.ldsp  a2, 80(sp)
+core   0: 0x000000008000001e (0x000066e6) c.ldsp  a3, 88(sp)
+core   0: 0x0000000080000020 (0x00007706) c.ldsp  a4, 96(sp)
+core   0: 0x0000000080000022 (0x000077a6) c.ldsp  a5, 104(sp)
+core   0: 0x0000000080000024 (0x00007846) c.ldsp  a6, 112(sp)
+core   0: 0x0000000080000026 (0x000078e6) c.ldsp  a7, 120(sp)
+core   0: 0x0000000080000028 (0x0000690a) c.ldsp  s2, 128(sp)
+core   0: 0x000000008000002a (0x000069aa) c.ldsp  s3, 136(sp)
+core   0: 0x000000008000002c (0x00006a4a) c.ldsp  s4, 144(sp)
+core   0: 0x000000008000002e (0x00006aea) c.ldsp  s5, 152(sp)
+core   0: 0x0000000080000030 (0x00007b0a) c.ldsp  s6, 160(sp)
+core   0: 0x0000000080000032 (0x00007baa) c.ldsp  s7, 168(sp)
+core   0: 0x0000000080000034 (0x00007c4a) c.ldsp  s8, 176(sp)
+core   0: 0x0000000080000036 (0x00007cea) c.ldsp  s9, 184(sp)
+core   0: 0x0000000080000038 (0x00006d0e) c.ldsp  s10, 192(sp)
+core   0: 0x000000008000003a (0x00006dae) c.ldsp  s11, 200(sp)
+core   0: 0x000000008000003c (0x00006e4e) c.ldsp  t3, 208(sp)
+core   0: 0x000000008000003e (0x00006eee) c.ldsp  t4, 216(sp)
+core   0: 0x0000000080000040 (0x00007f0e) c.ldsp  t5, 224(sp)
+core   0: 0x0000000080000042 (0x00007fae) c.ldsp  t6, 232(sp)
+core   0: 0x0000000080000044 (0x000062f9) c.lui   t0, 0x1e
+core   0: 0x0000000080000046 (0x3002a073) csrs    mstatus, t0
+core   0: 0x000000008000004a (0x00004285) c.li    t0, 1
+core   0: 0x000000008000004c (0x000002fe) c.slli  t0, 31
+core   0: 0x000000008000004e (0x0002d863) bgez    t0, pc + 16
+core   0: 0x000000008000005e (0x00000297) auipc   t0, 0x0
+core   0: 0x0000000080000062 (0x09228293) addi    t0, t0, 146
+core   0: 0x0000000080000066 (0x30529073) csrw    mtvec, t0
+core   0: 0x000000008000006a (0x00301073) csrw    fcsr, zero
+core   0: 0x000000008000006e (0xf2008053) fmv.d.x ft0, ra
+core   0: 0x0000000080000072 (0xf20080d3) fmv.d.x ft1, ra
+core   0: 0x0000000080000076 (0xf2010153) fmv.d.x ft2, sp
+core   0: 0x000000008000007a (0xf20181d3) fmv.d.x ft3, gp
+core   0: 0x000000008000007e (0xf2020253) fmv.d.x ft4, tp
+core   0: 0x0000000080000082 (0xf20282d3) fmv.d.x ft5, t0
+core   0: 0x0000000080000086 (0xf2030353) fmv.d.x ft6, t1
+core   0: 0x000000008000008a (0xf20383d3) fmv.d.x ft7, t2
+core   0: 0x000000008000008e (0xf2040453) fmv.d.x fs0, s0
+core   0: 0x0000000080000092 (0xf20484d3) fmv.d.x fs1, s1
+core   0: 0x0000000080000096 (0xf2050553) fmv.d.x fa0, a0
+core   0: 0x000000008000009a (0xf20585d3) fmv.d.x fa1, a1
+core   0: 0x000000008000009e (0xf2060653) fmv.d.x fa2, a2
+core   0: 0x00000000800000a2 (0xf20686d3) fmv.d.x fa3, a3
+core   0: 0x00000000800000a6 (0xf2070753) fmv.d.x fa4, a4
+core   0: 0x00000000800000aa (0xf20787d3) fmv.d.x fa5, a5
+core   0: 0x00000000800000ae (0xf2080853) fmv.d.x fa6, a6
+core   0: 0x00000000800000b2 (0xf20888d3) fmv.d.x fa7, a7
+core   0: 0x00000000800000b6 (0xf2090953) fmv.d.x fs2, s2
+core   0: 0x00000000800000ba (0xf20989d3) fmv.d.x fs3, s3
+core   0: 0x00000000800000be (0xf20a0a53) fmv.d.x fs4, s4
+core   0: 0x00000000800000c2 (0xf20a8ad3) fmv.d.x fs5, s5
+core   0: 0x00000000800000c6 (0xf20b0b53) fmv.d.x fs6, s6
+core   0: 0x00000000800000ca (0xf20b8bd3) fmv.d.x fs7, s7
+core   0: 0x00000000800000ce (0xf20c0c53) fmv.d.x fs8, s8
+core   0: 0x00000000800000d2 (0xf20c8cd3) fmv.d.x fs9, s9
+core   0: 0x00000000800000d6 (0xf20d0d53) fmv.d.x fs10, s10
+core   0: 0x00000000800000da (0xf20d8dd3) fmv.d.x fs11, s11
+core   0: 0x00000000800000de (0xf20e0e53) fmv.d.x ft8, t3
+core   0: 0x00000000800000e2 (0xf20e8ed3) fmv.d.x ft9, t4
+core   0: 0x00000000800000e6 (0xf20f0f53) fmv.d.x ft10, t5
+core   0: 0x00000000800000ea (0xf20f8fd3) fmv.d.x ft11, t6
+core   0: 0x00000000800000ee (0x00000001) c.nop
+core   0: 0x00000000800000f0 (0x00000297) auipc   t0, 0x0
+core   0: 0x00000000800000f4 (0x03428293) addi    t0, t0, 52
+core   0: 0x00000000800000f8 (0x30529073) csrw    mtvec, t0
+core   0: 0x00000000800000fc (0x00099217) auipc   tp, 0x99
+core   0: 0x0000000080000100 (0x9aa20213) addi    tp, tp, -1622
+core   0: 0x0000000080000104 (0xfc027213) andi    tp, tp, -64
+core   0: 0x0000000080000108 (0xf1402573) csrr    a0, mhartid
+core   0: 0x000000008000010c (0x00004585) c.li    a1, 1
+core   0: 0x000000008000010e (0x00b57063) bgeu    a0, a1, pc + 0
+core   0: 0x0000000080000112 (0x01151613) slli    a2, a0, 17
+core   0: 0x0000000080000116 (0x00009232) c.add   tp, a2
+core   0: 0x0000000080000118 (0x00150113) addi    sp, a0, 1
+core   0: 0x000000008000011c (0x00000146) c.slli  sp, 17
+core   0: 0x000000008000011e (0x00009112) c.add   sp, tp
+core   0: 0x0000000080000120 (0x2400006f) j       pc + 0x240
+core   0: >>>>  main
+core   0: 0x0000000080000360 (0x00000033) add     zero, zero, zero
+core   0: 0x0000000080000364 (0x00091117) auipc   sp, 0x91
+core   0: 0x0000000080000368 (0xc9c10113) addi    sp, sp, -868
+core   0: 0x000000008000036c (0x0000630d) c.lui   t1, 0x3
+core   0: 0x000000008000036e (0xd303031b) addiw   t1, t1, -720
+core   0: 0x0000000080000372 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000000
+core   0: 0x0000000080000374 (0x00004fa9) c.li    t6, 10
+core   0: >>>>  i0000000001
+core   0: 0x0000000080000376 (0x0000100f) fence.i
+core   0: >>>>  i0000000002
+core   0: 0x000000008000037a (0x0000100f) fence.i
+core   0: >>>>  i0000000003
+core   0: 0x000000008000037e (0x02e8d1bb) divuw   gp, a7, a4
+core   0: >>>>  i0000000004
+core   0: 0x0000000080000382 (0x0285f43b) remuw   s0, a1, s0
+core   0: >>>>  i0000000005
+core   0: 0x0000000080000386 (0x80f10fa3) sb      a5, -2017(sp)
+core   0: >>>>  i0000000006
+core   0: 0x000000008000038a (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000007
+core   0: 0x000000008000038e (0x766101a3) sb      t1, 1891(sp)
+core   0: >>>>  i0000000008
+core   0: 0x0000000080000392 (0xb2c12183) lw      gp, -1236(sp)
+core   0: >>>>  i0000000009
+core   0: 0x0000000080000396 (0xec811583) lh      a1, -312(sp)
+core   0: >>>>  i000000000a
+core   0: 0x000000008000039a (0x028477bb) remuw   a5, s0, s0
+core   0: >>>>  i000000000b
+core   0: 0x000000008000039e (0x0000100f) fence.i
+core   0: >>>>  i000000000c
+core   0: 0x00000000800003a2 (0x03f4fd3b) remuw   s10, s1, t6
+core   0: >>>>  i000000000d
+core   0: 0x00000000800003a6 (0x02b5f83b) remuw   a6, a1, a1
+core   0: >>>>  i000000000e
+core   0: 0x00000000800003aa (0x01c56bb3) or      s7, a0, t3
+core   0: 0x00000000800003ae (0x00091117) auipc   sp, 0x91
+core   0: 0x00000000800003b2 (0xc5210113) addi    sp, sp, -942
+core   0: 0x00000000800003b6 (0x00006305) c.lui   t1, 0x1
+core   0: 0x00000000800003b8 (0x7503031b) addiw   t1, t1, 1872
+core   0: 0x00000000800003bc (0x0000911a) c.add   sp, t1
+core   0: >>>>  i000000000f
+core   0: 0x00000000800003be (0x3d514503) lbu     a0, 981(sp)
+core   0: 0x00000000800003c2 (0x00091117) auipc   sp, 0x91
+core   0: 0x00000000800003c6 (0xc3e10113) addi    sp, sp, -962
+core   0: 0x00000000800003ca (0x00006305) c.lui   t1, 0x1
+core   0: 0x00000000800003cc (0xa683031b) addiw   t1, t1, -1432
+core   0: 0x00000000800003d0 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000010
+core   0: 0x00000000800003d2 (0x8b711423) sh      s7, -1880(sp)
+core   0: >>>>  i0000000011
+core   0: 0x00000000800003d6 (0x405a5ab3) sra     s5, s4, t0
+core   0: >>>>  i0000000012
+core   0: 0x00000000800003da (0x0000100f) fence.i
+core   0: >>>>  i0000000013
+core   0: 0x00000000800003de (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000014
+core   0: 0x00000000800003e2 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000015
+core   0: 0x00000000800003e6 (0x4ec14583) lbu     a1, 1260(sp)
+core   0: >>>>  i0000000016
+core   0: 0x00000000800003ea (0xc8a14903) lbu     s2, -886(sp)
+core   0: >>>>  i0000000017
+core   0: 0x00000000800003ee (0x03648dbb) mulw    s11, s1, s6
+core   0: >>>>  i0000000018
+core   0: 0x00000000800003f2 (0x52a15b83) lhu     s7, 1322(sp)
+core   0: >>>>  i0000000019
+core   0: 0x00000000800003f6 (0x005aa833) slt     a6, s5, t0
+core   0: >>>>  i000000001a
+core   0: 0x00000000800003fa (0x17210583) lb      a1, 370(sp)
+core   0: >>>>  i000000001b
+core   0: 0x00000000800003fe (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000001c
+core   0: 0x0000000080000402 (0x0344743b) remuw   s0, s0, s4
+core   0: >>>>  i000000001d
+core   0: 0x0000000080000406 (0x023bd2bb) divuw   t0, s7, gp
+core   0: >>>>  i000000001e
+core   0: 0x000000008000040a (0x037445bb) divw    a1, s0, s7
+core   0: >>>>  i000000001f
+core   0: 0x000000008000040e (0xb0812403) lw      s0, -1272(sp)
+core   0: >>>>  i0000000020
+core   0: 0x0000000080000412 (0x03747bbb) remuw   s7, s0, s7
+core   0: >>>>  i0000000021
+core   0: 0x0000000080000416 (0x034f843b) mulw    s0, t6, s4
+core   0: >>>>  i0000000022
+core   0: 0x000000008000041a (0x0294e2bb) remw    t0, s1, s1
+core   0: >>>>  i0000000023
+core   0: 0x000000008000041e (0xe0b108a3) sb      a1, -495(sp)
+core   0: >>>>  i0000000024
+core   0: 0x0000000080000422 (0x02b45dbb) divuw   s11, s0, a1
+core   0: >>>>  i0000000025
+core   0: 0x0000000080000426 (0x0000100f) fence.i
+core   0: >>>>  i0000000026
+core   0: 0x000000008000042a (0x037be5bb) remw    a1, s7, s7
+core   0: 0x000000008000042e (0x00091117) auipc   sp, 0x91
+core   0: 0x0000000080000432 (0xbd210113) addi    sp, sp, -1070
+core   0: 0x0000000080000436 (0x00006305) c.lui   t1, 0x1
+core   0: 0x0000000080000438 (0x1203031b) addiw   t1, t1, 288
+core   0: 0x000000008000043c (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000027
+core   0: 0x000000008000043e (0x50f10883) lb      a7, 1295(sp)
+core   0: >>>>  i0000000028
+core   0: 0x0000000080000442 (0x92b105a3) sb      a1, -1749(sp)
+core   0: >>>>  i0000000029
+core   0: 0x0000000080000446 (0x0285dc3b) divuw   s8, a1, s0
+core   0: >>>>  i000000002a
+core   0: 0x000000008000044a (0x0000c9d6) c.swsp  s5, 208(sp)
+core   0: >>>>  i000000002b
+core   0: 0x000000008000044c (0x02847fbb) remuw   t6, s0, s0
+core   0: >>>>  i000000002c
+core   0: 0x0000000080000450 (0x63711423) sh      s7, 1576(sp)
+core   0: >>>>  i000000002d
+core   0: 0x0000000080000454 (0x03745e3b) divuw   t3, s0, s7
+core   0: >>>>  i000000002e
+core   0: 0x0000000080000458 (0x003c2633) slt     a2, s8, gp
+core   0: >>>>  i000000002f
+core   0: 0x000000008000045c (0x81415183) lhu     gp, -2028(sp)
+core   0: >>>>  i0000000030
+core   0: 0x0000000080000460 (0x028bd5bb) divuw   a1, s7, s0
+core   0: >>>>  i0000000031
+core   0: 0x0000000080000464 (0x026f65bb) remw    a1, t5, t1
+core   0: >>>>  i0000000032
+core   0: 0x0000000080000468 (0x0000100f) fence.i
+core   0: >>>>  i0000000033
+core   0: 0x000000008000046c (0x18914403) lbu     s0, 393(sp)
+core   0: >>>>  i0000000034
+core   0: 0x0000000080000470 (0x59211583) lh      a1, 1426(sp)
+core   0: >>>>  i0000000035
+core   0: 0x0000000080000474 (0x0014dc13) srli    s8, s1, 1
+core   0: >>>>  i0000000036
+core   0: 0x0000000080000478 (0x01759733) sll     a4, a1, s7
+core   0: >>>>  i0000000037
+core   0: 0x000000008000047c (0xe3811823) sh      s8, -464(sp)
+core   0: >>>>  i0000000038
+core   0: 0x0000000080000480 (0x0249743b) remuw   s0, s2, tp
+core   0: >>>>  i0000000039
+core   0: 0x0000000080000484 (0x00b461b3) or      gp, s0, a1
+core   0: 0x0000000080000488 (0x00091117) auipc   sp, 0x91
+core   0: 0x000000008000048c (0xb7810113) addi    sp, sp, -1160
+core   0: 0x0000000080000490 (0x00006309) c.lui   t1, 0x2
+core   0: 0x0000000080000492 (0xb883031b) addiw   t1, t1, -1144
+core   0: 0x0000000080000496 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i000000003a
+core   0: 0x0000000080000498 (0xb9811603) lh      a2, -1128(sp)
+core   0: >>>>  i000000003b
+core   0: 0x000000008000049c (0x02818bbb) mulw    s7, gp, s0
+core   0: >>>>  i000000003c
+core   0: 0x00000000800004a0 (0x56abb413) sltiu   s0, s7, 1386
+core   0: >>>>  i000000003d
+core   0: 0x00000000800004a4 (0x02fb7bbb) remuw   s7, s6, a5
+core   0: >>>>  i000000003e
+core   0: 0x00000000800004a8 (0x56812023) sw      s0, 1376(sp)
+core   0: >>>>  i000000003f
+core   0: 0x00000000800004ac (0x0000100f) fence.i
+core   0: 0x00000000800004b0 (0x00091117) auipc   sp, 0x91
+core   0: 0x00000000800004b4 (0xb5010113) addi    sp, sp, -1200
+core   0: 0x00000000800004b8 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x00000000800004ba (0xb403031b) addiw   t1, t1, -1216
+core   0: 0x00000000800004be (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000040
+core   0: 0x00000000800004c0 (0x64a106a3) sb      a0, 1613(sp)
+core   0: >>>>  i0000000041
+core   0: 0x00000000800004c4 (0x01a41593) slli    a1, s0, 26
+core   0: >>>>  i0000000042
+core   0: 0x00000000800004c8 (0x008bff33) and     t5, s7, s0
+core   0: >>>>  i0000000043
+core   0: 0x00000000800004cc (0x8067a793) slti    a5, a5, -2042
+core   0: >>>>  i0000000044
+core   0: 0x00000000800004d0 (0x0000100f) fence.i
+core   0: >>>>  i0000000045
+core   0: 0x00000000800004d4 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000046
+core   0: 0x00000000800004d8 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000047
+core   0: 0x00000000800004dc (0x028be5bb) remw    a1, s7, s0
+core   0: >>>>  i0000000048
+core   0: 0x00000000800004e0 (0xb355ac93) slti    s9, a1, -1227
+core   0: >>>>  i0000000049
+core   0: 0x00000000800004e4 (0x703be593) ori     a1, s7, 1795
+core   0: >>>>  i000000004a
+core   0: 0x00000000800004e8 (0x985a720f) unknown
+core   0: exception trap_illegal_instruction, epc 0x00000000800004e8
+core   0:           tval 0x00000000985a720f
+core   0: >>>>  trap_entry
+core   0: 0x0000000080000124 (0x0000716d) c.addi16sp sp, -272
+core   0: 0x0000000080000126 (0x0000e406) c.sdsp  ra, 8(sp)
+core   0: 0x0000000080000128 (0x0000e80a) c.sdsp  sp, 16(sp)
+core   0: 0x000000008000012a (0x0000ec0e) c.sdsp  gp, 24(sp)
+core   0: 0x000000008000012c (0x0000f012) c.sdsp  tp, 32(sp)
+core   0: 0x000000008000012e (0x0000f416) c.sdsp  t0, 40(sp)
+core   0: 0x0000000080000130 (0x0000f81a) c.sdsp  t1, 48(sp)
+core   0: 0x0000000080000132 (0x0000fc1e) c.sdsp  t2, 56(sp)
+core   0: 0x0000000080000134 (0x0000e0a2) c.sdsp  s0, 64(sp)
+core   0: 0x0000000080000136 (0x0000e4a6) c.sdsp  s1, 72(sp)
+core   0: 0x0000000080000138 (0x0000e8aa) c.sdsp  a0, 80(sp)
+core   0: 0x000000008000013a (0x0000ecae) c.sdsp  a1, 88(sp)
+core   0: 0x000000008000013c (0x0000f0b2) c.sdsp  a2, 96(sp)
+core   0: 0x000000008000013e (0x0000f4b6) c.sdsp  a3, 104(sp)
+core   0: 0x0000000080000140 (0x0000f8ba) c.sdsp  a4, 112(sp)
+core   0: 0x0000000080000142 (0x0000fcbe) c.sdsp  a5, 120(sp)
+core   0: 0x0000000080000144 (0x0000e142) c.sdsp  a6, 128(sp)
+core   0: 0x0000000080000146 (0x0000e546) c.sdsp  a7, 136(sp)
+core   0: 0x0000000080000148 (0x0000e94a) c.sdsp  s2, 144(sp)
+core   0: 0x000000008000014a (0x0000ed4e) c.sdsp  s3, 152(sp)
+core   0: 0x000000008000014c (0x0000f152) c.sdsp  s4, 160(sp)
+core   0: 0x000000008000014e (0x0000f556) c.sdsp  s5, 168(sp)
+core   0: 0x0000000080000150 (0x0000f95a) c.sdsp  s6, 176(sp)
+core   0: 0x0000000080000152 (0x0000fd5e) c.sdsp  s7, 184(sp)
+core   0: 0x0000000080000154 (0x0000e1e2) c.sdsp  s8, 192(sp)
+core   0: 0x0000000080000156 (0x0000e5e6) c.sdsp  s9, 200(sp)
+core   0: 0x0000000080000158 (0x0000e9ea) c.sdsp  s10, 208(sp)
+core   0: 0x000000008000015a (0x0000edee) c.sdsp  s11, 216(sp)
+core   0: 0x000000008000015c (0x0000f1f2) c.sdsp  t3, 224(sp)
+core   0: 0x000000008000015e (0x0000f5f6) c.sdsp  t4, 232(sp)
+core   0: 0x0000000080000160 (0x0000f9fa) c.sdsp  t5, 240(sp)
+core   0: 0x0000000080000162 (0x0000fdfe) c.sdsp  t6, 248(sp)
+core   0: 0x0000000080000164 (0x34202573) csrr    a0, mcause
+core   0: 0x0000000080000168 (0x341025f3) csrr    a1, mepc
+core   0: 0x000000008000016c (0x0005d603) lhu     a2, 0(a1)
+core   0: 0x0000000080000170 (0x00008a0d) c.andi  a2, 3
+core   0: 0x0000000080000172 (0x0000428d) c.li    t0, 3
+core   0: 0x0000000080000174 (0x00561563) bne     a2, t0, pc + 10
+core   0: 0x0000000080000178 (0x00000591) c.addi  a1, 4
+core   0: 0x000000008000017a (0x00000363) beqz    zero, pc + 6
+core   0: 0x0000000080000180 (0x34159073) csrw    mepc, a1
+core   0: 0x0000000080000184 (0x00006289) c.lui   t0, 0x2
+core   0: 0x0000000080000186 (0x8002829b) addiw   t0, t0, -2048
+core   0: 0x000000008000018a (0x3002a073) csrs    mstatus, t0
+core   0: 0x000000008000018e (0x000060a2) c.ldsp  ra, 8(sp)
+core   0: 0x0000000080000190 (0x00006142) c.ldsp  sp, 16(sp)
+core   0: 0x0000000080000192 (0x000061e2) c.ldsp  gp, 24(sp)
+core   0: 0x0000000080000194 (0x00007202) c.ldsp  tp, 32(sp)
+core   0: 0x0000000080000196 (0x000072a2) c.ldsp  t0, 40(sp)
+core   0: 0x0000000080000198 (0x00007342) c.ldsp  t1, 48(sp)
+core   0: 0x000000008000019a (0x000073e2) c.ldsp  t2, 56(sp)
+core   0: 0x000000008000019c (0x00006406) c.ldsp  s0, 64(sp)
+core   0: 0x000000008000019e (0x000064a6) c.ldsp  s1, 72(sp)
+core   0: 0x00000000800001a0 (0x00006546) c.ldsp  a0, 80(sp)
+core   0: 0x00000000800001a2 (0x000065e6) c.ldsp  a1, 88(sp)
+core   0: 0x00000000800001a4 (0x00007606) c.ldsp  a2, 96(sp)
+core   0: 0x00000000800001a6 (0x000076a6) c.ldsp  a3, 104(sp)
+core   0: 0x00000000800001a8 (0x00007746) c.ldsp  a4, 112(sp)
+core   0: 0x00000000800001aa (0x000077e6) c.ldsp  a5, 120(sp)
+core   0: 0x00000000800001ac (0x0000680a) c.ldsp  a6, 128(sp)
+core   0: 0x00000000800001ae (0x000068aa) c.ldsp  a7, 136(sp)
+core   0: 0x00000000800001b0 (0x0000694a) c.ldsp  s2, 144(sp)
+core   0: 0x00000000800001b2 (0x000069ea) c.ldsp  s3, 152(sp)
+core   0: 0x00000000800001b4 (0x00007a0a) c.ldsp  s4, 160(sp)
+core   0: 0x00000000800001b6 (0x00007aaa) c.ldsp  s5, 168(sp)
+core   0: 0x00000000800001b8 (0x00007b4a) c.ldsp  s6, 176(sp)
+core   0: 0x00000000800001ba (0x00007bea) c.ldsp  s7, 184(sp)
+core   0: 0x00000000800001bc (0x00006c0e) c.ldsp  s8, 192(sp)
+core   0: 0x00000000800001be (0x00006cae) c.ldsp  s9, 200(sp)
+core   0: 0x00000000800001c0 (0x00006d4e) c.ldsp  s10, 208(sp)
+core   0: 0x00000000800001c2 (0x00006dee) c.ldsp  s11, 216(sp)
+core   0: 0x00000000800001c4 (0x00007e0e) c.ldsp  t3, 224(sp)
+core   0: 0x00000000800001c6 (0x00007eae) c.ldsp  t4, 232(sp)
+core   0: 0x00000000800001c8 (0x00007f4e) c.ldsp  t5, 240(sp)
+core   0: 0x00000000800001ca (0x00007fee) c.ldsp  t6, 248(sp)
+core   0: 0x00000000800001cc (0x00006151) c.addi16sp sp, 272
+core   0: 0x00000000800001ce (0x30200073) mret
+core   0: >>>>  i000000004b
+core   0: 0x00000000800004ec (0x00bb8633) add     a2, s7, a1
+core   0: >>>>  i000000004c
+core   0: 0x00000000800004f0 (0x025877bb) remuw   a5, a6, t0
+core   0: >>>>  i000000004d
+core   0: 0x00000000800004f4 (0x02bbdb3b) divuw   s6, s7, a1
+core   0: >>>>  i000000004e
+core   0: 0x00000000800004f8 (0x000005b2) c.slli  a1, 12
+core   0: >>>>  i000000004f
+core   0: 0x00000000800004fa (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000050
+core   0: 0x00000000800004fe (0xe4811723) sh      s0, -434(sp)
+core   0: >>>>  i0000000051
+core   0: 0x0000000080000502 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000052
+core   0: 0x0000000080000506 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000053
+core   0: 0x000000008000050a (0x90812303) lw      t1, -1784(sp)
+core   0: >>>>  i0000000054
+core   0: 0x000000008000050e (0x0000100f) fence.i
+core   0: >>>>  i0000000055
+core   0: 0x0000000080000512 (0x69a10b03) lb      s6, 1690(sp)
+core   0: >>>>  i0000000056
+core   0: 0x0000000080000516 (0x417bd433) sra     s0, s7, s7
+core   0: >>>>  i0000000057
+core   0: 0x000000008000051a (0x2a015583) lhu     a1, 672(sp)
+core   0: >>>>  i0000000058
+core   0: 0x000000008000051e (0x0000100f) fence.i
+core   0: >>>>  i0000000059
+core   0: 0x0000000080000522 (0x0000100f) fence.i
+core   0: >>>>  i000000005a
+core   0: 0x0000000080000526 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000005b
+core   0: 0x000000008000052a (0x00b58c33) add     s8, a1, a1
+core   0: >>>>  i000000005c
+core   0: 0x000000008000052e (0x037bf6bb) remuw   a3, s7, s7
+core   0: >>>>  i000000005d
+core   0: 0x0000000080000532 (0x0284643b) remw    s0, s0, s0
+core   0: >>>>  i000000005e
+core   0: 0x0000000080000536 (0x3dc11003) lh      zero, 988(sp)
+core   0: >>>>  i000000005f
+core   0: 0x000000008000053a (0x0260063b) mulw    a2, zero, t1
+core   0: >>>>  i0000000060
+core   0: 0x000000008000053e (0x0375fcbb) remuw   s9, a1, s7
+core   0: >>>>  i0000000061
+core   0: 0x0000000080000542 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000062
+core   0: 0x0000000080000546 (0x0000100f) fence.i
+core   0: >>>>  i0000000063
+core   0: 0x000000008000054a (0x02b465bb) remw    a1, s0, a1
+core   0: 0x000000008000054e (0x00091117) auipc   sp, 0x91
+core   0: 0x0000000080000552 (0xab210113) addi    sp, sp, -1358
+core   0: 0x0000000080000556 (0x00006309) c.lui   t1, 0x2
+core   0: 0x0000000080000558 (0x3603031b) addiw   t1, t1, 864
+core   0: 0x000000008000055c (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000064
+core   0: 0x000000008000055e (0x2c410423) sb      tp, 712(sp)
+core   0: >>>>  i0000000065
+core   0: 0x0000000080000562 (0x0000100f) fence.i
+core   0: 0x0000000080000566 (0x00091117) auipc   sp, 0x91
+core   0: 0x000000008000056a (0xa9a10113) addi    sp, sp, -1382
+core   0: 0x000000008000056e (0x00006309) c.lui   t1, 0x2
+core   0: 0x0000000080000570 (0xdf83031b) addiw   t1, t1, -520
+core   0: 0x0000000080000574 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000066
+core   0: 0x0000000080000576 (0xe1811583) lh      a1, -488(sp)
+core   0: >>>>  i0000000067
+core   0: 0x000000008000057a (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000068
+core   0: 0x000000008000057e (0x03a8dbbb) divuw   s7, a7, s10
+core   0: >>>>  i0000000069
+core   0: 0x0000000080000582 (0x33084597) auipc   a1, 0x33084
+core   0: >>>>  i000000006a
+core   0: 0x0000000080000586 (0x02bbd43b) divuw   s0, s7, a1
+core   0: >>>>  i000000006b
+core   0: 0x000000008000058a (0x03606bbb) remw    s7, zero, s6
+core   0: >>>>  i000000006c
+core   0: 0x000000008000058e (0x9fb5a593) slti    a1, a1, -1541
+core   0: >>>>  i000000006d
+core   0: 0x0000000080000592 (0xdc414403) lbu     s0, -572(sp)
+core   0: >>>>  i000000006e
+core   0: 0x0000000080000596 (0x0284563b) divuw   a2, s0, s0
+core   0: >>>>  i000000006f
+core   0: 0x000000008000059a (0x08014803) lbu     a6, 128(sp)
+core   0: >>>>  i0000000070
+core   0: 0x000000008000059e (0x02bbd43b) divuw   s0, s7, a1
+core   0: >>>>  i0000000071
+core   0: 0x00000000800005a2 (0xbd29643b) unknown
+core   0: exception trap_illegal_instruction, epc 0x00000000800005a2
+core   0:           tval 0x00000000bd29643b
+core   0: >>>>  trap_entry
+core   0: 0x0000000080000124 (0x0000716d) c.addi16sp sp, -272
+core   0: 0x0000000080000126 (0x0000e406) c.sdsp  ra, 8(sp)
+core   0: 0x0000000080000128 (0x0000e80a) c.sdsp  sp, 16(sp)
+core   0: 0x000000008000012a (0x0000ec0e) c.sdsp  gp, 24(sp)
+core   0: 0x000000008000012c (0x0000f012) c.sdsp  tp, 32(sp)
+core   0: 0x000000008000012e (0x0000f416) c.sdsp  t0, 40(sp)
+core   0: 0x0000000080000130 (0x0000f81a) c.sdsp  t1, 48(sp)
+core   0: 0x0000000080000132 (0x0000fc1e) c.sdsp  t2, 56(sp)
+core   0: 0x0000000080000134 (0x0000e0a2) c.sdsp  s0, 64(sp)
+core   0: 0x0000000080000136 (0x0000e4a6) c.sdsp  s1, 72(sp)
+core   0: 0x0000000080000138 (0x0000e8aa) c.sdsp  a0, 80(sp)
+core   0: 0x000000008000013a (0x0000ecae) c.sdsp  a1, 88(sp)
+core   0: 0x000000008000013c (0x0000f0b2) c.sdsp  a2, 96(sp)
+core   0: 0x000000008000013e (0x0000f4b6) c.sdsp  a3, 104(sp)
+core   0: 0x0000000080000140 (0x0000f8ba) c.sdsp  a4, 112(sp)
+core   0: 0x0000000080000142 (0x0000fcbe) c.sdsp  a5, 120(sp)
+core   0: 0x0000000080000144 (0x0000e142) c.sdsp  a6, 128(sp)
+core   0: 0x0000000080000146 (0x0000e546) c.sdsp  a7, 136(sp)
+core   0: 0x0000000080000148 (0x0000e94a) c.sdsp  s2, 144(sp)
+core   0: 0x000000008000014a (0x0000ed4e) c.sdsp  s3, 152(sp)
+core   0: 0x000000008000014c (0x0000f152) c.sdsp  s4, 160(sp)
+core   0: 0x000000008000014e (0x0000f556) c.sdsp  s5, 168(sp)
+core   0: 0x0000000080000150 (0x0000f95a) c.sdsp  s6, 176(sp)
+core   0: 0x0000000080000152 (0x0000fd5e) c.sdsp  s7, 184(sp)
+core   0: 0x0000000080000154 (0x0000e1e2) c.sdsp  s8, 192(sp)
+core   0: 0x0000000080000156 (0x0000e5e6) c.sdsp  s9, 200(sp)
+core   0: 0x0000000080000158 (0x0000e9ea) c.sdsp  s10, 208(sp)
+core   0: 0x000000008000015a (0x0000edee) c.sdsp  s11, 216(sp)
+core   0: 0x000000008000015c (0x0000f1f2) c.sdsp  t3, 224(sp)
+core   0: 0x000000008000015e (0x0000f5f6) c.sdsp  t4, 232(sp)
+core   0: 0x0000000080000160 (0x0000f9fa) c.sdsp  t5, 240(sp)
+core   0: 0x0000000080000162 (0x0000fdfe) c.sdsp  t6, 248(sp)
+core   0: 0x0000000080000164 (0x34202573) csrr    a0, mcause
+core   0: 0x0000000080000168 (0x341025f3) csrr    a1, mepc
+core   0: 0x000000008000016c (0x0005d603) lhu     a2, 0(a1)
+core   0: 0x0000000080000170 (0x00008a0d) c.andi  a2, 3
+core   0: 0x0000000080000172 (0x0000428d) c.li    t0, 3
+core   0: 0x0000000080000174 (0x00561563) bne     a2, t0, pc + 10
+core   0: 0x0000000080000178 (0x00000591) c.addi  a1, 4
+core   0: 0x000000008000017a (0x00000363) beqz    zero, pc + 6
+core   0: 0x0000000080000180 (0x34159073) csrw    mepc, a1
+core   0: 0x0000000080000184 (0x00006289) c.lui   t0, 0x2
+core   0: 0x0000000080000186 (0x8002829b) addiw   t0, t0, -2048
+core   0: 0x000000008000018a (0x3002a073) csrs    mstatus, t0
+core   0: 0x000000008000018e (0x000060a2) c.ldsp  ra, 8(sp)
+core   0: 0x0000000080000190 (0x00006142) c.ldsp  sp, 16(sp)
+core   0: 0x0000000080000192 (0x000061e2) c.ldsp  gp, 24(sp)
+core   0: 0x0000000080000194 (0x00007202) c.ldsp  tp, 32(sp)
+core   0: 0x0000000080000196 (0x000072a2) c.ldsp  t0, 40(sp)
+core   0: 0x0000000080000198 (0x00007342) c.ldsp  t1, 48(sp)
+core   0: 0x000000008000019a (0x000073e2) c.ldsp  t2, 56(sp)
+core   0: 0x000000008000019c (0x00006406) c.ldsp  s0, 64(sp)
+core   0: 0x000000008000019e (0x000064a6) c.ldsp  s1, 72(sp)
+core   0: 0x00000000800001a0 (0x00006546) c.ldsp  a0, 80(sp)
+core   0: 0x00000000800001a2 (0x000065e6) c.ldsp  a1, 88(sp)
+core   0: 0x00000000800001a4 (0x00007606) c.ldsp  a2, 96(sp)
+core   0: 0x00000000800001a6 (0x000076a6) c.ldsp  a3, 104(sp)
+core   0: 0x00000000800001a8 (0x00007746) c.ldsp  a4, 112(sp)
+core   0: 0x00000000800001aa (0x000077e6) c.ldsp  a5, 120(sp)
+core   0: 0x00000000800001ac (0x0000680a) c.ldsp  a6, 128(sp)
+core   0: 0x00000000800001ae (0x000068aa) c.ldsp  a7, 136(sp)
+core   0: 0x00000000800001b0 (0x0000694a) c.ldsp  s2, 144(sp)
+core   0: 0x00000000800001b2 (0x000069ea) c.ldsp  s3, 152(sp)
+core   0: 0x00000000800001b4 (0x00007a0a) c.ldsp  s4, 160(sp)
+core   0: 0x00000000800001b6 (0x00007aaa) c.ldsp  s5, 168(sp)
+core   0: 0x00000000800001b8 (0x00007b4a) c.ldsp  s6, 176(sp)
+core   0: 0x00000000800001ba (0x00007bea) c.ldsp  s7, 184(sp)
+core   0: 0x00000000800001bc (0x00006c0e) c.ldsp  s8, 192(sp)
+core   0: 0x00000000800001be (0x00006cae) c.ldsp  s9, 200(sp)
+core   0: 0x00000000800001c0 (0x00006d4e) c.ldsp  s10, 208(sp)
+core   0: 0x00000000800001c2 (0x00006dee) c.ldsp  s11, 216(sp)
+core   0: 0x00000000800001c4 (0x00007e0e) c.ldsp  t3, 224(sp)
+core   0: 0x00000000800001c6 (0x00007eae) c.ldsp  t4, 232(sp)
+core   0: 0x00000000800001c8 (0x00007f4e) c.ldsp  t5, 240(sp)
+core   0: 0x00000000800001ca (0x00007fee) c.ldsp  t6, 248(sp)
+core   0: 0x00000000800001cc (0x00006151) c.addi16sp sp, 272
+core   0: 0x00000000800001ce (0x30200073) mret
+core   0: >>>>  i0000000072
+core   0: 0x00000000800005a6 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000073
+core   0: 0x00000000800005aa (0x008432b3) sltu    t0, s0, s0
+core   0: >>>>  i0000000074
+core   0: 0x00000000800005ae (0x017bdbb3) srl     s7, s7, s7
+core   0: >>>>  i0000000075
+core   0: 0x00000000800005b2 (0x02b455bb) divuw   a1, s0, a1
+core   0: >>>>  i0000000076
+core   0: 0x00000000800005b6 (0x02a9cb3b) divw    s6, s3, a0
+core   0: >>>>  i0000000077
+core   0: 0x00000000800005ba (0xee314b83) lbu     s7, -285(sp)
+core   0: >>>>  i0000000078
+core   0: 0x00000000800005be (0x59812e03) lw      t3, 1432(sp)
+core   0: >>>>  i0000000079
+core   0: 0x00000000800005c2 (0x40b14283) lbu     t0, 1035(sp)
+core   0: >>>>  i000000007a
+core   0: 0x00000000800005c6 (0x2bc12b83) lw      s7, 700(sp)
+core   0: >>>>  i000000007b
+core   0: 0x00000000800005ca (0x0175feb3) and     t4, a1, s7
+core   0: >>>>  i000000007c
+core   0: 0x00000000800005ce (0x10731417) auipc   s0, 0x10731
+core   0: >>>>  i000000007d
+core   0: 0x00000000800005d2 (0x037be5bb) remw    a1, s7, s7
+core   0: >>>>  i000000007e
+core   0: 0x00000000800005d6 (0x0000100f) fence.i
+core   0: >>>>  i000000007f
+core   0: 0x00000000800005da (0xa1412583) lw      a1, -1516(sp)
+core   0: >>>>  i0000000080
+core   0: 0x00000000800005de (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000081
+core   0: 0x00000000800005e2 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000082
+core   0: 0x00000000800005e6 (0x0000100f) fence.i
+core   0: 0x00000000800005ea (0x00091117) auipc   sp, 0x91
+core   0: 0x00000000800005ee (0xa1610113) addi    sp, sp, -1514
+core   0: 0x00000000800005f2 (0x00006309) c.lui   t1, 0x2
+core   0: 0x00000000800005f4 (0xdd83031b) addiw   t1, t1, -552
+core   0: 0x00000000800005f8 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000083
+core   0: 0x00000000800005fa (0x73e10503) lb      a0, 1854(sp)
+core   0: >>>>  i0000000084
+core   0: 0x00000000800005fe (0xc7f46a93) ori     s5, s0, -897
+core   0: >>>>  i0000000085
+core   0: 0x0000000080000602 (0xd4b10fa3) sb      a1, -673(sp)
+core   0: >>>>  i0000000086
+core   0: 0x0000000080000606 (0xf2b10e23) sb      a1, -196(sp)
+core   0: >>>>  i0000000087
+core   0: 0x000000008000060a (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000088
+core   0: 0x000000008000060e (0xd3615e83) lhu     t4, -714(sp)
+core   0: >>>>  i0000000089
+core   0: 0x0000000080000612 (0xabe11523) sh      t5, -1366(sp)
+core   0: >>>>  i000000008a
+core   0: 0x0000000080000616 (0x0000100f) fence.i
+core   0: >>>>  i000000008b
+core   0: 0x000000008000061a (0x026acfbb) divw    t6, s5, t1
+core   0: >>>>  i000000008c
+core   0: 0x000000008000061e (0xcd814583) lbu     a1, -808(sp)
+core   0: >>>>  i000000008d
+core   0: 0x0000000080000622 (0xf7a11403) lh      s0, -134(sp)
+core   0: >>>>  i000000008e
+core   0: 0x0000000080000626 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000008f
+core   0: 0x000000008000062a (0x015903b3) add     t2, s2, s5
+core   0: >>>>  i0000000090
+core   0: 0x000000008000062e (0x0000100f) fence.i
+core   0: >>>>  i0000000091
+core   0: 0x0000000080000632 (0x0f646693) ori     a3, s0, 246
+core   0: >>>>  i0000000092
+core   0: 0x0000000080000636 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000093
+core   0: 0x000000008000063a (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000094
+core   0: 0x000000008000063e (0x02e5763b) remuw   a2, a0, a4
+core   0: >>>>  i0000000095
+core   0: 0x0000000080000642 (0x0369043b) mulw    s0, s2, s6
+core   0: >>>>  i0000000096
+core   0: 0x0000000080000646 (0xe3c12403) lw      s0, -452(sp)
+core   0: >>>>  i0000000097
+core   0: 0x000000008000064a (0x0096e5b3) or      a1, a3, s1
+core   0: >>>>  i0000000098
+core   0: 0x000000008000064e (0x0363c5bb) divw    a1, t2, s6
+core   0: >>>>  i0000000099
+core   0: 0x0000000080000652 (0x0375c93b) divw    s2, a1, s7
+core   0: >>>>  i000000009a
+core   0: 0x0000000080000656 (0x7c012583) lw      a1, 1984(sp)
+core   0: >>>>  i000000009b
+core   0: 0x000000008000065a (0x028462bb) remw    t0, s0, s0
+core   0: >>>>  i000000009c
+core   0: 0x000000008000065e (0x40f45293) srai    t0, s0, 15
+core   0: >>>>  i000000009d
+core   0: 0x0000000080000662 (0x1421bf93) sltiu   t6, gp, 322
+core   0: >>>>  i000000009e
+core   0: 0x0000000080000666 (0x4306b237) lui     tp, 0x4306b
+core   0: >>>>  i000000009f
+core   0: 0x000000008000066a (0x00c14e83) lbu     t4, 12(sp)
+core   0: >>>>  i00000000a0
+core   0: 0x000000008000066e (0x02a685bb) mulw    a1, a3, a0
+core   0: >>>>  i00000000a1
+core   0: 0x0000000080000672 (0x00008c4d) c.or    s0, a1
+core   0: >>>>  i00000000a2
+core   0: 0x0000000080000674 (0x037585bb) mulw    a1, a1, s7
+core   0: >>>>  i00000000a3
+core   0: 0x0000000080000678 (0x03758fbb) mulw    t6, a1, s7
+core   0: >>>>  i00000000a4
+core   0: 0x000000008000067c (0x008b8f33) add     t5, s7, s0
+core   0: >>>>  i00000000a5
+core   0: 0x0000000080000680 (0x02bb893b) mulw    s2, s7, a1
+core   0: >>>>  i00000000a6
+core   0: 0x0000000080000684 (0x78811123) sh      s0, 1922(sp)
+core   0: >>>>  i00000000a7
+core   0: 0x0000000080000688 (0xd6414983) lbu     s3, -668(sp)
+core   0: >>>>  i00000000a8
+core   0: 0x000000008000068c (0x1a811d23) sh      s0, 442(sp)
+core   0: >>>>  i00000000a9
+core   0: 0x0000000080000690 (0x0000100f) fence.i
+core   0: >>>>  i00000000aa
+core   0: 0x0000000080000694 (0x0000100f) fence.i
+core   0: >>>>  i00000000ab
+core   0: 0x0000000080000698 (0x033e083b) mulw    a6, t3, s3
+core   0: >>>>  i00000000ac
+core   0: 0x000000008000069c (0x0193dbb3) srl     s7, t2, s9
+core   0: >>>>  i00000000ad
+core   0: 0x00000000800006a0 (0x02dfc93b) divw    s2, t6, a3
+core   0: >>>>  i00000000ae
+core   0: 0x00000000800006a4 (0x8cb11923) sh      a1, -1838(sp)
+core   0: >>>>  i00000000af
+core   0: 0x00000000800006a8 (0x01511923) sh      s5, 18(sp)
+core   0: >>>>  i00000000b0
+core   0: 0x00000000800006ac (0x0284073b) mulw    a4, s0, s0
+core   0: >>>>  i00000000b1
+core   0: 0x00000000800006b0 (0x0000100f) fence.i
+core   0: >>>>  i00000000b2
+core   0: 0x00000000800006b4 (0x0000100f) fence.i
+core   0: >>>>  i00000000b3
+core   0: 0x00000000800006b8 (0x004ef6b3) and     a3, t4, tp
+core   0: >>>>  i00000000b4
+core   0: 0x00000000800006bc (0xf13105a3) sb      s3, -245(sp)
+core   0: >>>>  i00000000b5
+core   0: 0x00000000800006c0 (0x0000100f) fence.i
+core   0: >>>>  i00000000b6
+core   0: 0x00000000800006c4 (0x0285f5bb) remuw   a1, a1, s0
+core   0: >>>>  i00000000b7
+core   0: 0x00000000800006c8 (0xb1015e83) lhu     t4, -1264(sp)
+core   0: >>>>  i00000000b8
+core   0: 0x00000000800006cc (0x0000100f) fence.i
+core   0: >>>>  i00000000b9
+core   0: 0x00000000800006d0 (0x2aa11e03) lh      t3, 682(sp)
+core   0: >>>>  i00000000ba
+core   0: 0x00000000800006d4 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000000bb
+core   0: 0x00000000800006d8 (0x012f3d33) sltu    s10, t5, s2
+core   0: 0x00000000800006dc (0x00091117) auipc   sp, 0x91
+core   0: 0x00000000800006e0 (0x92410113) addi    sp, sp, -1756
+core   0: 0x00000000800006e4 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x00000000800006e6 (0xc883031b) addiw   t1, t1, -888
+core   0: 0x00000000800006ea (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000000bc
+core   0: 0x00000000800006ec (0xa5e11923) sh      t5, -1454(sp)
+core   0: >>>>  i00000000bd
+core   0: 0x00000000800006f0 (0x3ff99717) auipc   a4, 0x3ff99
+core   0: >>>>  i00000000be
+core   0: 0x00000000800006f4 (0x0000100f) fence.i
+core   0: >>>>  i00000000bf
+core   0: 0x00000000800006f8 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000000c0
+core   0: 0x00000000800006fc (0x0000100f) fence.i
+core   0: >>>>  i00000000c1
+core   0: 0x0000000080000700 (0x54db8393) addi    t2, s7, 1357
+core   0: >>>>  i00000000c2
+core   0: 0x0000000080000704 (0x0000100f) fence.i
+core   0: >>>>  i00000000c3
+core   0: 0x0000000080000708 (0x03f56bbb) remw    s7, a0, t6
+core   0: >>>>  i00000000c4
+core   0: 0x000000008000070c (0x029dd5bb) divuw   a1, s11, s1
+core   0: >>>>  i00000000c5
+core   0: 0x0000000080000710 (0x79214b83) lbu     s7, 1938(sp)
+core   0: >>>>  i00000000c6
+core   0: 0x0000000080000714 (0x017bb433) sltu    s0, s7, s7
+core   0: >>>>  i00000000c7
+core   0: 0x0000000080000718 (0x0000100f) fence.i
+core   0: >>>>  i00000000c8
+core   0: 0x000000008000071c (0x03160bbb) mulw    s7, a2, a7
+core   0: >>>>  i00000000c9
+core   0: 0x0000000080000720 (0x0000100f) fence.i
+core   0: >>>>  i00000000ca
+core   0: 0x0000000080000724 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000000cb
+core   0: 0x0000000080000728 (0xf5310983) lb      s3, -173(sp)
+core   0: >>>>  i00000000cc
+core   0: 0x000000008000072c (0x0285dd3b) divuw   s10, a1, s0
+core   0: >>>>  i00000000cd
+core   0: 0x0000000080000730 (0x61e36817) auipc   a6, 0x61e36
+core   0: >>>>  i00000000ce
+core   0: 0x0000000080000734 (0x41c45593) srai    a1, s0, 28
+core   0: >>>>  i00000000cf
+core   0: 0x0000000080000738 (0x72910e23) sb      s1, 1852(sp)
+core   0: >>>>  i00000000d0
+core   0: 0x000000008000073c (0x40445d13) srai    s10, s0, 4
+core   0: >>>>  i00000000d1
+core   0: 0x0000000080000740 (0xb5914b83) lbu     s7, -1191(sp)
+core   0: >>>>  i00000000d2
+core   0: 0x0000000080000744 (0x0000100f) fence.i
+core   0: >>>>  i00000000d3
+core   0: 0x0000000080000748 (0x010a5d13) srli    s10, s4, 16
+core   0: >>>>  i00000000d4
+core   0: 0x000000008000074c (0x0064abb3) slt     s7, s1, t1
+core   0: >>>>  i00000000d5
+core   0: 0x0000000080000750 (0x00fe7bb3) and     s7, t3, a5
+core   0: >>>>  i00000000d6
+core   0: 0x0000000080000754 (0x0285cbbb) divw    s7, a1, s0
+core   0: >>>>  i00000000d7
+core   0: 0x0000000080000758 (0x028bfe3b) remuw   t3, s7, s0
+core   0: >>>>  i00000000d8
+core   0: 0x000000008000075c (0x07011403) lh      s0, 112(sp)
+core   0: >>>>  i00000000d9
+core   0: 0x0000000080000760 (0x0375893b) mulw    s2, a1, s7
+core   0: >>>>  i00000000da
+core   0: 0x0000000080000764 (0xf6911923) sh      s1, -142(sp)
+core   0: >>>>  i00000000db
+core   0: 0x0000000080000768 (0xc0411323) sh      tp, -1018(sp)
+core   0: >>>>  i00000000dc
+core   0: 0x000000008000076c (0x00858bb3) add     s7, a1, s0
+core   0: >>>>  i00000000dd
+core   0: 0x0000000080000770 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000000de
+core   0: 0x0000000080000774 (0x0000100f) fence.i
+core   0: >>>>  i00000000df
+core   0: 0x0000000080000778 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000000e0
+core   0: 0x000000008000077c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000000e1
+core   0: 0x0000000080000780 (0x028bc43b) divw    s0, s7, s0
+core   0: >>>>  i00000000e2
+core   0: 0x0000000080000784 (0x41f45213) srai    tp, s0, 31
+core   0: >>>>  i00000000e3
+core   0: 0x0000000080000788 (0x00bbf5b3) and     a1, s7, a1
+core   0: >>>>  i00000000e4
+core   0: 0x000000008000078c (0x43c11023) sh      t3, 1056(sp)
+core   0: >>>>  i00000000e5
+core   0: 0x0000000080000790 (0x63611c03) lh      s8, 1590(sp)
+core   0: >>>>  i00000000e6
+core   0: 0x0000000080000794 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000000e7
+core   0: 0x0000000080000798 (0x02c688bb) mulw    a7, a3, a2
+core   0: >>>>  i00000000e8
+core   0: 0x000000008000079c (0x02b5ee3b) remw    t3, a1, a1
+core   0: >>>>  i00000000e9
+core   0: 0x00000000800007a0 (0x00ef7433) and     s0, t5, a4
+core   0: >>>>  i00000000ea
+core   0: 0x00000000800007a4 (0xbcc15583) lhu     a1, -1076(sp)
+core   0: >>>>  i00000000eb
+core   0: 0x00000000800007a8 (0xf7710583) lb      a1, -137(sp)
+core   0: 0x00000000800007ac (0x00091117) auipc   sp, 0x91
+core   0: 0x00000000800007b0 (0x85410113) addi    sp, sp, -1964
+core   0: 0x00000000800007b4 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x00000000800007b6 (0xb083031b) addiw   t1, t1, -1272
+core   0: 0x00000000800007ba (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000000ec
+core   0: 0x00000000800007bc (0x73c12403) lw      s0, 1852(sp)
+core   0: >>>>  i00000000ed
+core   0: 0x00000000800007c0 (0x3f2b4f13) xori    t5, s6, 1010
+core   0: >>>>  i00000000ee
+core   0: 0x00000000800007c4 (0x0000100f) fence.i
+core   0: >>>>  i00000000ef
+core   0: 0x00000000800007c8 (0x03dc64bb) remw    s1, s8, t4
+core   0: >>>>  i00000000f0
+core   0: 0x00000000800007cc (0x03d11a23) sh      t4, 52(sp)
+core   0: >>>>  i00000000f1
+core   0: 0x00000000800007d0 (0x02bbf5bb) remuw   a1, s7, a1
+core   0: >>>>  i00000000f2
+core   0: 0x00000000800007d4 (0x44b10fa3) sb      a1, 1119(sp)
+core   0: >>>>  i00000000f3
+core   0: 0x00000000800007d8 (0x0375d5bb) divuw   a1, a1, s7
+core   0: >>>>  i00000000f4
+core   0: 0x00000000800007dc (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000000f5
+core   0: 0x00000000800007e0 (0x83611403) lh      s0, -1994(sp)
+core   0: >>>>  i00000000f6
+core   0: 0x00000000800007e4 (0x3d92fbb7) lui     s7, 0x3d92f
+core   0: >>>>  i00000000f7
+core   0: 0x00000000800007e8 (0x34510f23) sb      t0, 862(sp)
+core   0: >>>>  i00000000f8
+core   0: 0x00000000800007ec (0x414388b3) sub     a7, t2, s4
+core   0: >>>>  i00000000f9
+core   0: 0x00000000800007f0 (0x02b5d1bb) divuw   gp, a1, a1
+core   0: >>>>  i00000000fa
+core   0: 0x00000000800007f4 (0x0285debb) divuw   t4, a1, s0
+core   0: >>>>  i00000000fb
+core   0: 0x00000000800007f8 (0x46a14403) lbu     s0, 1130(sp)
+core   0: >>>>  i00000000fc
+core   0: 0x00000000800007fc (0x00bbd933) srl     s2, s7, a1
+core   0: >>>>  i00000000fd
+core   0: 0x0000000080000800 (0x02ec05bb) mulw    a1, s8, a4
+core   0: >>>>  i00000000fe
+core   0: 0x0000000080000804 (0x0000100f) fence.i
+core   0: >>>>  i00000000ff
+core   0: 0x0000000080000808 (0x375cabb572b7a3f) unknown
+core   0: exception trap_illegal_instruction, epc 0x0000000080000808
+core   0:           tval 0x00000000572b7a3f
+core   0: >>>>  trap_entry
+core   0: 0x0000000080000124 (0x0000716d) c.addi16sp sp, -272
+core   0: 0x0000000080000126 (0x0000e406) c.sdsp  ra, 8(sp)
+core   0: 0x0000000080000128 (0x0000e80a) c.sdsp  sp, 16(sp)
+core   0: 0x000000008000012a (0x0000ec0e) c.sdsp  gp, 24(sp)
+core   0: 0x000000008000012c (0x0000f012) c.sdsp  tp, 32(sp)
+core   0: 0x000000008000012e (0x0000f416) c.sdsp  t0, 40(sp)
+core   0: 0x0000000080000130 (0x0000f81a) c.sdsp  t1, 48(sp)
+core   0: 0x0000000080000132 (0x0000fc1e) c.sdsp  t2, 56(sp)
+core   0: 0x0000000080000134 (0x0000e0a2) c.sdsp  s0, 64(sp)
+core   0: 0x0000000080000136 (0x0000e4a6) c.sdsp  s1, 72(sp)
+core   0: 0x0000000080000138 (0x0000e8aa) c.sdsp  a0, 80(sp)
+core   0: 0x000000008000013a (0x0000ecae) c.sdsp  a1, 88(sp)
+core   0: 0x000000008000013c (0x0000f0b2) c.sdsp  a2, 96(sp)
+core   0: 0x000000008000013e (0x0000f4b6) c.sdsp  a3, 104(sp)
+core   0: 0x0000000080000140 (0x0000f8ba) c.sdsp  a4, 112(sp)
+core   0: 0x0000000080000142 (0x0000fcbe) c.sdsp  a5, 120(sp)
+core   0: 0x0000000080000144 (0x0000e142) c.sdsp  a6, 128(sp)
+core   0: 0x0000000080000146 (0x0000e546) c.sdsp  a7, 136(sp)
+core   0: 0x0000000080000148 (0x0000e94a) c.sdsp  s2, 144(sp)
+core   0: 0x000000008000014a (0x0000ed4e) c.sdsp  s3, 152(sp)
+core   0: 0x000000008000014c (0x0000f152) c.sdsp  s4, 160(sp)
+core   0: 0x000000008000014e (0x0000f556) c.sdsp  s5, 168(sp)
+core   0: 0x0000000080000150 (0x0000f95a) c.sdsp  s6, 176(sp)
+core   0: 0x0000000080000152 (0x0000fd5e) c.sdsp  s7, 184(sp)
+core   0: 0x0000000080000154 (0x0000e1e2) c.sdsp  s8, 192(sp)
+core   0: 0x0000000080000156 (0x0000e5e6) c.sdsp  s9, 200(sp)
+core   0: 0x0000000080000158 (0x0000e9ea) c.sdsp  s10, 208(sp)
+core   0: 0x000000008000015a (0x0000edee) c.sdsp  s11, 216(sp)
+core   0: 0x000000008000015c (0x0000f1f2) c.sdsp  t3, 224(sp)
+core   0: 0x000000008000015e (0x0000f5f6) c.sdsp  t4, 232(sp)
+core   0: 0x0000000080000160 (0x0000f9fa) c.sdsp  t5, 240(sp)
+core   0: 0x0000000080000162 (0x0000fdfe) c.sdsp  t6, 248(sp)
+core   0: 0x0000000080000164 (0x34202573) csrr    a0, mcause
+core   0: 0x0000000080000168 (0x341025f3) csrr    a1, mepc
+core   0: 0x000000008000016c (0x0005d603) lhu     a2, 0(a1)
+core   0: 0x0000000080000170 (0x00008a0d) c.andi  a2, 3
+core   0: 0x0000000080000172 (0x0000428d) c.li    t0, 3
+core   0: 0x0000000080000174 (0x00561563) bne     a2, t0, pc + 10
+core   0: 0x0000000080000178 (0x00000591) c.addi  a1, 4
+core   0: 0x000000008000017a (0x00000363) beqz    zero, pc + 6
+core   0: 0x0000000080000180 (0x34159073) csrw    mepc, a1
+core   0: 0x0000000080000184 (0x00006289) c.lui   t0, 0x2
+core   0: 0x0000000080000186 (0x8002829b) addiw   t0, t0, -2048
+core   0: 0x000000008000018a (0x3002a073) csrs    mstatus, t0
+core   0: 0x000000008000018e (0x000060a2) c.ldsp  ra, 8(sp)
+core   0: 0x0000000080000190 (0x00006142) c.ldsp  sp, 16(sp)
+core   0: 0x0000000080000192 (0x000061e2) c.ldsp  gp, 24(sp)
+core   0: 0x0000000080000194 (0x00007202) c.ldsp  tp, 32(sp)
+core   0: 0x0000000080000196 (0x000072a2) c.ldsp  t0, 40(sp)
+core   0: 0x0000000080000198 (0x00007342) c.ldsp  t1, 48(sp)
+core   0: 0x000000008000019a (0x000073e2) c.ldsp  t2, 56(sp)
+core   0: 0x000000008000019c (0x00006406) c.ldsp  s0, 64(sp)
+core   0: 0x000000008000019e (0x000064a6) c.ldsp  s1, 72(sp)
+core   0: 0x00000000800001a0 (0x00006546) c.ldsp  a0, 80(sp)
+core   0: 0x00000000800001a2 (0x000065e6) c.ldsp  a1, 88(sp)
+core   0: 0x00000000800001a4 (0x00007606) c.ldsp  a2, 96(sp)
+core   0: 0x00000000800001a6 (0x000076a6) c.ldsp  a3, 104(sp)
+core   0: 0x00000000800001a8 (0x00007746) c.ldsp  a4, 112(sp)
+core   0: 0x00000000800001aa (0x000077e6) c.ldsp  a5, 120(sp)
+core   0: 0x00000000800001ac (0x0000680a) c.ldsp  a6, 128(sp)
+core   0: 0x00000000800001ae (0x000068aa) c.ldsp  a7, 136(sp)
+core   0: 0x00000000800001b0 (0x0000694a) c.ldsp  s2, 144(sp)
+core   0: 0x00000000800001b2 (0x000069ea) c.ldsp  s3, 152(sp)
+core   0: 0x00000000800001b4 (0x00007a0a) c.ldsp  s4, 160(sp)
+core   0: 0x00000000800001b6 (0x00007aaa) c.ldsp  s5, 168(sp)
+core   0: 0x00000000800001b8 (0x00007b4a) c.ldsp  s6, 176(sp)
+core   0: 0x00000000800001ba (0x00007bea) c.ldsp  s7, 184(sp)
+core   0: 0x00000000800001bc (0x00006c0e) c.ldsp  s8, 192(sp)
+core   0: 0x00000000800001be (0x00006cae) c.ldsp  s9, 200(sp)
+core   0: 0x00000000800001c0 (0x00006d4e) c.ldsp  s10, 208(sp)
+core   0: 0x00000000800001c2 (0x00006dee) c.ldsp  s11, 216(sp)
+core   0: 0x00000000800001c4 (0x00007e0e) c.ldsp  t3, 224(sp)
+core   0: 0x00000000800001c6 (0x00007eae) c.ldsp  t4, 232(sp)
+core   0: 0x00000000800001c8 (0x00007f4e) c.ldsp  t5, 240(sp)
+core   0: 0x00000000800001ca (0x00007fee) c.ldsp  t6, 248(sp)
+core   0: 0x00000000800001cc (0x00006151) c.addi16sp sp, 272
+core   0: 0x00000000800001ce (0x30200073) mret
+core   0: >>>>  i0000000100
+core   0: 0x000000008000080c (0x0375cabb) divw    s5, a1, s7
+core   0: >>>>  i0000000101
+core   0: 0x0000000080000810 (0x98710023) sb      t2, -1664(sp)
+core   0: >>>>  i0000000102
+core   0: 0x0000000080000814 (0x76812623) sw      s0, 1900(sp)
+core   0: >>>>  i0000000103
+core   0: 0x0000000080000818 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000104
+core   0: 0x000000008000081c (0x40bbd593) srai    a1, s7, 11
+core   0: >>>>  i0000000105
+core   0: 0x0000000080000820 (0x008be833) or      a6, s7, s0
+core   0: >>>>  i0000000106
+core   0: 0x0000000080000824 (0x0000100f) fence.i
+core   0: >>>>  i0000000107
+core   0: 0x0000000080000828 (0x0000100f) fence.i
+core   0: >>>>  i0000000108
+core   0: 0x000000008000082c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000109
+core   0: 0x0000000080000830 (0x0000100f) fence.i
+core   0: >>>>  i000000010a
+core   0: 0x0000000080000834 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000010b
+core   0: 0x0000000080000838 (0x03bb7bbb) remuw   s7, s6, s11
+core   0: >>>>  i000000010c
+core   0: 0x000000008000083c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000010d
+core   0: 0x0000000080000840 (0x34f5c593) xori    a1, a1, 847
+core   0: >>>>  i000000010e
+core   0: 0x0000000080000844 (0x00e1fbb3) and     s7, gp, a4
+core   0: >>>>  i000000010f
+core   0: 0x0000000080000848 (0xb2210583) lb      a1, -1246(sp)
+core   0: >>>>  i0000000110
+core   0: 0x000000008000084c (0x034a873b) mulw    a4, s5, s4
+core   0: >>>>  i0000000111
+core   0: 0x0000000080000850 (0x00842bb3) slt     s7, s0, s0
+core   0: >>>>  i0000000112
+core   0: 0x0000000080000854 (0x01759bb3) sll     s7, a1, s7
+core   0: >>>>  i0000000113
+core   0: 0x0000000080000858 (0x037bc9bb) divw    s3, s7, s7
+core   0: >>>>  i0000000114
+core   0: 0x000000008000085c (0x0000100f) fence.i
+core   0: >>>>  i0000000115
+core   0: 0x0000000080000860 (0x0085bbb3) sltu    s7, a1, s0
+core   0: >>>>  i0000000116
+core   0: 0x0000000080000864 (0x017b8433) add     s0, s7, s7
+core   0: >>>>  i0000000117
+core   0: 0x0000000080000868 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000118
+core   0: 0x000000008000086c (0x02b5fabb) remuw   s5, a1, a1
+core   0: >>>>  i0000000119
+core   0: 0x0000000080000870 (0x5ed0fd37) lui     s10, 0x5ed0f
+core   0: >>>>  i000000011a
+core   0: 0x0000000080000874 (0x45711d23) sh      s7, 1114(sp)
+core   0: >>>>  i000000011b
+core   0: 0x0000000080000878 (0x6420fb97) auipc   s7, 0x6420f
+core   0: >>>>  i000000011c
+core   0: 0x000000008000087c (0x24d14b83) lbu     s7, 589(sp)
+core   0: >>>>  i000000011d
+core   0: 0x0000000080000880 (0x020f743b) remuw   s0, t5, zero
+core   0: >>>>  i000000011e
+core   0: 0x0000000080000884 (0x02cfdfbb) divuw   t6, t6, a2
+core   0: >>>>  i000000011f
+core   0: 0x0000000080000888 (0x0000100f) fence.i
+core   0: >>>>  i0000000120
+core   0: 0x000000008000088c (0x48b11023) sh      a1, 1152(sp)
+core   0: >>>>  i0000000121
+core   0: 0x0000000080000890 (0x7b455417) auipc   s0, 0x7b455
+core   0: >>>>  i0000000122
+core   0: 0x0000000080000894 (0x01a31433) sll     s0, t1, s10
+core   0: >>>>  i0000000123
+core   0: 0x0000000080000898 (0xae615683) lhu     a3, -1306(sp)
+core   0: >>>>  i0000000124
+core   0: 0x000000008000089c (0x005fcbb3) xor     s7, t6, t0
+core   0: >>>>  i0000000125
+core   0: 0x00000000800008a0 (0x0375f2bb) remuw   t0, a1, s7
+core   0: >>>>  i0000000126
+core   0: 0x00000000800008a4 (0x02b4043b) mulw    s0, s0, a1
+core   0: >>>>  i0000000127
+core   0: 0x00000000800008a8 (0x0000100f) fence.i
+core   0: >>>>  i0000000128
+core   0: 0x00000000800008ac (0x0301e5bb) remw    a1, gp, a6
+core   0: >>>>  i0000000129
+core   0: 0x00000000800008b0 (0x0000100f) fence.i
+core   0: >>>>  i000000012a
+core   0: 0x00000000800008b4 (0x0000100f) fence.i
+core   0: >>>>  i000000012b
+core   0: 0x00000000800008b8 (0x028bfbbb) remuw   s7, s7, s0
+core   0: >>>>  i000000012c
+core   0: 0x00000000800008bc (0x40e2d2b3) sra     t0, t0, a4
+core   0: >>>>  i000000012d
+core   0: 0x00000000800008c0 (0xa28105a3) sb      s0, -1493(sp)
+core   0: >>>>  i000000012e
+core   0: 0x00000000800008c4 (0x02b5cbbb) divw    s7, a1, a1
+core   0: 0x00000000800008c8 (0x00090117) auipc   sp, 0x90
+core   0: 0x00000000800008cc (0x73810113) addi    sp, sp, 1848
+core   0: 0x00000000800008d0 (0x00006305) c.lui   t1, 0x1
+core   0: 0x00000000800008d2 (0x4283031b) addiw   t1, t1, 1064
+core   0: 0x00000000800008d6 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i000000012f
+core   0: 0x00000000800008d8 (0x62812e23) sw      s0, 1596(sp)
+core   0: >>>>  i0000000130
+core   0: 0x00000000800008dc (0x00bbafb3) slt     t6, s7, a1
+core   0: >>>>  i0000000131
+core   0: 0x00000000800008e0 (0x12a5f713) andi    a4, a1, 298
+core   0: >>>>  i0000000132
+core   0: 0x00000000800008e4 (0x01f11923) sh      t6, 18(sp)
+core   0: >>>>  i0000000133
+core   0: 0x00000000800008e8 (0x01197633) and     a2, s2, a7
+core   0: >>>>  i0000000134
+core   0: 0x00000000800008ec (0x005296b3) sll     a3, t0, t0
+core   0: 0x00000000800008f0 (0x00090117) auipc   sp, 0x90
+core   0: 0x00000000800008f4 (0x71010113) addi    sp, sp, 1808
+core   0: 0x00000000800008f8 (0x00006305) c.lui   t1, 0x1
+core   0: 0x00000000800008fa (0x9083031b) addiw   t1, t1, -1784
+core   0: 0x00000000800008fe (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000135
+core   0: 0x0000000080000900 (0x11011403) lh      s0, 272(sp)
+core   0: >>>>  i0000000136
+core   0: 0x0000000080000904 (0x4ef10903) lb      s2, 1263(sp)
+core   0: >>>>  i0000000137
+core   0: 0x0000000080000908 (0x0137f5b3) and     a1, a5, s3
+core   0: >>>>  i0000000138
+core   0: 0x000000008000090c (0x039044bb) divw    s1, zero, s9
+core   0: >>>>  i0000000139
+core   0: 0x0000000080000910 (0x0000100f) fence.i
+core   0: >>>>  i000000013a
+core   0: 0x0000000080000914 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000013b
+core   0: 0x0000000080000918 (0xe97e3413) sltiu   s0, t3, -361
+core   0: >>>>  i000000013c
+core   0: 0x000000008000091c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000013d
+core   0: 0x0000000080000920 (0x0000100f) fence.i
+core   0: >>>>  i000000013e
+core   0: 0x0000000080000924 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000013f
+core   0: 0x0000000080000928 (0x00e6bbb3) sltu    s7, a3, a4
+core   0: >>>>  i0000000140
+core   0: 0x000000008000092c (0x0000100f) fence.i
+core   0: >>>>  i0000000141
+core   0: 0x0000000080000930 (0x0000100f) fence.i
+core   0: >>>>  i0000000142
+core   0: 0x0000000080000934 (0x0000100f) fence.i
+core   0: >>>>  i0000000143
+core   0: 0x0000000080000938 (0x1b5da3b7) lui     t2, 0x1b5da
+core   0: >>>>  i0000000144
+core   0: 0x000000008000093c (0x0000100f) fence.i
+core   0: >>>>  i0000000145
+core   0: 0x0000000080000940 (0x0249ebbb) remw    s7, s3, tp
+core   0: >>>>  i0000000146
+core   0: 0x0000000080000944 (0x4e015403) lhu     s0, 1248(sp)
+core   0: >>>>  i0000000147
+core   0: 0x0000000080000948 (0x0000100f) fence.i
+core   0: >>>>  i0000000148
+core   0: 0x000000008000094c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000149
+core   0: 0x0000000080000950 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000014a
+core   0: 0x0000000080000954 (0x01b4f3b3) and     t2, s1, s11
+core   0: >>>>  i000000014b
+core   0: 0x0000000080000958 (0x0000100f) fence.i
+core   0: >>>>  i000000014c
+core   0: 0x000000008000095c (0x00008c01) c.sub   s0, s0
+core   0: >>>>  i000000014d
+core   0: 0x000000008000095e (0x00008e68) unknown
+core   0: exception trap_illegal_instruction, epc 0x000000008000095e
+core   0:           tval 0x0000000000008e68
+core   0: >>>>  trap_entry
+core   0: 0x0000000080000124 (0x0000716d) c.addi16sp sp, -272
+core   0: 0x0000000080000126 (0x0000e406) c.sdsp  ra, 8(sp)
+core   0: 0x0000000080000128 (0x0000e80a) c.sdsp  sp, 16(sp)
+core   0: 0x000000008000012a (0x0000ec0e) c.sdsp  gp, 24(sp)
+core   0: 0x000000008000012c (0x0000f012) c.sdsp  tp, 32(sp)
+core   0: 0x000000008000012e (0x0000f416) c.sdsp  t0, 40(sp)
+core   0: 0x0000000080000130 (0x0000f81a) c.sdsp  t1, 48(sp)
+core   0: 0x0000000080000132 (0x0000fc1e) c.sdsp  t2, 56(sp)
+core   0: 0x0000000080000134 (0x0000e0a2) c.sdsp  s0, 64(sp)
+core   0: 0x0000000080000136 (0x0000e4a6) c.sdsp  s1, 72(sp)
+core   0: 0x0000000080000138 (0x0000e8aa) c.sdsp  a0, 80(sp)
+core   0: 0x000000008000013a (0x0000ecae) c.sdsp  a1, 88(sp)
+core   0: 0x000000008000013c (0x0000f0b2) c.sdsp  a2, 96(sp)
+core   0: 0x000000008000013e (0x0000f4b6) c.sdsp  a3, 104(sp)
+core   0: 0x0000000080000140 (0x0000f8ba) c.sdsp  a4, 112(sp)
+core   0: 0x0000000080000142 (0x0000fcbe) c.sdsp  a5, 120(sp)
+core   0: 0x0000000080000144 (0x0000e142) c.sdsp  a6, 128(sp)
+core   0: 0x0000000080000146 (0x0000e546) c.sdsp  a7, 136(sp)
+core   0: 0x0000000080000148 (0x0000e94a) c.sdsp  s2, 144(sp)
+core   0: 0x000000008000014a (0x0000ed4e) c.sdsp  s3, 152(sp)
+core   0: 0x000000008000014c (0x0000f152) c.sdsp  s4, 160(sp)
+core   0: 0x000000008000014e (0x0000f556) c.sdsp  s5, 168(sp)
+core   0: 0x0000000080000150 (0x0000f95a) c.sdsp  s6, 176(sp)
+core   0: 0x0000000080000152 (0x0000fd5e) c.sdsp  s7, 184(sp)
+core   0: 0x0000000080000154 (0x0000e1e2) c.sdsp  s8, 192(sp)
+core   0: 0x0000000080000156 (0x0000e5e6) c.sdsp  s9, 200(sp)
+core   0: 0x0000000080000158 (0x0000e9ea) c.sdsp  s10, 208(sp)
+core   0: 0x000000008000015a (0x0000edee) c.sdsp  s11, 216(sp)
+core   0: 0x000000008000015c (0x0000f1f2) c.sdsp  t3, 224(sp)
+core   0: 0x000000008000015e (0x0000f5f6) c.sdsp  t4, 232(sp)
+core   0: 0x0000000080000160 (0x0000f9fa) c.sdsp  t5, 240(sp)
+core   0: 0x0000000080000162 (0x0000fdfe) c.sdsp  t6, 248(sp)
+core   0: 0x0000000080000164 (0x34202573) csrr    a0, mcause
+core   0: 0x0000000080000168 (0x341025f3) csrr    a1, mepc
+core   0: 0x000000008000016c (0x0005d603) lhu     a2, 0(a1)
+core   0: 0x0000000080000170 (0x00008a0d) c.andi  a2, 3
+core   0: 0x0000000080000172 (0x0000428d) c.li    t0, 3
+core   0: 0x0000000080000174 (0x00561563) bne     a2, t0, pc + 10
+core   0: 0x000000008000017e (0x00000589) c.addi  a1, 2
+core   0: 0x0000000080000180 (0x34159073) csrw    mepc, a1
+core   0: 0x0000000080000184 (0x00006289) c.lui   t0, 0x2
+core   0: 0x0000000080000186 (0x8002829b) addiw   t0, t0, -2048
+core   0: 0x000000008000018a (0x3002a073) csrs    mstatus, t0
+core   0: 0x000000008000018e (0x000060a2) c.ldsp  ra, 8(sp)
+core   0: 0x0000000080000190 (0x00006142) c.ldsp  sp, 16(sp)
+core   0: 0x0000000080000192 (0x000061e2) c.ldsp  gp, 24(sp)
+core   0: 0x0000000080000194 (0x00007202) c.ldsp  tp, 32(sp)
+core   0: 0x0000000080000196 (0x000072a2) c.ldsp  t0, 40(sp)
+core   0: 0x0000000080000198 (0x00007342) c.ldsp  t1, 48(sp)
+core   0: 0x000000008000019a (0x000073e2) c.ldsp  t2, 56(sp)
+core   0: 0x000000008000019c (0x00006406) c.ldsp  s0, 64(sp)
+core   0: 0x000000008000019e (0x000064a6) c.ldsp  s1, 72(sp)
+core   0: 0x00000000800001a0 (0x00006546) c.ldsp  a0, 80(sp)
+core   0: 0x00000000800001a2 (0x000065e6) c.ldsp  a1, 88(sp)
+core   0: 0x00000000800001a4 (0x00007606) c.ldsp  a2, 96(sp)
+core   0: 0x00000000800001a6 (0x000076a6) c.ldsp  a3, 104(sp)
+core   0: 0x00000000800001a8 (0x00007746) c.ldsp  a4, 112(sp)
+core   0: 0x00000000800001aa (0x000077e6) c.ldsp  a5, 120(sp)
+core   0: 0x00000000800001ac (0x0000680a) c.ldsp  a6, 128(sp)
+core   0: 0x00000000800001ae (0x000068aa) c.ldsp  a7, 136(sp)
+core   0: 0x00000000800001b0 (0x0000694a) c.ldsp  s2, 144(sp)
+core   0: 0x00000000800001b2 (0x000069ea) c.ldsp  s3, 152(sp)
+core   0: 0x00000000800001b4 (0x00007a0a) c.ldsp  s4, 160(sp)
+core   0: 0x00000000800001b6 (0x00007aaa) c.ldsp  s5, 168(sp)
+core   0: 0x00000000800001b8 (0x00007b4a) c.ldsp  s6, 176(sp)
+core   0: 0x00000000800001ba (0x00007bea) c.ldsp  s7, 184(sp)
+core   0: 0x00000000800001bc (0x00006c0e) c.ldsp  s8, 192(sp)
+core   0: 0x00000000800001be (0x00006cae) c.ldsp  s9, 200(sp)
+core   0: 0x00000000800001c0 (0x00006d4e) c.ldsp  s10, 208(sp)
+core   0: 0x00000000800001c2 (0x00006dee) c.ldsp  s11, 216(sp)
+core   0: 0x00000000800001c4 (0x00007e0e) c.ldsp  t3, 224(sp)
+core   0: 0x00000000800001c6 (0x00007eae) c.ldsp  t4, 232(sp)
+core   0: 0x00000000800001c8 (0x00007f4e) c.ldsp  t5, 240(sp)
+core   0: 0x00000000800001ca (0x00007fee) c.ldsp  t6, 248(sp)
+core   0: 0x00000000800001cc (0x00006151) c.addi16sp sp, 272
+core   0: 0x00000000800001ce (0x30200073) mret
+core   0: >>>>  i000000014e
+core   0: 0x0000000080000960 (0x03c071bb) remuw   gp, zero, t3
+core   0: >>>>  i000000014f
+core   0: 0x0000000080000964 (0x064104a3) sb      tp, 105(sp)
+core   0: >>>>  i0000000150
+core   0: 0x0000000080000968 (0x01aadeb3) srl     t4, s5, s10
+core   0: >>>>  i0000000151
+core   0: 0x000000008000096c (0x004eb5b3) sltu    a1, t4, tp
+core   0: >>>>  i0000000152
+core   0: 0x0000000080000970 (0x0284443b) divw    s0, s0, s0
+core   0: >>>>  i0000000153
+core   0: 0x0000000080000974 (0x037bd6bb) divuw   a3, s7, s7
+core   0: >>>>  i0000000154
+core   0: 0x0000000080000978 (0x0000100f) fence.i
+core   0: >>>>  i0000000155
+core   0: 0x000000008000097c (0xdb912623) sw      s9, -596(sp)
+core   0: >>>>  i0000000156
+core   0: 0x0000000080000980 (0x02defbbb) remuw   s7, t4, a3
+core   0: >>>>  i0000000157
+core   0: 0x0000000080000984 (0x016aecb3) or      s9, s5, s6
+core   0: >>>>  i0000000158
+core   0: 0x0000000080000988 (0x00bbc333) xor     t1, s7, a1
+core   0: >>>>  i0000000159
+core   0: 0x000000008000098c (0x01ce8bb3) add     s7, t4, t3
+core   0: >>>>  i000000015a
+core   0: 0x0000000080000990 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000015b
+core   0: 0x0000000080000994 (0x020549bb) divw    s3, a0, zero
+core   0: >>>>  i000000015c
+core   0: 0x0000000080000998 (0x00004606) c.lwsp  a2, 64(sp)
+core   0: >>>>  i000000015d
+core   0: 0x000000008000099a (0x0000100f) fence.i
+core   0: >>>>  i000000015e
+core   0: 0x000000008000099e (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000015f
+core   0: 0x00000000800009a2 (0x0000100f) fence.i
+core   0: >>>>  i0000000160
+core   0: 0x00000000800009a6 (0x0000100f) fence.i
+core   0: >>>>  i0000000161
+core   0: 0x00000000800009aa (0xe6810623) sb      s0, -404(sp)
+core   0: >>>>  i0000000162
+core   0: 0x00000000800009ae (0x40b5deb3) sra     t4, a1, a1
+core   0: >>>>  i0000000163
+core   0: 0x00000000800009b2 (0x4c415b83) lhu     s7, 1220(sp)
+core   0: >>>>  i0000000164
+core   0: 0x00000000800009b6 (0xc6b12c23) sw      a1, -904(sp)
+core   0: >>>>  i0000000165
+core   0: 0x00000000800009ba (0x0374083b) mulw    a6, s0, s7
+core   0: >>>>  i0000000166
+core   0: 0x00000000800009be (0xe9610583) lb      a1, -362(sp)
+core   0: >>>>  i0000000167
+core   0: 0x00000000800009c2 (0x0000100f) fence.i
+core   0: >>>>  i0000000168
+core   0: 0x00000000800009c6 (0x037be03b) remw    zero, s7, s7
+core   0: >>>>  i0000000169
+core   0: 0x00000000800009ca (0x03aafbbb) remuw   s7, s5, s10
+core   0: >>>>  i000000016a
+core   0: 0x00000000800009ce (0x76c12423) sw      a2, 1896(sp)
+core   0: >>>>  i000000016b
+core   0: 0x00000000800009d2 (0x00bbff33) and     t5, s7, a1
+core   0: >>>>  i000000016c
+core   0: 0x00000000800009d6 (0x3b972313) slti    t1, a4, 953
+core   0: >>>>  i000000016d
+core   0: 0x00000000800009da (0x277e8613) addi    a2, t4, 631
+core   0: >>>>  i000000016e
+core   0: 0x00000000800009de (0x02b447bb) divw    a5, s0, a1
+core   0: >>>>  i000000016f
+core   0: 0x00000000800009e2 (0x03325fbb) divuw   t6, tp, s3
+core   0: >>>>  i0000000170
+core   0: 0x00000000800009e6 (0x03fd45bb) divw    a1, s10, t6
+core   0: >>>>  i0000000171
+core   0: 0x00000000800009ea (0xf0914003) lbu     zero, -247(sp)
+core   0: >>>>  i0000000172
+core   0: 0x00000000800009ee (0xc7814403) lbu     s0, -904(sp)
+core   0: >>>>  i0000000173
+core   0: 0x00000000800009f2 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000174
+core   0: 0x00000000800009f6 (0x9aa11283) lh      t0, -1622(sp)
+core   0: >>>>  i0000000175
+core   0: 0x00000000800009fa (0x03744bbb) divw    s7, s0, s7
+core   0: >>>>  i0000000176
+core   0: 0x00000000800009fe (0x02840bbb) mulw    s7, s0, s0
+core   0: >>>>  i0000000177
+core   0: 0x0000000080000a02 (0x00847bb3) and     s7, s0, s0
+core   0: 0x0000000080000a06 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000a0a (0x5fa10113) addi    sp, sp, 1530
+core   0: 0x0000000080000a0e (0x0000630d) c.lui   t1, 0x3
+core   0: 0x0000000080000a10 (0xb483031b) addiw   t1, t1, -1208
+core   0: 0x0000000080000a14 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000178
+core   0: 0x0000000080000a16 (0xf1412283) lw      t0, -236(sp)
+core   0: >>>>  i0000000179
+core   0: 0x0000000080000a1a (0x030a6cbb) remw    s9, s4, a6
+core   0: >>>>  i000000017a
+core   0: 0x0000000080000a1e (0x2a810523) sb      s0, 682(sp)
+core   0: >>>>  i000000017b
+core   0: 0x0000000080000a22 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000017c
+core   0: 0x0000000080000a26 (0x00009494) unknown
+core   0: exception trap_illegal_instruction, epc 0x0000000080000a26
+core   0:           tval 0x0000000000009494
+core   0: >>>>  trap_entry
+core   0: 0x0000000080000124 (0x0000716d) c.addi16sp sp, -272
+core   0: 0x0000000080000126 (0x0000e406) c.sdsp  ra, 8(sp)
+core   0: 0x0000000080000128 (0x0000e80a) c.sdsp  sp, 16(sp)
+core   0: 0x000000008000012a (0x0000ec0e) c.sdsp  gp, 24(sp)
+core   0: 0x000000008000012c (0x0000f012) c.sdsp  tp, 32(sp)
+core   0: 0x000000008000012e (0x0000f416) c.sdsp  t0, 40(sp)
+core   0: 0x0000000080000130 (0x0000f81a) c.sdsp  t1, 48(sp)
+core   0: 0x0000000080000132 (0x0000fc1e) c.sdsp  t2, 56(sp)
+core   0: 0x0000000080000134 (0x0000e0a2) c.sdsp  s0, 64(sp)
+core   0: 0x0000000080000136 (0x0000e4a6) c.sdsp  s1, 72(sp)
+core   0: 0x0000000080000138 (0x0000e8aa) c.sdsp  a0, 80(sp)
+core   0: 0x000000008000013a (0x0000ecae) c.sdsp  a1, 88(sp)
+core   0: 0x000000008000013c (0x0000f0b2) c.sdsp  a2, 96(sp)
+core   0: 0x000000008000013e (0x0000f4b6) c.sdsp  a3, 104(sp)
+core   0: 0x0000000080000140 (0x0000f8ba) c.sdsp  a4, 112(sp)
+core   0: 0x0000000080000142 (0x0000fcbe) c.sdsp  a5, 120(sp)
+core   0: 0x0000000080000144 (0x0000e142) c.sdsp  a6, 128(sp)
+core   0: 0x0000000080000146 (0x0000e546) c.sdsp  a7, 136(sp)
+core   0: 0x0000000080000148 (0x0000e94a) c.sdsp  s2, 144(sp)
+core   0: 0x000000008000014a (0x0000ed4e) c.sdsp  s3, 152(sp)
+core   0: 0x000000008000014c (0x0000f152) c.sdsp  s4, 160(sp)
+core   0: 0x000000008000014e (0x0000f556) c.sdsp  s5, 168(sp)
+core   0: 0x0000000080000150 (0x0000f95a) c.sdsp  s6, 176(sp)
+core   0: 0x0000000080000152 (0x0000fd5e) c.sdsp  s7, 184(sp)
+core   0: 0x0000000080000154 (0x0000e1e2) c.sdsp  s8, 192(sp)
+core   0: 0x0000000080000156 (0x0000e5e6) c.sdsp  s9, 200(sp)
+core   0: 0x0000000080000158 (0x0000e9ea) c.sdsp  s10, 208(sp)
+core   0: 0x000000008000015a (0x0000edee) c.sdsp  s11, 216(sp)
+core   0: 0x000000008000015c (0x0000f1f2) c.sdsp  t3, 224(sp)
+core   0: 0x000000008000015e (0x0000f5f6) c.sdsp  t4, 232(sp)
+core   0: 0x0000000080000160 (0x0000f9fa) c.sdsp  t5, 240(sp)
+core   0: 0x0000000080000162 (0x0000fdfe) c.sdsp  t6, 248(sp)
+core   0: 0x0000000080000164 (0x34202573) csrr    a0, mcause
+core   0: 0x0000000080000168 (0x341025f3) csrr    a1, mepc
+core   0: 0x000000008000016c (0x0005d603) lhu     a2, 0(a1)
+core   0: 0x0000000080000170 (0x00008a0d) c.andi  a2, 3
+core   0: 0x0000000080000172 (0x0000428d) c.li    t0, 3
+core   0: 0x0000000080000174 (0x00561563) bne     a2, t0, pc + 10
+core   0: 0x000000008000017e (0x00000589) c.addi  a1, 2
+core   0: 0x0000000080000180 (0x34159073) csrw    mepc, a1
+core   0: 0x0000000080000184 (0x00006289) c.lui   t0, 0x2
+core   0: 0x0000000080000186 (0x8002829b) addiw   t0, t0, -2048
+core   0: 0x000000008000018a (0x3002a073) csrs    mstatus, t0
+core   0: 0x000000008000018e (0x000060a2) c.ldsp  ra, 8(sp)
+core   0: 0x0000000080000190 (0x00006142) c.ldsp  sp, 16(sp)
+core   0: 0x0000000080000192 (0x000061e2) c.ldsp  gp, 24(sp)
+core   0: 0x0000000080000194 (0x00007202) c.ldsp  tp, 32(sp)
+core   0: 0x0000000080000196 (0x000072a2) c.ldsp  t0, 40(sp)
+core   0: 0x0000000080000198 (0x00007342) c.ldsp  t1, 48(sp)
+core   0: 0x000000008000019a (0x000073e2) c.ldsp  t2, 56(sp)
+core   0: 0x000000008000019c (0x00006406) c.ldsp  s0, 64(sp)
+core   0: 0x000000008000019e (0x000064a6) c.ldsp  s1, 72(sp)
+core   0: 0x00000000800001a0 (0x00006546) c.ldsp  a0, 80(sp)
+core   0: 0x00000000800001a2 (0x000065e6) c.ldsp  a1, 88(sp)
+core   0: 0x00000000800001a4 (0x00007606) c.ldsp  a2, 96(sp)
+core   0: 0x00000000800001a6 (0x000076a6) c.ldsp  a3, 104(sp)
+core   0: 0x00000000800001a8 (0x00007746) c.ldsp  a4, 112(sp)
+core   0: 0x00000000800001aa (0x000077e6) c.ldsp  a5, 120(sp)
+core   0: 0x00000000800001ac (0x0000680a) c.ldsp  a6, 128(sp)
+core   0: 0x00000000800001ae (0x000068aa) c.ldsp  a7, 136(sp)
+core   0: 0x00000000800001b0 (0x0000694a) c.ldsp  s2, 144(sp)
+core   0: 0x00000000800001b2 (0x000069ea) c.ldsp  s3, 152(sp)
+core   0: 0x00000000800001b4 (0x00007a0a) c.ldsp  s4, 160(sp)
+core   0: 0x00000000800001b6 (0x00007aaa) c.ldsp  s5, 168(sp)
+core   0: 0x00000000800001b8 (0x00007b4a) c.ldsp  s6, 176(sp)
+core   0: 0x00000000800001ba (0x00007bea) c.ldsp  s7, 184(sp)
+core   0: 0x00000000800001bc (0x00006c0e) c.ldsp  s8, 192(sp)
+core   0: 0x00000000800001be (0x00006cae) c.ldsp  s9, 200(sp)
+core   0: 0x00000000800001c0 (0x00006d4e) c.ldsp  s10, 208(sp)
+core   0: 0x00000000800001c2 (0x00006dee) c.ldsp  s11, 216(sp)
+core   0: 0x00000000800001c4 (0x00007e0e) c.ldsp  t3, 224(sp)
+core   0: 0x00000000800001c6 (0x00007eae) c.ldsp  t4, 232(sp)
+core   0: 0x00000000800001c8 (0x00007f4e) c.ldsp  t5, 240(sp)
+core   0: 0x00000000800001ca (0x00007fee) c.ldsp  t6, 248(sp)
+core   0: 0x00000000800001cc (0x00006151) c.addi16sp sp, 272
+core   0: 0x00000000800001ce (0x30200073) mret
+core   0: >>>>  i000000017d
+core   0: 0x0000000080000a28 (0xa2415683) lhu     a3, -1500(sp)
+core   0: >>>>  i000000017e
+core   0: 0x0000000080000a2c (0x03f48e3b) mulw    t3, s1, t6
+core   0: >>>>  i000000017f
+core   0: 0x0000000080000a30 (0x5fc6e293) ori     t0, a3, 1532
+core   0: >>>>  i0000000180
+core   0: 0x0000000080000a34 (0x96812e23) sw      s0, -1668(sp)
+core   0: >>>>  i0000000181
+core   0: 0x0000000080000a38 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000182
+core   0: 0x0000000080000a3c (0x0000100f) fence.i
+core   0: >>>>  i0000000183
+core   0: 0x0000000080000a40 (0x41f45213) srai    tp, s0, 31
+core   0: >>>>  i0000000184
+core   0: 0x0000000080000a44 (0x0000c37e) c.swsp  t6, 132(sp)
+core   0: >>>>  i0000000185
+core   0: 0x0000000080000a46 (0x0000100f) fence.i
+core   0: >>>>  i0000000186
+core   0: 0x0000000080000a4a (0x03d7fbbb) remuw   s7, a5, t4
+core   0: >>>>  i0000000187
+core   0: 0x0000000080000a4e (0x034885bb) mulw    a1, a7, s4
+core   0: >>>>  i0000000188
+core   0: 0x0000000080000a52 (0x42d46737) lui     a4, 0x42d46
+core   0: >>>>  i0000000189
+core   0: 0x0000000080000a56 (0x35210c03) lb      s8, 850(sp)
+core   0: >>>>  i000000018a
+core   0: 0x0000000080000a5a (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000018b
+core   0: 0x0000000080000a5e (0xc0811023) sh      s0, -1024(sp)
+core   0: >>>>  i000000018c
+core   0: 0x0000000080000a62 (0x023a843b) mulw    s0, s5, gp
+core   0: >>>>  i000000018d
+core   0: 0x0000000080000a66 (0x017babb3) slt     s7, s7, s7
+core   0: 0x0000000080000a6a (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000a6e (0x59610113) addi    sp, sp, 1430
+core   0: 0x0000000080000a72 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x0000000080000a74 (0x0a03031b) addiw   t1, t1, 160
+core   0: 0x0000000080000a78 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i000000018e
+core   0: 0x0000000080000a7a (0x35e15003) lhu     zero, 862(sp)
+core   0: >>>>  i000000018f
+core   0: 0x0000000080000a7e (0x02845bbb) divuw   s7, s0, s0
+core   0: >>>>  i0000000190
+core   0: 0x0000000080000a82 (0x0000100f) fence.i
+core   0: >>>>  i0000000191
+core   0: 0x0000000080000a86 (0x034f863b) mulw    a2, t6, s4
+core   0: >>>>  i0000000192
+core   0: 0x0000000080000a8a (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000193
+core   0: 0x0000000080000a8e (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000194
+core   0: 0x0000000080000a92 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000195
+core   0: 0x0000000080000a96 (0x0000100f) fence.i
+core   0: >>>>  i0000000196
+core   0: 0x0000000080000a9a (0x0c214403) lbu     s0, 194(sp)
+core   0: >>>>  i0000000197
+core   0: 0x0000000080000a9e (0x017babb3) slt     s7, s7, s7
+core   0: >>>>  i0000000198
+core   0: 0x0000000080000aa2 (0x035ce5bb) remw    a1, s9, s5
+core   0: >>>>  i0000000199
+core   0: 0x0000000080000aa6 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000019a
+core   0: 0x0000000080000aaa (0x024788bb) mulw    a7, a5, tp
+core   0: >>>>  i000000019b
+core   0: 0x0000000080000aae (0x405385b3) sub     a1, t2, t0
+core   0: >>>>  i000000019c
+core   0: 0x0000000080000ab2 (0x6d887f3b) unknown
+core   0: exception trap_illegal_instruction, epc 0x0000000080000ab2
+core   0:           tval 0x000000006d887f3b
+core   0: >>>>  trap_entry
+core   0: 0x0000000080000124 (0x0000716d) c.addi16sp sp, -272
+core   0: 0x0000000080000126 (0x0000e406) c.sdsp  ra, 8(sp)
+core   0: 0x0000000080000128 (0x0000e80a) c.sdsp  sp, 16(sp)
+core   0: 0x000000008000012a (0x0000ec0e) c.sdsp  gp, 24(sp)
+core   0: 0x000000008000012c (0x0000f012) c.sdsp  tp, 32(sp)
+core   0: 0x000000008000012e (0x0000f416) c.sdsp  t0, 40(sp)
+core   0: 0x0000000080000130 (0x0000f81a) c.sdsp  t1, 48(sp)
+core   0: 0x0000000080000132 (0x0000fc1e) c.sdsp  t2, 56(sp)
+core   0: 0x0000000080000134 (0x0000e0a2) c.sdsp  s0, 64(sp)
+core   0: 0x0000000080000136 (0x0000e4a6) c.sdsp  s1, 72(sp)
+core   0: 0x0000000080000138 (0x0000e8aa) c.sdsp  a0, 80(sp)
+core   0: 0x000000008000013a (0x0000ecae) c.sdsp  a1, 88(sp)
+core   0: 0x000000008000013c (0x0000f0b2) c.sdsp  a2, 96(sp)
+core   0: 0x000000008000013e (0x0000f4b6) c.sdsp  a3, 104(sp)
+core   0: 0x0000000080000140 (0x0000f8ba) c.sdsp  a4, 112(sp)
+core   0: 0x0000000080000142 (0x0000fcbe) c.sdsp  a5, 120(sp)
+core   0: 0x0000000080000144 (0x0000e142) c.sdsp  a6, 128(sp)
+core   0: 0x0000000080000146 (0x0000e546) c.sdsp  a7, 136(sp)
+core   0: 0x0000000080000148 (0x0000e94a) c.sdsp  s2, 144(sp)
+core   0: 0x000000008000014a (0x0000ed4e) c.sdsp  s3, 152(sp)
+core   0: 0x000000008000014c (0x0000f152) c.sdsp  s4, 160(sp)
+core   0: 0x000000008000014e (0x0000f556) c.sdsp  s5, 168(sp)
+core   0: 0x0000000080000150 (0x0000f95a) c.sdsp  s6, 176(sp)
+core   0: 0x0000000080000152 (0x0000fd5e) c.sdsp  s7, 184(sp)
+core   0: 0x0000000080000154 (0x0000e1e2) c.sdsp  s8, 192(sp)
+core   0: 0x0000000080000156 (0x0000e5e6) c.sdsp  s9, 200(sp)
+core   0: 0x0000000080000158 (0x0000e9ea) c.sdsp  s10, 208(sp)
+core   0: 0x000000008000015a (0x0000edee) c.sdsp  s11, 216(sp)
+core   0: 0x000000008000015c (0x0000f1f2) c.sdsp  t3, 224(sp)
+core   0: 0x000000008000015e (0x0000f5f6) c.sdsp  t4, 232(sp)
+core   0: 0x0000000080000160 (0x0000f9fa) c.sdsp  t5, 240(sp)
+core   0: 0x0000000080000162 (0x0000fdfe) c.sdsp  t6, 248(sp)
+core   0: 0x0000000080000164 (0x34202573) csrr    a0, mcause
+core   0: 0x0000000080000168 (0x341025f3) csrr    a1, mepc
+core   0: 0x000000008000016c (0x0005d603) lhu     a2, 0(a1)
+core   0: 0x0000000080000170 (0x00008a0d) c.andi  a2, 3
+core   0: 0x0000000080000172 (0x0000428d) c.li    t0, 3
+core   0: 0x0000000080000174 (0x00561563) bne     a2, t0, pc + 10
+core   0: 0x0000000080000178 (0x00000591) c.addi  a1, 4
+core   0: 0x000000008000017a (0x00000363) beqz    zero, pc + 6
+core   0: 0x0000000080000180 (0x34159073) csrw    mepc, a1
+core   0: 0x0000000080000184 (0x00006289) c.lui   t0, 0x2
+core   0: 0x0000000080000186 (0x8002829b) addiw   t0, t0, -2048
+core   0: 0x000000008000018a (0x3002a073) csrs    mstatus, t0
+core   0: 0x000000008000018e (0x000060a2) c.ldsp  ra, 8(sp)
+core   0: 0x0000000080000190 (0x00006142) c.ldsp  sp, 16(sp)
+core   0: 0x0000000080000192 (0x000061e2) c.ldsp  gp, 24(sp)
+core   0: 0x0000000080000194 (0x00007202) c.ldsp  tp, 32(sp)
+core   0: 0x0000000080000196 (0x000072a2) c.ldsp  t0, 40(sp)
+core   0: 0x0000000080000198 (0x00007342) c.ldsp  t1, 48(sp)
+core   0: 0x000000008000019a (0x000073e2) c.ldsp  t2, 56(sp)
+core   0: 0x000000008000019c (0x00006406) c.ldsp  s0, 64(sp)
+core   0: 0x000000008000019e (0x000064a6) c.ldsp  s1, 72(sp)
+core   0: 0x00000000800001a0 (0x00006546) c.ldsp  a0, 80(sp)
+core   0: 0x00000000800001a2 (0x000065e6) c.ldsp  a1, 88(sp)
+core   0: 0x00000000800001a4 (0x00007606) c.ldsp  a2, 96(sp)
+core   0: 0x00000000800001a6 (0x000076a6) c.ldsp  a3, 104(sp)
+core   0: 0x00000000800001a8 (0x00007746) c.ldsp  a4, 112(sp)
+core   0: 0x00000000800001aa (0x000077e6) c.ldsp  a5, 120(sp)
+core   0: 0x00000000800001ac (0x0000680a) c.ldsp  a6, 128(sp)
+core   0: 0x00000000800001ae (0x000068aa) c.ldsp  a7, 136(sp)
+core   0: 0x00000000800001b0 (0x0000694a) c.ldsp  s2, 144(sp)
+core   0: 0x00000000800001b2 (0x000069ea) c.ldsp  s3, 152(sp)
+core   0: 0x00000000800001b4 (0x00007a0a) c.ldsp  s4, 160(sp)
+core   0: 0x00000000800001b6 (0x00007aaa) c.ldsp  s5, 168(sp)
+core   0: 0x00000000800001b8 (0x00007b4a) c.ldsp  s6, 176(sp)
+core   0: 0x00000000800001ba (0x00007bea) c.ldsp  s7, 184(sp)
+core   0: 0x00000000800001bc (0x00006c0e) c.ldsp  s8, 192(sp)
+core   0: 0x00000000800001be (0x00006cae) c.ldsp  s9, 200(sp)
+core   0: 0x00000000800001c0 (0x00006d4e) c.ldsp  s10, 208(sp)
+core   0: 0x00000000800001c2 (0x00006dee) c.ldsp  s11, 216(sp)
+core   0: 0x00000000800001c4 (0x00007e0e) c.ldsp  t3, 224(sp)
+core   0: 0x00000000800001c6 (0x00007eae) c.ldsp  t4, 232(sp)
+core   0: 0x00000000800001c8 (0x00007f4e) c.ldsp  t5, 240(sp)
+core   0: 0x00000000800001ca (0x00007fee) c.ldsp  t6, 248(sp)
+core   0: 0x00000000800001cc (0x00006151) c.addi16sp sp, 272
+core   0: 0x00000000800001ce (0x30200073) mret
+core   0: >>>>  i000000019d
+core   0: 0x0000000080000ab6 (0x02b5843b) mulw    s0, a1, a1
+core   0: >>>>  i000000019e
+core   0: 0x0000000080000aba (0x037bd5bb) divuw   a1, s7, s7
+core   0: >>>>  i000000019f
+core   0: 0x0000000080000abe (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001a0
+core   0: 0x0000000080000ac2 (0x010c5bb3) srl     s7, s8, a6
+core   0: >>>>  i00000001a1
+core   0: 0x0000000080000ac6 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001a2
+core   0: 0x0000000080000aca (0x0000100f) fence.i
+core   0: >>>>  i00000001a3
+core   0: 0x0000000080000ace (0xd5e11b83) lh      s7, -674(sp)
+core   0: >>>>  i00000001a4
+core   0: 0x0000000080000ad2 (0x02a6753b) remuw   a0, a2, a0
+core   0: >>>>  i00000001a5
+core   0: 0x0000000080000ad6 (0x02b473bb) remuw   t2, s0, a1
+core   0: >>>>  i00000001a6
+core   0: 0x0000000080000ada (0x6e6a6713) ori     a4, s4, 1766
+core   0: 0x0000000080000ade (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000ae2 (0x52210113) addi    sp, sp, 1314
+core   0: 0x0000000080000ae6 (0x00006309) c.lui   t1, 0x2
+core   0: 0x0000000080000ae8 (0x1183031b) addiw   t1, t1, 280
+core   0: 0x0000000080000aec (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000001a7
+core   0: 0x0000000080000aee (0x71514f83) lbu     t6, 1813(sp)
+core   0: >>>>  i00000001a8
+core   0: 0x0000000080000af2 (0x0175e2b3) or      t0, a1, s7
+core   0: >>>>  i00000001a9
+core   0: 0x0000000080000af6 (0x0351cabb) divw    s5, gp, s5
+core   0: >>>>  i00000001aa
+core   0: 0x0000000080000afa (0x00008461) c.srai  s0, 24
+core   0: >>>>  i00000001ab
+core   0: 0x0000000080000afc (0x0000100f) fence.i
+core   0: >>>>  i00000001ac
+core   0: 0x0000000080000b00 (0x0000100f) fence.i
+core   0: 0x0000000080000b04 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000b08 (0x4fc10113) addi    sp, sp, 1276
+core   0: 0x0000000080000b0c (0x00006309) c.lui   t1, 0x2
+core   0: 0x0000000080000b0e (0x4703031b) addiw   t1, t1, 1136
+core   0: 0x0000000080000b12 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000001ad
+core   0: 0x0000000080000b14 (0x7e314583) lbu     a1, 2019(sp)
+core   0: >>>>  i00000001ae
+core   0: 0x0000000080000b18 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001af
+core   0: 0x0000000080000b1c (0x02d7f3bb) remuw   t2, a5, a3
+core   0: >>>>  i00000001b0
+core   0: 0x0000000080000b20 (0xfe410a83) lb      s5, -28(sp)
+core   0: >>>>  i00000001b1
+core   0: 0x0000000080000b24 (0x7f910303) lb      t1, 2041(sp)
+core   0: >>>>  i00000001b2
+core   0: 0x0000000080000b28 (0xff010b83) lb      s7, -16(sp)
+core   0: >>>>  i00000001b3
+core   0: 0x0000000080000b2c (0x43011283) lh      t0, 1072(sp)
+core   0: >>>>  i00000001b4
+core   0: 0x0000000080000b30 (0x03bc05bb) mulw    a1, s8, s11
+core   0: >>>>  i00000001b5
+core   0: 0x0000000080000b34 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001b6
+core   0: 0x0000000080000b38 (0x0385053b) mulw    a0, a0, s8
+core   0: >>>>  i00000001b7
+core   0: 0x0000000080000b3c (0x01a9b933) sltu    s2, s3, s10
+core   0: >>>>  i00000001b8
+core   0: 0x0000000080000b40 (0x012b4433) xor     s0, s6, s2
+core   0: >>>>  i00000001b9
+core   0: 0x0000000080000b44 (0x02bbe03b) remw    zero, s7, a1
+core   0: >>>>  i00000001ba
+core   0: 0x0000000080000b48 (0x4a914b83) lbu     s7, 1193(sp)
+core   0: >>>>  i00000001bb
+core   0: 0x0000000080000b4c (0xca215e83) lhu     t4, -862(sp)
+core   0: >>>>  i00000001bc
+core   0: 0x0000000080000b50 (0x0197c433) xor     s0, a5, s9
+core   0: >>>>  i00000001bd
+core   0: 0x0000000080000b54 (0x02b5d43b) divuw   s0, a1, a1
+core   0: >>>>  i00000001be
+core   0: 0x0000000080000b58 (0x91014403) lbu     s0, -1776(sp)
+core   0: 0x0000000080000b5c (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000b60 (0x4a410113) addi    sp, sp, 1188
+core   0: 0x0000000080000b64 (0x00006305) c.lui   t1, 0x1
+core   0: 0x0000000080000b66 (0x8503031b) addiw   t1, t1, -1968
+core   0: 0x0000000080000b6a (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000001bf
+core   0: 0x0000000080000b6c (0x6ca15403) lhu     s0, 1738(sp)
+core   0: >>>>  i00000001c0
+core   0: 0x0000000080000b70 (0xc4c15d83) lhu     s11, -948(sp)
+core   0: >>>>  i00000001c1
+core   0: 0x0000000080000b74 (0x00b44833) xor     a6, s0, a1
+core   0: >>>>  i00000001c2
+core   0: 0x0000000080000b78 (0x02b5d5bb) divuw   a1, a1, a1
+core   0: >>>>  i00000001c3
+core   0: 0x0000000080000b7c (0xbb011b23) sh      a6, -1098(sp)
+core   0: >>>>  i00000001c4
+core   0: 0x0000000080000b80 (0x26510ea3) sb      t0, 637(sp)
+core   0: >>>>  i00000001c5
+core   0: 0x0000000080000b84 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001c6
+core   0: 0x0000000080000b88 (0xff0d0413) addi    s0, s10, -16
+core   0: >>>>  i00000001c7
+core   0: 0x0000000080000b8c (0x028bd43b) divuw   s0, s7, s0
+core   0: >>>>  i00000001c8
+core   0: 0x0000000080000b90 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001c9
+core   0: 0x0000000080000b94 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001ca
+core   0: 0x0000000080000b98 (0x02b585bb) mulw    a1, a1, a1
+core   0: >>>>  i00000001cb
+core   0: 0x0000000080000b9c (0x63af0437) lui     s0, 0x63af0
+core   0: >>>>  i00000001cc
+core   0: 0x0000000080000ba0 (0x03fa743b) remuw   s0, s4, t6
+core   0: >>>>  i00000001cd
+core   0: 0x0000000080000ba4 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001ce
+core   0: 0x0000000080000ba8 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001cf
+core   0: 0x0000000080000bac (0x02fff8bb) remuw   a7, t6, a5
+core   0: >>>>  i00000001d0
+core   0: 0x0000000080000bb0 (0x0000100f) fence.i
+core   0: >>>>  i00000001d1
+core   0: 0x0000000080000bb4 (0x3ba15583) lhu     a1, 954(sp)
+core   0: >>>>  i00000001d2
+core   0: 0x0000000080000bb8 (0xd0b10023) sb      a1, -768(sp)
+core   0: >>>>  i00000001d3
+core   0: 0x0000000080000bbc (0x038a85bb) mulw    a1, s5, s8
+core   0: >>>>  i00000001d4
+core   0: 0x0000000080000bc0 (0x0000100f) fence.i
+core   0: >>>>  i00000001d5
+core   0: 0x0000000080000bc4 (0x40bbdd33) sra     s10, s7, a1
+core   0: >>>>  i00000001d6
+core   0: 0x0000000080000bc8 (0x037bc43b) divw    s0, s7, s7
+core   0: >>>>  i00000001d7
+core   0: 0x0000000080000bcc (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001d8
+core   0: 0x0000000080000bd0 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001d9
+core   0: 0x0000000080000bd4 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001da
+core   0: 0x0000000080000bd8 (0x02b5eabb) remw    s5, a1, a1
+core   0: >>>>  i00000001db
+core   0: 0x0000000080000bdc (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001dc
+core   0: 0x0000000080000be0 (0x0375dc3b) divuw   s8, a1, s7
+core   0: >>>>  i00000001dd
+core   0: 0x0000000080000be4 (0x41847f93) andi    t6, s0, 1048
+core   0: >>>>  i00000001de
+core   0: 0x0000000080000be8 (0x0000100f) fence.i
+core   0: >>>>  i00000001df
+core   0: 0x0000000080000bec (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001e0
+core   0: 0x0000000080000bf0 (0x0000100f) fence.i
+core   0: >>>>  i00000001e1
+core   0: 0x0000000080000bf4 (0x573f15b7) lui     a1, 0x573f1
+core   0: >>>>  i00000001e2
+core   0: 0x0000000080000bf8 (0x02a9e5bb) remw    a1, s3, a0
+core   0: >>>>  i00000001e3
+core   0: 0x0000000080000bfc (0x02b5c5bb) divw    a1, a1, a1
+core   0: >>>>  i00000001e4
+core   0: 0x0000000080000c00 (0xc3a63413) sltiu   s0, a2, -966
+core   0: >>>>  i00000001e5
+core   0: 0x0000000080000c04 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001e6
+core   0: 0x0000000080000c08 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001e7
+core   0: 0x0000000080000c0c (0x037bee3b) remw    t3, s7, s7
+core   0: >>>>  i00000001e8
+core   0: 0x0000000080000c10 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000001e9
+core   0: 0x0000000080000c14 (0x0000100f) fence.i
+core   0: >>>>  i00000001ea
+core   0: 0x0000000080000c18 (0xbd29643b) unknown
+core   0: exception trap_illegal_instruction, epc 0x0000000080000c18
+core   0:           tval 0x00000000bd29643b
+core   0: >>>>  trap_entry
+core   0: 0x0000000080000124 (0x0000716d) c.addi16sp sp, -272
+core   0: 0x0000000080000126 (0x0000e406) c.sdsp  ra, 8(sp)
+core   0: 0x0000000080000128 (0x0000e80a) c.sdsp  sp, 16(sp)
+core   0: 0x000000008000012a (0x0000ec0e) c.sdsp  gp, 24(sp)
+core   0: 0x000000008000012c (0x0000f012) c.sdsp  tp, 32(sp)
+core   0: 0x000000008000012e (0x0000f416) c.sdsp  t0, 40(sp)
+core   0: 0x0000000080000130 (0x0000f81a) c.sdsp  t1, 48(sp)
+core   0: 0x0000000080000132 (0x0000fc1e) c.sdsp  t2, 56(sp)
+core   0: 0x0000000080000134 (0x0000e0a2) c.sdsp  s0, 64(sp)
+core   0: 0x0000000080000136 (0x0000e4a6) c.sdsp  s1, 72(sp)
+core   0: 0x0000000080000138 (0x0000e8aa) c.sdsp  a0, 80(sp)
+core   0: 0x000000008000013a (0x0000ecae) c.sdsp  a1, 88(sp)
+core   0: 0x000000008000013c (0x0000f0b2) c.sdsp  a2, 96(sp)
+core   0: 0x000000008000013e (0x0000f4b6) c.sdsp  a3, 104(sp)
+core   0: 0x0000000080000140 (0x0000f8ba) c.sdsp  a4, 112(sp)
+core   0: 0x0000000080000142 (0x0000fcbe) c.sdsp  a5, 120(sp)
+core   0: 0x0000000080000144 (0x0000e142) c.sdsp  a6, 128(sp)
+core   0: 0x0000000080000146 (0x0000e546) c.sdsp  a7, 136(sp)
+core   0: 0x0000000080000148 (0x0000e94a) c.sdsp  s2, 144(sp)
+core   0: 0x000000008000014a (0x0000ed4e) c.sdsp  s3, 152(sp)
+core   0: 0x000000008000014c (0x0000f152) c.sdsp  s4, 160(sp)
+core   0: 0x000000008000014e (0x0000f556) c.sdsp  s5, 168(sp)
+core   0: 0x0000000080000150 (0x0000f95a) c.sdsp  s6, 176(sp)
+core   0: 0x0000000080000152 (0x0000fd5e) c.sdsp  s7, 184(sp)
+core   0: 0x0000000080000154 (0x0000e1e2) c.sdsp  s8, 192(sp)
+core   0: 0x0000000080000156 (0x0000e5e6) c.sdsp  s9, 200(sp)
+core   0: 0x0000000080000158 (0x0000e9ea) c.sdsp  s10, 208(sp)
+core   0: 0x000000008000015a (0x0000edee) c.sdsp  s11, 216(sp)
+core   0: 0x000000008000015c (0x0000f1f2) c.sdsp  t3, 224(sp)
+core   0: 0x000000008000015e (0x0000f5f6) c.sdsp  t4, 232(sp)
+core   0: 0x0000000080000160 (0x0000f9fa) c.sdsp  t5, 240(sp)
+core   0: 0x0000000080000162 (0x0000fdfe) c.sdsp  t6, 248(sp)
+core   0: 0x0000000080000164 (0x34202573) csrr    a0, mcause
+core   0: 0x0000000080000168 (0x341025f3) csrr    a1, mepc
+core   0: 0x000000008000016c (0x0005d603) lhu     a2, 0(a1)
+core   0: 0x0000000080000170 (0x00008a0d) c.andi  a2, 3
+core   0: 0x0000000080000172 (0x0000428d) c.li    t0, 3
+core   0: 0x0000000080000174 (0x00561563) bne     a2, t0, pc + 10
+core   0: 0x0000000080000178 (0x00000591) c.addi  a1, 4
+core   0: 0x000000008000017a (0x00000363) beqz    zero, pc + 6
+core   0: 0x0000000080000180 (0x34159073) csrw    mepc, a1
+core   0: 0x0000000080000184 (0x00006289) c.lui   t0, 0x2
+core   0: 0x0000000080000186 (0x8002829b) addiw   t0, t0, -2048
+core   0: 0x000000008000018a (0x3002a073) csrs    mstatus, t0
+core   0: 0x000000008000018e (0x000060a2) c.ldsp  ra, 8(sp)
+core   0: 0x0000000080000190 (0x00006142) c.ldsp  sp, 16(sp)
+core   0: 0x0000000080000192 (0x000061e2) c.ldsp  gp, 24(sp)
+core   0: 0x0000000080000194 (0x00007202) c.ldsp  tp, 32(sp)
+core   0: 0x0000000080000196 (0x000072a2) c.ldsp  t0, 40(sp)
+core   0: 0x0000000080000198 (0x00007342) c.ldsp  t1, 48(sp)
+core   0: 0x000000008000019a (0x000073e2) c.ldsp  t2, 56(sp)
+core   0: 0x000000008000019c (0x00006406) c.ldsp  s0, 64(sp)
+core   0: 0x000000008000019e (0x000064a6) c.ldsp  s1, 72(sp)
+core   0: 0x00000000800001a0 (0x00006546) c.ldsp  a0, 80(sp)
+core   0: 0x00000000800001a2 (0x000065e6) c.ldsp  a1, 88(sp)
+core   0: 0x00000000800001a4 (0x00007606) c.ldsp  a2, 96(sp)
+core   0: 0x00000000800001a6 (0x000076a6) c.ldsp  a3, 104(sp)
+core   0: 0x00000000800001a8 (0x00007746) c.ldsp  a4, 112(sp)
+core   0: 0x00000000800001aa (0x000077e6) c.ldsp  a5, 120(sp)
+core   0: 0x00000000800001ac (0x0000680a) c.ldsp  a6, 128(sp)
+core   0: 0x00000000800001ae (0x000068aa) c.ldsp  a7, 136(sp)
+core   0: 0x00000000800001b0 (0x0000694a) c.ldsp  s2, 144(sp)
+core   0: 0x00000000800001b2 (0x000069ea) c.ldsp  s3, 152(sp)
+core   0: 0x00000000800001b4 (0x00007a0a) c.ldsp  s4, 160(sp)
+core   0: 0x00000000800001b6 (0x00007aaa) c.ldsp  s5, 168(sp)
+core   0: 0x00000000800001b8 (0x00007b4a) c.ldsp  s6, 176(sp)
+core   0: 0x00000000800001ba (0x00007bea) c.ldsp  s7, 184(sp)
+core   0: 0x00000000800001bc (0x00006c0e) c.ldsp  s8, 192(sp)
+core   0: 0x00000000800001be (0x00006cae) c.ldsp  s9, 200(sp)
+core   0: 0x00000000800001c0 (0x00006d4e) c.ldsp  s10, 208(sp)
+core   0: 0x00000000800001c2 (0x00006dee) c.ldsp  s11, 216(sp)
+core   0: 0x00000000800001c4 (0x00007e0e) c.ldsp  t3, 224(sp)
+core   0: 0x00000000800001c6 (0x00007eae) c.ldsp  t4, 232(sp)
+core   0: 0x00000000800001c8 (0x00007f4e) c.ldsp  t5, 240(sp)
+core   0: 0x00000000800001ca (0x00007fee) c.ldsp  t6, 248(sp)
+core   0: 0x00000000800001cc (0x00006151) c.addi16sp sp, 272
+core   0: 0x00000000800001ce (0x30200073) mret
+core   0: >>>>  i00000001eb
+core   0: 0x0000000080000c1c (0xe3711223) sh      s7, -476(sp)
+core   0: >>>>  i00000001ec
+core   0: 0x0000000080000c20 (0x00008c0d) c.sub   s0, a1
+core   0: >>>>  i00000001ed
+core   0: 0x0000000080000c22 (0x0000100f) fence.i
+core   0: >>>>  i00000001ee
+core   0: 0x0000000080000c26 (0x0000100f) fence.i
+core   0: >>>>  i00000001ef
+core   0: 0x0000000080000c2a (0x0000100f) fence.i
+core   0: >>>>  i00000001f0
+core   0: 0x0000000080000c2e (0x02a256bb) divuw   a3, tp, a0
+core   0: >>>>  i00000001f1
+core   0: 0x0000000080000c32 (0x0362c43b) divw    s0, t0, s6
+core   0: 0x0000000080000c36 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000c3a (0x3ca10113) addi    sp, sp, 970
+core   0: 0x0000000080000c3e (0x0000630d) c.lui   t1, 0x3
+core   0: 0x0000000080000c40 (0xcd83031b) addiw   t1, t1, -808
+core   0: 0x0000000080000c44 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000001f2
+core   0: 0x0000000080000c46 (0xb6415583) lhu     a1, -1180(sp)
+core   0: >>>>  i00000001f3
+core   0: 0x0000000080000c4a (0x03a74dbb) divw    s11, a4, s10
+core   0: 0x0000000080000c4e (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000c52 (0x3b210113) addi    sp, sp, 946
+core   0: 0x0000000080000c56 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x0000000080000c58 (0x0203031b) addiw   t1, t1, 32
+core   0: 0x0000000080000c5c (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000001f4
+core   0: 0x0000000080000c5e (0xf9412b83) lw      s7, -108(sp)
+core   0: >>>>  i00000001f5
+core   0: 0x0000000080000c62 (0x0374093b) mulw    s2, s0, s7
+core   0: >>>>  i00000001f6
+core   0: 0x0000000080000c66 (0x0375dabb) divuw   s5, a1, s7
+core   0: >>>>  i00000001f7
+core   0: 0x0000000080000c6a (0x01f59b93) slli    s7, a1, 31
+core   0: >>>>  i00000001f8
+core   0: 0x0000000080000c6e (0x4b5d6b93) ori     s7, s10, 1205
+core   0: >>>>  i00000001f9
+core   0: 0x0000000080000c72 (0x02996bbb) remw    s7, s2, s1
+core   0: 0x0000000080000c76 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000c7a (0x38a10113) addi    sp, sp, 906
+core   0: 0x0000000080000c7e (0x00006309) c.lui   t1, 0x2
+core   0: 0x0000000080000c80 (0x5503031b) addiw   t1, t1, 1360
+core   0: 0x0000000080000c84 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000001fa
+core   0: 0x0000000080000c86 (0x9cc12a03) lw      s4, -1588(sp)
+core   0: >>>>  i00000001fb
+core   0: 0x0000000080000c8a (0x01097433) and     s0, s2, a6
+core   0: >>>>  i00000001fc
+core   0: 0x0000000080000c8e (0x0a211483) lh      s1, 162(sp)
+core   0: >>>>  i00000001fd
+core   0: 0x0000000080000c92 (0xdc610f83) lb      t6, -570(sp)
+core   0: >>>>  i00000001fe
+core   0: 0x0000000080000c96 (0x00e91533) sll     a0, s2, a4
+core   0: >>>>  i00000001ff
+core   0: 0x0000000080000c9a (0x8c714c03) lbu     s8, -1849(sp)
+core   0: >>>>  i0000000200
+core   0: 0x0000000080000c9e (0x5a410d03) lb      s10, 1444(sp)
+core   0: >>>>  i0000000201
+core   0: 0x0000000080000ca2 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000202
+core   0: 0x0000000080000ca6 (0x02b4753b) remuw   a0, s0, a1
+core   0: >>>>  i0000000203
+core   0: 0x0000000080000caa (0x03bc043b) mulw    s0, s8, s11
+core   0: >>>>  i0000000204
+core   0: 0x0000000080000cae (0x024a78bb) remuw   a7, s4, tp
+core   0: >>>>  i0000000205
+core   0: 0x0000000080000cb2 (0x035485bb) mulw    a1, s1, s5
+core   0: >>>>  i0000000206
+core   0: 0x0000000080000cb6 (0x00549fb3) sll     t6, s1, t0
+core   0: >>>>  i0000000207
+core   0: 0x0000000080000cba (0x0375d43b) divuw   s0, a1, s7
+core   0: >>>>  i0000000208
+core   0: 0x0000000080000cbe (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000209
+core   0: 0x0000000080000cc2 (0xfd815503) lhu     a0, -40(sp)
+core   0: >>>>  i000000020a
+core   0: 0x0000000080000cc6 (0x02a9f2bb) remuw   t0, s3, a0
+core   0: >>>>  i000000020b
+core   0: 0x0000000080000cca (0x0269643b) remw    s0, s2, t1
+core   0: >>>>  i000000020c
+core   0: 0x0000000080000cce (0x33f97e13) andi    t3, s2, 831
+core   0: >>>>  i000000020d
+core   0: 0x0000000080000cd2 (0x02b44cbb) divw    s9, s0, a1
+core   0: >>>>  i000000020e
+core   0: 0x0000000080000cd6 (0x0000100f) fence.i
+core   0: >>>>  i000000020f
+core   0: 0x0000000080000cda (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000210
+core   0: 0x0000000080000cde (0x0344c43b) divw    s0, s1, s4
+core   0: >>>>  i0000000211
+core   0: 0x0000000080000ce2 (0x03758bbb) mulw    s7, a1, s7
+core   0: >>>>  i0000000212
+core   0: 0x0000000080000ce6 (0x02eb6bbb) remw    s7, s6, a4
+core   0: >>>>  i0000000213
+core   0: 0x0000000080000cea (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000214
+core   0: 0x0000000080000cee (0xd6c15403) lhu     s0, -660(sp)
+core   0: >>>>  i0000000215
+core   0: 0x0000000080000cf2 (0x02368bbb) mulw    s7, a3, gp
+core   0: >>>>  i0000000216
+core   0: 0x0000000080000cf6 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000217
+core   0: 0x0000000080000cfa (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000218
+core   0: 0x0000000080000cfe (0x40b457b3) sra     a5, s0, a1
+core   0: >>>>  i0000000219
+core   0: 0x0000000080000d02 (0x00fe2a33) slt     s4, t3, a5
+core   0: >>>>  i000000021a
+core   0: 0x0000000080000d06 (0x00adebb3) or      s7, s11, a0
+core   0: >>>>  i000000021b
+core   0: 0x0000000080000d0a (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000021c
+core   0: 0x0000000080000d0e (0x87812f83) lw      t6, -1928(sp)
+core   0: >>>>  i000000021d
+core   0: 0x0000000080000d12 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000021e
+core   0: 0x0000000080000d16 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000021f
+core   0: 0x0000000080000d1a (0xd9010b83) lb      s7, -624(sp)
+core   0: >>>>  i0000000220
+core   0: 0x0000000080000d1e (0x7c815603) lhu     a2, 1992(sp)
+core   0: >>>>  i0000000221
+core   0: 0x0000000080000d22 (0x0302f43b) remuw   s0, t0, a6
+core   0: >>>>  i0000000222
+core   0: 0x0000000080000d26 (0x0000100f) fence.i
+core   0: >>>>  i0000000223
+core   0: 0x0000000080000d2a (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000224
+core   0: 0x0000000080000d2e (0x028b8c3b) mulw    s8, s7, s0
+core   0: >>>>  i0000000225
+core   0: 0x0000000080000d32 (0x40930a33) sub     s4, t1, s1
+core   0: >>>>  i0000000226
+core   0: 0x0000000080000d36 (0x02858bbb) mulw    s7, a1, s0
+core   0: >>>>  i0000000227
+core   0: 0x0000000080000d3a (0x0375d43b) divuw   s0, a1, s7
+core   0: >>>>  i0000000228
+core   0: 0x0000000080000d3e (0x65015483) lhu     s1, 1616(sp)
+core   0: >>>>  i0000000229
+core   0: 0x0000000080000d42 (0x0ff0000f) fence   iorw,iorw
+core   0: 0x0000000080000d46 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000d4a (0x2ba10113) addi    sp, sp, 698
+core   0: 0x0000000080000d4e (0x00006309) c.lui   t1, 0x2
+core   0: 0x0000000080000d50 (0x9a03031b) addiw   t1, t1, -1632
+core   0: 0x0000000080000d54 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i000000022a
+core   0: 0x0000000080000d56 (0xae214703) lbu     a4, -1310(sp)
+core   0: >>>>  i000000022b
+core   0: 0x0000000080000d5a (0x037473bb) remuw   t2, s0, s7
+core   0: >>>>  i000000022c
+core   0: 0x0000000080000d5e (0x03bcbe37) lui     t3, 0x3bcb
+core   0: >>>>  i000000022d
+core   0: 0x0000000080000d62 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000022e
+core   0: 0x0000000080000d66 (0x00004bd2) c.lwsp  s7, 20(sp)
+core   0: >>>>  i000000022f
+core   0: 0x0000000080000d68 (0x0266543b) divuw   s0, a2, t1
+core   0: >>>>  i0000000230
+core   0: 0x0000000080000d6c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000231
+core   0: 0x0000000080000d70 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000232
+core   0: 0x0000000080000d74 (0x028445bb) divw    a1, s0, s0
+core   0: >>>>  i0000000233
+core   0: 0x0000000080000d78 (0x60b11323) sh      a1, 1542(sp)
+core   0: >>>>  i0000000234
+core   0: 0x0000000080000d7c (0x418cdf33) sra     t5, s9, s8
+core   0: >>>>  i0000000235
+core   0: 0x0000000080000d80 (0x031d7abb) remuw   s5, s10, a7
+core   0: >>>>  i0000000236
+core   0: 0x0000000080000d84 (0x41740433) sub     s0, s0, s7
+core   0: >>>>  i0000000237
+core   0: 0x0000000080000d88 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000238
+core   0: 0x0000000080000d8c (0x0375fbbb) remuw   s7, a1, s7
+core   0: >>>>  i0000000239
+core   0: 0x0000000080000d90 (0xb4a14583) lbu     a1, -1206(sp)
+core   0: >>>>  i000000023a
+core   0: 0x0000000080000d94 (0x02bbd43b) divuw   s0, s7, a1
+core   0: >>>>  i000000023b
+core   0: 0x0000000080000d98 (0x01223733) sltu    a4, tp, s2
+core   0: >>>>  i000000023c
+core   0: 0x0000000080000d9c (0x02b474bb) remuw   s1, s0, a1
+core   0: >>>>  i000000023d
+core   0: 0x0000000080000da0 (0x0285f43b) remuw   s0, a1, s0
+core   0: >>>>  i000000023e
+core   0: 0x0000000080000da4 (0x58810b83) lb      s7, 1416(sp)
+core   0: >>>>  i000000023f
+core   0: 0x0000000080000da8 (0x412bd313) srai    t1, s7, 18
+core   0: 0x0000000080000dac (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000db0 (0x25410113) addi    sp, sp, 596
+core   0: 0x0000000080000db4 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x0000000080000db6 (0xfc83031b) addiw   t1, t1, -56
+core   0: 0x0000000080000dba (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000240
+core   0: 0x0000000080000dbc (0x7ae14303) lbu     t1, 1966(sp)
+core   0: >>>>  i0000000241
+core   0: 0x0000000080000dc0 (0x037475bb) remuw   a1, s0, s7
+core   0: >>>>  i0000000242
+core   0: 0x0000000080000dc4 (0x00bb8433) add     s0, s7, a1
+core   0: 0x0000000080000dc8 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000dcc (0x23810113) addi    sp, sp, 568
+core   0: 0x0000000080000dd0 (0x00006305) c.lui   t1, 0x1
+core   0: 0x0000000080000dd2 (0xdc83031b) addiw   t1, t1, -568
+core   0: 0x0000000080000dd6 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000243
+core   0: 0x0000000080000dd8 (0x5ee11303) lh      t1, 1518(sp)
+core   0: >>>>  i0000000244
+core   0: 0x0000000080000ddc (0x40b5deb3) sra     t4, a1, a1
+core   0: >>>>  i0000000245
+core   0: 0x0000000080000de0 (0x0285fbbb) remuw   s7, a1, s0
+core   0: >>>>  i0000000246
+core   0: 0x0000000080000de4 (0x00ff4333) xor     t1, t5, a5
+core   0: >>>>  i0000000247
+core   0: 0x0000000080000de8 (0x015f3433) sltu    s0, t5, s5
+core   0: >>>>  i0000000248
+core   0: 0x0000000080000dec (0x023c423b) divw    tp, s8, gp
+core   0: >>>>  i0000000249
+core   0: 0x0000000080000df0 (0xba812403) lw      s0, -1112(sp)
+core   0: >>>>  i000000024a
+core   0: 0x0000000080000df4 (0xad647213) andi    tp, s0, -1322
+core   0: >>>>  i000000024b
+core   0: 0x0000000080000df8 (0x3ff10583) lb      a1, 1023(sp)
+core   0: >>>>  i000000024c
+core   0: 0x0000000080000dfc (0x010f07b3) add     a5, t5, a6
+core   0: 0x0000000080000e00 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000e04 (0x20010113) addi    sp, sp, 512
+core   0: 0x0000000080000e08 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x0000000080000e0a (0xe303031b) addiw   t1, t1, -464
+core   0: 0x0000000080000e0e (0x0000911a) c.add   sp, t1
+core   0: >>>>  i000000024d
+core   0: 0x0000000080000e10 (0x0d210e23) sb      s2, 220(sp)
+core   0: >>>>  i000000024e
+core   0: 0x0000000080000e14 (0x02b58a3b) mulw    s4, a1, a1
+core   0: >>>>  i000000024f
+core   0: 0x0000000080000e18 (0x0000100f) fence.i
+core   0: >>>>  i0000000250
+core   0: 0x0000000080000e1c (0x008b8cb3) add     s9, s7, s0
+core   0: >>>>  i0000000251
+core   0: 0x0000000080000e20 (0x03eff43b) remuw   s0, t6, t5
+core   0: >>>>  i0000000252
+core   0: 0x0000000080000e24 (0x0000100f) fence.i
+core   0: >>>>  i0000000253
+core   0: 0x0000000080000e28 (0x0285cabb) divw    s5, a1, s0
+core   0: >>>>  i0000000254
+core   0: 0x0000000080000e2c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000255
+core   0: 0x0000000080000e30 (0x0000100f) fence.i
+core   0: >>>>  i0000000256
+core   0: 0x0000000080000e34 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000257
+core   0: 0x0000000080000e38 (0x029a843b) mulw    s0, s5, s1
+core   0: >>>>  i0000000258
+core   0: 0x0000000080000e3c (0x03a34f3b) divw    t5, t1, s10
+core   0: >>>>  i0000000259
+core   0: 0x0000000080000e40 (0x419b5bb3) sra     s7, s6, s9
+core   0: >>>>  i000000025a
+core   0: 0x0000000080000e44 (0x028405bb) mulw    a1, s0, s0
+core   0: 0x0000000080000e48 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000e4c (0x1b810113) addi    sp, sp, 440
+core   0: 0x0000000080000e50 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x0000000080000e52 (0x2683031b) addiw   t1, t1, 616
+core   0: 0x0000000080000e56 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i000000025b
+core   0: 0x0000000080000e58 (0x15410b83) lb      s7, 340(sp)
+core   0: >>>>  i000000025c
+core   0: 0x0000000080000e5c (0x02f6043b) mulw    s0, a2, a5
+core   0: >>>>  i000000025d
+core   0: 0x0000000080000e60 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000025e
+core   0: 0x0000000080000e64 (0x43610da3) sb      s6, 1083(sp)
+core   0: >>>>  i000000025f
+core   0: 0x0000000080000e68 (0x037be1bb) remw    gp, s7, s7
+core   0: >>>>  i0000000260
+core   0: 0x0000000080000e6c (0x0375c6bb) divw    a3, a1, s7
+core   0: >>>>  i0000000261
+core   0: 0x0000000080000e70 (0x0000100f) fence.i
+core   0: >>>>  i0000000262
+core   0: 0x0000000080000e74 (0x0000100f) fence.i
+core   0: >>>>  i0000000263
+core   0: 0x0000000080000e78 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000264
+core   0: 0x0000000080000e7c (0x008b91b3) sll     gp, s7, s0
+core   0: >>>>  i0000000265
+core   0: 0x0000000080000e80 (0x02cdd5bb) divuw   a1, s11, a2
+core   0: >>>>  i0000000266
+core   0: 0x0000000080000e84 (0x0374043b) mulw    s0, s0, s7
+core   0: >>>>  i0000000267
+core   0: 0x0000000080000e88 (0x03c3d5bb) divuw   a1, t2, t3
+core   0: >>>>  i0000000268
+core   0: 0x0000000080000e8c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000269
+core   0: 0x0000000080000e90 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000026a
+core   0: 0x0000000080000e94 (0x0285cbbb) divw    s7, a1, s0
+core   0: >>>>  i000000026b
+core   0: 0x0000000080000e98 (0x016515b3) sll     a1, a0, s6
+core   0: >>>>  i000000026c
+core   0: 0x0000000080000e9c (0x0000100f) fence.i
+core   0: >>>>  i000000026d
+core   0: 0x0000000080000ea0 (0x03405bbb) divuw   s7, zero, s4
+core   0: >>>>  i000000026e
+core   0: 0x0000000080000ea4 (0x03d6cabb) divw    s5, a3, t4
+core   0: >>>>  i000000026f
+core   0: 0x0000000080000ea8 (0x0000100f) fence.i
+core   0: >>>>  i0000000270
+core   0: 0x0000000080000eac (0x00b5ebb3) or      s7, a1, a1
+core   0: >>>>  i0000000271
+core   0: 0x0000000080000eb0 (0x00846fb3) or      t6, s0, s0
+core   0: >>>>  i0000000272
+core   0: 0x0000000080000eb4 (0xcef10583) lb      a1, -785(sp)
+core   0: >>>>  i0000000273
+core   0: 0x0000000080000eb8 (0x0000100f) fence.i
+core   0: >>>>  i0000000274
+core   0: 0x0000000080000ebc (0x0175a433) slt     s0, a1, s7
+core   0: >>>>  i0000000275
+core   0: 0x0000000080000ec0 (0x8c812223) sw      s0, -1852(sp)
+core   0: >>>>  i0000000276
+core   0: 0x0000000080000ec4 (0x03758b3b) mulw    s6, a1, s7
+core   0: >>>>  i0000000277
+core   0: 0x0000000080000ec8 (0xcab12423) sw      a1, -856(sp)
+core   0: >>>>  i0000000278
+core   0: 0x0000000080000ecc (0x0000824e) c.mv    tp, s3
+core   0: >>>>  i0000000279
+core   0: 0x0000000080000ece (0xe0e10923) sb      a4, -494(sp)
+core   0: >>>>  i000000027a
+core   0: 0x0000000080000ed2 (0x01e86bb3) or      s7, a6, t5
+core   0: >>>>  i000000027b
+core   0: 0x0000000080000ed6 (0x40f25bb3) sra     s7, tp, a5
+core   0: >>>>  i000000027c
+core   0: 0x0000000080000eda (0xa3410583) lb      a1, -1484(sp)
+core   0: >>>>  i000000027d
+core   0: 0x0000000080000ede (0x02b5cbbb) divw    s7, a1, a1
+core   0: >>>>  i000000027e
+core   0: 0x0000000080000ee2 (0x0000100f) fence.i
+core   0: >>>>  i000000027f
+core   0: 0x0000000080000ee6 (0x02ccf5bb) remuw   a1, s9, a2
+core   0: >>>>  i0000000280
+core   0: 0x0000000080000eea (0x01c1bc33) sltu    s8, gp, t3
+core   0: >>>>  i0000000281
+core   0: 0x0000000080000eee (0x003ed593) srli    a1, t4, 3
+core   0: >>>>  i0000000282
+core   0: 0x0000000080000ef2 (0x0000100f) fence.i
+core   0: >>>>  i0000000283
+core   0: 0x0000000080000ef6 (0x0375c5bb) divw    a1, a1, s7
+core   0: >>>>  i0000000284
+core   0: 0x0000000080000efa (0xc6814583) lbu     a1, -920(sp)
+core   0: >>>>  i0000000285
+core   0: 0x0000000080000efe (0x03758f3b) mulw    t5, a1, s7
+core   0: 0x0000000080000f02 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000f06 (0x0fe10113) addi    sp, sp, 254
+core   0: 0x0000000080000f0a (0x00006305) c.lui   t1, 0x1
+core   0: 0x0000000080000f0c (0x6003031b) addiw   t1, t1, 1536
+core   0: 0x0000000080000f10 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000286
+core   0: 0x0000000080000f12 (0x76e11d23) sh      a4, 1914(sp)
+core   0: >>>>  i0000000287
+core   0: 0x0000000080000f16 (0x0000100f) fence.i
+core   0: >>>>  i0000000288
+core   0: 0x0000000080000f1a (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000289
+core   0: 0x0000000080000f1e (0x024cc5bb) divw    a1, s9, tp
+core   0: >>>>  i000000028a
+core   0: 0x0000000080000f22 (0x02b4543b) divuw   s0, s0, a1
+core   0: >>>>  i000000028b
+core   0: 0x0000000080000f26 (0x57b108a3) sb      s11, 1393(sp)
+core   0: >>>>  i000000028c
+core   0: 0x0000000080000f2a (0x49f11123) sh      t6, 1154(sp)
+core   0: >>>>  i000000028d
+core   0: 0x0000000080000f2e (0x02cf643b) remw    s0, t5, a2
+core   0: >>>>  i000000028e
+core   0: 0x0000000080000f32 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000028f
+core   0: 0x0000000080000f36 (0x015e5b33) srl     s6, t3, s5
+core   0: >>>>  i0000000290
+core   0: 0x0000000080000f3a (0x79a14583) lbu     a1, 1946(sp)
+core   0: >>>>  i0000000291
+core   0: 0x0000000080000f3e (0x0000100f) fence.i
+core   0: >>>>  i0000000292
+core   0: 0x0000000080000f42 (0x7a910b83) lb      s7, 1961(sp)
+core   0: >>>>  i0000000293
+core   0: 0x0000000080000f46 (0x0000100f) fence.i
+core   0: 0x0000000080000f4a (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000f4e (0x0b610113) addi    sp, sp, 182
+core   0: 0x0000000080000f52 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x0000000080000f54 (0xa483031b) addiw   t1, t1, -1464
+core   0: 0x0000000080000f58 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000294
+core   0: 0x0000000080000f5a (0x90b12223) sw      a1, -1788(sp)
+core   0: >>>>  i0000000295
+core   0: 0x0000000080000f5e (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000296
+core   0: 0x0000000080000f62 (0xbd25b593) sltiu   a1, a1, -1070
+core   0: >>>>  i0000000297
+core   0: 0x0000000080000f66 (0x01bed533) srl     a0, t4, s11
+core   0: >>>>  i0000000298
+core   0: 0x0000000080000f6a (0x411dd433) sra     s0, s11, a7
+core   0: >>>>  i0000000299
+core   0: 0x0000000080000f6e (0x00b42433) slt     s0, s0, a1
+core   0: >>>>  i000000029a
+core   0: 0x0000000080000f72 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000029b
+core   0: 0x0000000080000f76 (0x22010f23) sb      zero, 574(sp)
+core   0: >>>>  i000000029c
+core   0: 0x0000000080000f7a (0x017bb5b3) sltu    a1, s7, s7
+core   0: >>>>  i000000029d
+core   0: 0x0000000080000f7e (0x037bc43b) divw    s0, s7, s7
+core   0: >>>>  i000000029e
+core   0: 0x0000000080000f82 (0xebc10d23) sb      t3, -326(sp)
+core   0: >>>>  i000000029f
+core   0: 0x0000000080000f86 (0x02847e3b) remuw   t3, s0, s0
+core   0: >>>>  i00000002a0
+core   0: 0x0000000080000f8a (0x0000100f) fence.i
+core   0: >>>>  i00000002a1
+core   0: 0x0000000080000f8e (0x02b5c43b) divw    s0, a1, a1
+core   0: >>>>  i00000002a2
+core   0: 0x0000000080000f92 (0x405f07b3) sub     a5, t5, t0
+core   0: >>>>  i00000002a3
+core   0: 0x0000000080000f96 (0x37611223) sh      s6, 868(sp)
+core   0: >>>>  i00000002a4
+core   0: 0x0000000080000f9a (0xa6812a23) sw      s0, -1420(sp)
+core   0: >>>>  i00000002a5
+core   0: 0x0000000080000f9e (0x3b410803) lb      a6, 948(sp)
+core   0: >>>>  i00000002a6
+core   0: 0x0000000080000fa2 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002a7
+core   0: 0x0000000080000fa6 (0x028be5bb) remw    a1, s7, s0
+core   0: >>>>  i00000002a8
+core   0: 0x0000000080000faa (0xce2c8693) addi    a3, s9, -798
+core   0: >>>>  i00000002a9
+core   0: 0x0000000080000fae (0x02b5e83b) remw    a6, a1, a1
+core   0: >>>>  i00000002aa
+core   0: 0x0000000080000fb2 (0x02b467bb) remw    a5, s0, a1
+core   0: >>>>  i00000002ab
+core   0: 0x0000000080000fb6 (0x03745bbb) divuw   s7, s0, s7
+core   0: >>>>  i00000002ac
+core   0: 0x0000000080000fba (0x0000100f) fence.i
+core   0: >>>>  i00000002ad
+core   0: 0x0000000080000fbe (0x01d8c733) xor     a4, a7, t4
+core   0: >>>>  i00000002ae
+core   0: 0x0000000080000fc2 (0x1d712023) sw      s7, 448(sp)
+core   0: >>>>  i00000002af
+core   0: 0x0000000080000fc6 (0x5e412f03) lw      t5, 1508(sp)
+core   0: 0x0000000080000fca (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080000fce (0x03610113) addi    sp, sp, 54
+core   0: 0x0000000080000fd2 (0x00006305) c.lui   t1, 0x1
+core   0: 0x0000000080000fd4 (0x6703031b) addiw   t1, t1, 1648
+core   0: 0x0000000080000fd8 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000002b0
+core   0: 0x0000000080000fda (0x24b10a23) sb      a1, 596(sp)
+core   0: >>>>  i00000002b1
+core   0: 0x0000000080000fde (0xf9f40693) addi    a3, s0, -97
+core   0: >>>>  i00000002b2
+core   0: 0x0000000080000fe2 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002b3
+core   0: 0x0000000080000fe6 (0xa3510403) lb      s0, -1483(sp)
+core   0: >>>>  i00000002b4
+core   0: 0x0000000080000fea (0x71852937) lui     s2, 0x71852
+core   0: >>>>  i00000002b5
+core   0: 0x0000000080000fee (0x0299e53b) remw    a0, s3, s1
+core   0: >>>>  i00000002b6
+core   0: 0x0000000080000ff2 (0x77c12d03) lw      s10, 1916(sp)
+core   0: >>>>  i00000002b7
+core   0: 0x0000000080000ff6 (0x0000100f) fence.i
+core   0: >>>>  i00000002b8
+core   0: 0x0000000080000ffa (0x6e7109a3) sb      t2, 1779(sp)
+core   0: >>>>  i00000002b9
+core   0: 0x0000000080000ffe (0x00008c61) c.and   s0, s0
+core   0: >>>>  i00000002ba
+core   0: 0x0000000080001000 (0x415f0b33) sub     s6, t5, s5
+core   0: 0x0000000080001004 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080001008 (0xffc10113) addi    sp, sp, -4
+core   0: 0x000000008000100c (0x00006305) c.lui   t1, 0x1
+core   0: 0x000000008000100e (0x4b03031b) addiw   t1, t1, 1200
+core   0: 0x0000000080001012 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000002bb
+core   0: 0x0000000080001014 (0xa2415b83) lhu     s7, -1500(sp)
+core   0: >>>>  i00000002bc
+core   0: 0x0000000080001018 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002bd
+core   0: 0x000000008000101c (0x9d510c03) lb      s8, -1579(sp)
+core   0: >>>>  i00000002be
+core   0: 0x0000000080001020 (0x01941193) slli    gp, s0, 25
+core   0: >>>>  i00000002bf
+core   0: 0x0000000080001024 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002c0
+core   0: 0x0000000080001028 (0x7aaea413) slti    s0, t4, 1962
+core   0: >>>>  i00000002c1
+core   0: 0x000000008000102c (0x037467bb) remw    a5, s0, s7
+core   0: >>>>  i00000002c2
+core   0: 0x0000000080001030 (0x034a673b) remw    a4, s4, s4
+core   0: >>>>  i00000002c3
+core   0: 0x0000000080001034 (0xb9a14b83) lbu     s7, -1126(sp)
+core   0: >>>>  i00000002c4
+core   0: 0x0000000080001038 (0x0000100f) fence.i
+core   0: >>>>  i00000002c5
+core   0: 0x000000008000103c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002c6
+core   0: 0x0000000080001040 (0x0285d73b) divuw   a4, a1, s0
+core   0: >>>>  i00000002c7
+core   0: 0x0000000080001044 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002c8
+core   0: 0x0000000080001048 (0x01745bb3) srl     s7, s0, s7
+core   0: >>>>  i00000002c9
+core   0: 0x000000008000104c (0x0000100f) fence.i
+core   0: >>>>  i00000002ca
+core   0: 0x0000000080001050 (0xaa811f23) sh      s0, -1346(sp)
+core   0: >>>>  i00000002cb
+core   0: 0x0000000080001054 (0x0000100f) fence.i
+core   0: 0x0000000080001058 (0x00090117) auipc   sp, 0x90
+core   0: 0x000000008000105c (0xfa810113) addi    sp, sp, -88
+core   0: 0x0000000080001060 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x0000000080001062 (0xdb83031b) addiw   t1, t1, -584
+core   0: 0x0000000080001066 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000002cc
+core   0: 0x0000000080001068 (0x7eb12c23) sw      a1, 2040(sp)
+core   0: >>>>  i00000002cd
+core   0: 0x000000008000106c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002ce
+core   0: 0x0000000080001070 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002cf
+core   0: 0x0000000080001074 (0x35700e93) li      t4, 855
+core   0: >>>>  i00000002d0
+core   0: 0x0000000080001078 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002d1
+core   0: 0x000000008000107c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002d2
+core   0: 0x0000000080001080 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002d3
+core   0: 0x0000000080001084 (0x03435cbb) divuw   s9, t1, s4
+core   0: >>>>  i00000002d4
+core   0: 0x0000000080001088 (0x38a04a93) xori    s5, zero, 906
+core   0: >>>>  i00000002d5
+core   0: 0x000000008000108c (0x030f46bb) divw    a3, t5, a6
+core   0: >>>>  i00000002d6
+core   0: 0x0000000080001090 (0x0000100f) fence.i
+core   0: >>>>  i00000002d7
+core   0: 0x0000000080001094 (0x1c812223) sw      s0, 452(sp)
+core   0: >>>>  i00000002d8
+core   0: 0x0000000080001098 (0x5ff3a1b7) lui     gp, 0x5ff3a
+core   0: >>>>  i00000002d9
+core   0: 0x000000008000109c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002da
+core   0: 0x00000000800010a0 (0x0046f4b3) and     s1, a3, tp
+core   0: >>>>  i00000002db
+core   0: 0x00000000800010a4 (0xb6c12583) lw      a1, -1172(sp)
+core   0: >>>>  i00000002dc
+core   0: 0x00000000800010a8 (0x31944413) xori    s0, s0, 793
+core   0: >>>>  i00000002dd
+core   0: 0x00000000800010ac (0x0375c33b) divw    t1, a1, s7
+core   0: >>>>  i00000002de
+core   0: 0x00000000800010b0 (0x640cd437) lui     s0, 0x640cd
+core   0: >>>>  i00000002df
+core   0: 0x00000000800010b4 (0x037be5bb) remw    a1, s7, s7
+core   0: >>>>  i00000002e0
+core   0: 0x00000000800010b8 (0x00cf5f13) srli    t5, t5, 12
+core   0: >>>>  i00000002e1
+core   0: 0x00000000800010bc (0x0000100f) fence.i
+core   0: >>>>  i00000002e2
+core   0: 0x00000000800010c0 (0x028bf83b) remuw   a6, s7, s0
+core   0: >>>>  i00000002e3
+core   0: 0x00000000800010c4 (0x01744bb3) xor     s7, s0, s7
+core   0: >>>>  i00000002e4
+core   0: 0x00000000800010c8 (0x4e815603) lhu     a2, 1256(sp)
+core   0: >>>>  i00000002e5
+core   0: 0x00000000800010cc (0x0000100f) fence.i
+core   0: >>>>  i00000002e6
+core   0: 0x00000000800010d0 (0x014d15b3) sll     a1, s10, s4
+core   0: >>>>  i00000002e7
+core   0: 0x00000000800010d4 (0x031a55bb) divuw   a1, s4, a7
+core   0: >>>>  i00000002e8
+core   0: 0x00000000800010d8 (0x84611403) lh      s0, -1978(sp)
+core   0: >>>>  i00000002e9
+core   0: 0x00000000800010dc (0xeb412583) lw      a1, -332(sp)
+core   0: >>>>  i00000002ea
+core   0: 0x00000000800010e0 (0xb2e10583) lb      a1, -1234(sp)
+core   0: >>>>  i00000002eb
+core   0: 0x00000000800010e4 (0x037457bb) divuw   a5, s0, s7
+core   0: >>>>  i00000002ec
+core   0: 0x00000000800010e8 (0x0000100f) fence.i
+core   0: >>>>  i00000002ed
+core   0: 0x00000000800010ec (0x59011e23) sh      a6, 1436(sp)
+core   0: >>>>  i00000002ee
+core   0: 0x00000000800010f0 (0x82e4b913) sltiu   s2, s1, -2002
+core   0: >>>>  i00000002ef
+core   0: 0x00000000800010f4 (0x0000100f) fence.i
+core   0: >>>>  i00000002f0
+core   0: 0x00000000800010f8 (0x02b5dbbb) divuw   s7, a1, a1
+core   0: >>>>  i00000002f1
+core   0: 0x00000000800010fc (0x37c14783) lbu     a5, 892(sp)
+core   0: >>>>  i00000002f2
+core   0: 0x0000000080001100 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002f3
+core   0: 0x0000000080001104 (0x0000100f) fence.i
+core   0: >>>>  i00000002f4
+core   0: 0x0000000080001108 (0x39211403) lh      s0, 914(sp)
+core   0: >>>>  i00000002f5
+core   0: 0x000000008000110c (0x0285df3b) divuw   t5, a1, s0
+core   0: >>>>  i00000002f6
+core   0: 0x0000000080001110 (0x02bbed3b) remw    s10, s7, a1
+core   0: >>>>  i00000002f7
+core   0: 0x0000000080001114 (0x08411b83) lh      s7, 132(sp)
+core   0: >>>>  i00000002f8
+core   0: 0x0000000080001118 (0x0000100f) fence.i
+core   0: >>>>  i00000002f9
+core   0: 0x000000008000111c (0x030cd5bb) divuw   a1, s9, a6
+core   0: >>>>  i00000002fa
+core   0: 0x0000000080001120 (0x02b47ebb) remuw   t4, s0, a1
+core   0: >>>>  i00000002fb
+core   0: 0x0000000080001124 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000002fc
+core   0: 0x0000000080001128 (0x29db8293) addi    t0, s7, 669
+core   0: >>>>  i00000002fd
+core   0: 0x000000008000112c (0xe445e413) ori     s0, a1, -444
+core   0: >>>>  i00000002fe
+core   0: 0x0000000080001130 (0x0000100f) fence.i
+core   0: >>>>  i00000002ff
+core   0: 0x0000000080001134 (0x00bbcbb3) xor     s7, s7, a1
+core   0: >>>>  i0000000300
+core   0: 0x0000000080001138 (0x41a5d893) srai    a7, a1, 26
+core   0: >>>>  i0000000301
+core   0: 0x000000008000113c (0x0000100f) fence.i
+core   0: >>>>  i0000000302
+core   0: 0x0000000080001140 (0x0000100f) fence.i
+core   0: >>>>  i0000000303
+core   0: 0x0000000080001144 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000304
+core   0: 0x0000000080001148 (0x0375d73b) divuw   a4, a1, s7
+core   0: >>>>  i0000000305
+core   0: 0x000000008000114c (0x037bfbbb) remuw   s7, s7, s7
+core   0: >>>>  i0000000306
+core   0: 0x0000000080001150 (0x017bdeb3) srl     t4, s7, s7
+core   0: >>>>  i0000000307
+core   0: 0x0000000080001154 (0x037bf23b) remuw   tp, s7, s7
+core   0: >>>>  i0000000308
+core   0: 0x0000000080001158 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000309
+core   0: 0x000000008000115c (0x3bc11803) lh      a6, 956(sp)
+core   0: >>>>  i000000030a
+core   0: 0x0000000080001160 (0x501f1c37) lui     s8, 0x501f1
+core   0: >>>>  i000000030b
+core   0: 0x0000000080001164 (0x0000100f) fence.i
+core   0: >>>>  i000000030c
+core   0: 0x0000000080001168 (0x037bcbbb) divw    s7, s7, s7
+core   0: >>>>  i000000030d
+core   0: 0x000000008000116c (0x4d510023) sb      s5, 1216(sp)
+core   0: >>>>  i000000030e
+core   0: 0x0000000080001170 (0x414355b3) sra     a1, t1, s4
+core   0: >>>>  i000000030f
+core   0: 0x0000000080001174 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000310
+core   0: 0x0000000080001178 (0x3642e593) ori     a1, t0, 868
+core   0: >>>>  i0000000311
+core   0: 0x000000008000117c (0x000098fc) unknown
+core   0: exception trap_illegal_instruction, epc 0x000000008000117c
+core   0:           tval 0x00000000000098fc
+core   0: >>>>  trap_entry
+core   0: 0x0000000080000124 (0x0000716d) c.addi16sp sp, -272
+core   0: 0x0000000080000126 (0x0000e406) c.sdsp  ra, 8(sp)
+core   0: 0x0000000080000128 (0x0000e80a) c.sdsp  sp, 16(sp)
+core   0: 0x000000008000012a (0x0000ec0e) c.sdsp  gp, 24(sp)
+core   0: 0x000000008000012c (0x0000f012) c.sdsp  tp, 32(sp)
+core   0: 0x000000008000012e (0x0000f416) c.sdsp  t0, 40(sp)
+core   0: 0x0000000080000130 (0x0000f81a) c.sdsp  t1, 48(sp)
+core   0: 0x0000000080000132 (0x0000fc1e) c.sdsp  t2, 56(sp)
+core   0: 0x0000000080000134 (0x0000e0a2) c.sdsp  s0, 64(sp)
+core   0: 0x0000000080000136 (0x0000e4a6) c.sdsp  s1, 72(sp)
+core   0: 0x0000000080000138 (0x0000e8aa) c.sdsp  a0, 80(sp)
+core   0: 0x000000008000013a (0x0000ecae) c.sdsp  a1, 88(sp)
+core   0: 0x000000008000013c (0x0000f0b2) c.sdsp  a2, 96(sp)
+core   0: 0x000000008000013e (0x0000f4b6) c.sdsp  a3, 104(sp)
+core   0: 0x0000000080000140 (0x0000f8ba) c.sdsp  a4, 112(sp)
+core   0: 0x0000000080000142 (0x0000fcbe) c.sdsp  a5, 120(sp)
+core   0: 0x0000000080000144 (0x0000e142) c.sdsp  a6, 128(sp)
+core   0: 0x0000000080000146 (0x0000e546) c.sdsp  a7, 136(sp)
+core   0: 0x0000000080000148 (0x0000e94a) c.sdsp  s2, 144(sp)
+core   0: 0x000000008000014a (0x0000ed4e) c.sdsp  s3, 152(sp)
+core   0: 0x000000008000014c (0x0000f152) c.sdsp  s4, 160(sp)
+core   0: 0x000000008000014e (0x0000f556) c.sdsp  s5, 168(sp)
+core   0: 0x0000000080000150 (0x0000f95a) c.sdsp  s6, 176(sp)
+core   0: 0x0000000080000152 (0x0000fd5e) c.sdsp  s7, 184(sp)
+core   0: 0x0000000080000154 (0x0000e1e2) c.sdsp  s8, 192(sp)
+core   0: 0x0000000080000156 (0x0000e5e6) c.sdsp  s9, 200(sp)
+core   0: 0x0000000080000158 (0x0000e9ea) c.sdsp  s10, 208(sp)
+core   0: 0x000000008000015a (0x0000edee) c.sdsp  s11, 216(sp)
+core   0: 0x000000008000015c (0x0000f1f2) c.sdsp  t3, 224(sp)
+core   0: 0x000000008000015e (0x0000f5f6) c.sdsp  t4, 232(sp)
+core   0: 0x0000000080000160 (0x0000f9fa) c.sdsp  t5, 240(sp)
+core   0: 0x0000000080000162 (0x0000fdfe) c.sdsp  t6, 248(sp)
+core   0: 0x0000000080000164 (0x34202573) csrr    a0, mcause
+core   0: 0x0000000080000168 (0x341025f3) csrr    a1, mepc
+core   0: 0x000000008000016c (0x0005d603) lhu     a2, 0(a1)
+core   0: 0x0000000080000170 (0x00008a0d) c.andi  a2, 3
+core   0: 0x0000000080000172 (0x0000428d) c.li    t0, 3
+core   0: 0x0000000080000174 (0x00561563) bne     a2, t0, pc + 10
+core   0: 0x000000008000017e (0x00000589) c.addi  a1, 2
+core   0: 0x0000000080000180 (0x34159073) csrw    mepc, a1
+core   0: 0x0000000080000184 (0x00006289) c.lui   t0, 0x2
+core   0: 0x0000000080000186 (0x8002829b) addiw   t0, t0, -2048
+core   0: 0x000000008000018a (0x3002a073) csrs    mstatus, t0
+core   0: 0x000000008000018e (0x000060a2) c.ldsp  ra, 8(sp)
+core   0: 0x0000000080000190 (0x00006142) c.ldsp  sp, 16(sp)
+core   0: 0x0000000080000192 (0x000061e2) c.ldsp  gp, 24(sp)
+core   0: 0x0000000080000194 (0x00007202) c.ldsp  tp, 32(sp)
+core   0: 0x0000000080000196 (0x000072a2) c.ldsp  t0, 40(sp)
+core   0: 0x0000000080000198 (0x00007342) c.ldsp  t1, 48(sp)
+core   0: 0x000000008000019a (0x000073e2) c.ldsp  t2, 56(sp)
+core   0: 0x000000008000019c (0x00006406) c.ldsp  s0, 64(sp)
+core   0: 0x000000008000019e (0x000064a6) c.ldsp  s1, 72(sp)
+core   0: 0x00000000800001a0 (0x00006546) c.ldsp  a0, 80(sp)
+core   0: 0x00000000800001a2 (0x000065e6) c.ldsp  a1, 88(sp)
+core   0: 0x00000000800001a4 (0x00007606) c.ldsp  a2, 96(sp)
+core   0: 0x00000000800001a6 (0x000076a6) c.ldsp  a3, 104(sp)
+core   0: 0x00000000800001a8 (0x00007746) c.ldsp  a4, 112(sp)
+core   0: 0x00000000800001aa (0x000077e6) c.ldsp  a5, 120(sp)
+core   0: 0x00000000800001ac (0x0000680a) c.ldsp  a6, 128(sp)
+core   0: 0x00000000800001ae (0x000068aa) c.ldsp  a7, 136(sp)
+core   0: 0x00000000800001b0 (0x0000694a) c.ldsp  s2, 144(sp)
+core   0: 0x00000000800001b2 (0x000069ea) c.ldsp  s3, 152(sp)
+core   0: 0x00000000800001b4 (0x00007a0a) c.ldsp  s4, 160(sp)
+core   0: 0x00000000800001b6 (0x00007aaa) c.ldsp  s5, 168(sp)
+core   0: 0x00000000800001b8 (0x00007b4a) c.ldsp  s6, 176(sp)
+core   0: 0x00000000800001ba (0x00007bea) c.ldsp  s7, 184(sp)
+core   0: 0x00000000800001bc (0x00006c0e) c.ldsp  s8, 192(sp)
+core   0: 0x00000000800001be (0x00006cae) c.ldsp  s9, 200(sp)
+core   0: 0x00000000800001c0 (0x00006d4e) c.ldsp  s10, 208(sp)
+core   0: 0x00000000800001c2 (0x00006dee) c.ldsp  s11, 216(sp)
+core   0: 0x00000000800001c4 (0x00007e0e) c.ldsp  t3, 224(sp)
+core   0: 0x00000000800001c6 (0x00007eae) c.ldsp  t4, 232(sp)
+core   0: 0x00000000800001c8 (0x00007f4e) c.ldsp  t5, 240(sp)
+core   0: 0x00000000800001ca (0x00007fee) c.ldsp  t6, 248(sp)
+core   0: 0x00000000800001cc (0x00006151) c.addi16sp sp, 272
+core   0: 0x00000000800001ce (0x30200073) mret
+core   0: >>>>  i0000000312
+core   0: 0x000000008000117e (0x008435b3) sltu    a1, s0, s0
+core   0: >>>>  i0000000313
+core   0: 0x0000000080001182 (0xcad14b03) lbu     s6, -851(sp)
+core   0: >>>>  i0000000314
+core   0: 0x0000000080001186 (0x02b441bb) divw    gp, s0, a1
+core   0: >>>>  i0000000315
+core   0: 0x000000008000118a (0x03f4d7bb) divuw   a5, s1, t6
+core   0: 0x000000008000118e (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080001192 (0xe7210113) addi    sp, sp, -398
+core   0: 0x0000000080001196 (0x00006305) c.lui   t1, 0x1
+core   0: 0x0000000080001198 (0xb003031b) addiw   t1, t1, -1280
+core   0: 0x000000008000119c (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000316
+core   0: 0x000000008000119e (0x6d415703) lhu     a4, 1748(sp)
+core   0: >>>>  i0000000317
+core   0: 0x00000000800011a2 (0xb7412003) lw      zero, -1164(sp)
+core   0: >>>>  i0000000318
+core   0: 0x00000000800011a6 (0x14a11403) lh      s0, 330(sp)
+core   0: >>>>  i0000000319
+core   0: 0x00000000800011aa (0x006f42b3) xor     t0, t5, t1
+core   0: >>>>  i000000031a
+core   0: 0x00000000800011ae (0x5ac15d83) lhu     s11, 1452(sp)
+core   0: >>>>  i000000031b
+core   0: 0x00000000800011b2 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000031c
+core   0: 0x00000000800011b6 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000031d
+core   0: 0x00000000800011ba (0x0000100f) fence.i
+core   0: >>>>  i000000031e
+core   0: 0x00000000800011be (0xc8c12f03) lw      t5, -884(sp)
+core   0: >>>>  i000000031f
+core   0: 0x00000000800011c2 (0x41da81b3) sub     gp, s5, t4
+core   0: >>>>  i0000000320
+core   0: 0x00000000800011c6 (0x41740433) sub     s0, s0, s7
+core   0: >>>>  i0000000321
+core   0: 0x00000000800011ca (0x00fce033) or      zero, s9, a5
+core   0: >>>>  i0000000322
+core   0: 0x00000000800011ce (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000323
+core   0: 0x00000000800011d2 (0x409c5433) sra     s0, s8, s1
+core   0: >>>>  i0000000324
+core   0: 0x00000000800011d6 (0x0000db2e) c.swsp  a1, 180(sp)
+core   0: >>>>  i0000000325
+core   0: 0x00000000800011d8 (0x035c0bbb) mulw    s7, s8, s5
+core   0: >>>>  i0000000326
+core   0: 0x00000000800011dc (0x03a4fabb) remuw   s5, s1, s10
+core   0: >>>>  i0000000327
+core   0: 0x00000000800011e0 (0x0337043b) mulw    s0, a4, s3
+core   0: >>>>  i0000000328
+core   0: 0x00000000800011e4 (0x0367fbbb) remuw   s7, a5, s6
+core   0: >>>>  i0000000329
+core   0: 0x00000000800011e8 (0x00ab35b3) sltu    a1, s6, a0
+core   0: >>>>  i000000032a
+core   0: 0x00000000800011ec (0x7b411203) lh      tp, 1972(sp)
+core   0: >>>>  i000000032b
+core   0: 0x00000000800011f0 (0x0000100f) fence.i
+core   0: >>>>  i000000032c
+core   0: 0x00000000800011f4 (0x02bbde3b) divuw   t3, s7, a1
+core   0: >>>>  i000000032d
+core   0: 0x00000000800011f8 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000032e
+core   0: 0x00000000800011fc (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000032f
+core   0: 0x0000000080001200 (0x0000100f) fence.i
+core   0: >>>>  i0000000330
+core   0: 0x0000000080001204 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000331
+core   0: 0x0000000080001208 (0x02797dbb) remuw   s11, s2, t2
+core   0: >>>>  i0000000332
+core   0: 0x000000008000120c (0x017b8433) add     s0, s7, s7
+core   0: >>>>  i0000000333
+core   0: 0x0000000080001210 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000334
+core   0: 0x0000000080001214 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000335
+core   0: 0x0000000080001218 (0x0000100f) fence.i
+core   0: >>>>  i0000000336
+core   0: 0x000000008000121c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000337
+core   0: 0x0000000080001220 (0x028b84bb) mulw    s1, s7, s0
+core   0: >>>>  i0000000338
+core   0: 0x0000000080001224 (0x0175a7b3) slt     a5, a1, s7
+core   0: >>>>  i0000000339
+core   0: 0x0000000080001228 (0x037465bb) remw    a1, s0, s7
+core   0: >>>>  i000000033a
+core   0: 0x000000008000122c (0x032e043b) mulw    s0, t3, s2
+core   0: >>>>  i000000033b
+core   0: 0x0000000080001230 (0x33711123) sh      s7, 802(sp)
+core   0: >>>>  i000000033c
+core   0: 0x0000000080001234 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000033d
+core   0: 0x0000000080001238 (0x0231f5bb) remuw   a1, gp, gp
+core   0: >>>>  i000000033e
+core   0: 0x000000008000123c (0x26b11d23) sh      a1, 634(sp)
+core   0: >>>>  i000000033f
+core   0: 0x0000000080001240 (0x0a114583) lbu     a1, 161(sp)
+core   0: >>>>  i0000000340
+core   0: 0x0000000080001244 (0x008bee33) or      t3, s7, s0
+core   0: >>>>  i0000000341
+core   0: 0x0000000080001248 (0x410e5ab3) sra     s5, t3, a6
+core   0: >>>>  i0000000342
+core   0: 0x000000008000124c (0x0342d63b) divuw   a2, t0, s4
+core   0: >>>>  i0000000343
+core   0: 0x0000000080001250 (0x028585bb) mulw    a1, a1, s0
+core   0: >>>>  i0000000344
+core   0: 0x0000000080001254 (0x0000100f) fence.i
+core   0: >>>>  i0000000345
+core   0: 0x0000000080001258 (0x13711823) sh      s7, 304(sp)
+core   0: >>>>  i0000000346
+core   0: 0x000000008000125c (0x03d3cfbb) divw    t6, t2, t4
+core   0: 0x0000000080001260 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080001264 (0xda010113) addi    sp, sp, -608
+core   0: 0x0000000080001268 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x000000008000126a (0xa383031b) addiw   t1, t1, -1480
+core   0: 0x000000008000126e (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000347
+core   0: 0x0000000080001270 (0xf7711c23) sh      s7, -136(sp)
+core   0: >>>>  i0000000348
+core   0: 0x0000000080001274 (0x41f41b17) auipc   s6, 0x41f41
+core   0: >>>>  i0000000349
+core   0: 0x0000000080001278 (0x6fc15a83) lhu     s5, 1788(sp)
+core   0: >>>>  i000000034a
+core   0: 0x000000008000127c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000034b
+core   0: 0x0000000080001280 (0x03740f3b) mulw    t5, s0, s7
+core   0: >>>>  i000000034c
+core   0: 0x0000000080001284 (0x026f893b) mulw    s2, t6, t1
+core   0: >>>>  i000000034d
+core   0: 0x0000000080001288 (0x032b753b) remuw   a0, s6, s2
+core   0: >>>>  i000000034e
+core   0: 0x000000008000128c (0xc0810c23) sb      s0, -1000(sp)
+core   0: >>>>  i000000034f
+core   0: 0x0000000080001290 (0x028bcbbb) divw    s7, s7, s0
+core   0: 0x0000000080001294 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080001298 (0xd6c10113) addi    sp, sp, -660
+core   0: 0x000000008000129c (0x0000630d) c.lui   t1, 0x3
+core   0: 0x000000008000129e (0xeb83031b) addiw   t1, t1, -328
+core   0: 0x00000000800012a2 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000350
+core   0: 0x00000000800012a4 (0xf1c11403) lh      s0, -228(sp)
+core   0: 0x00000000800012a8 (0x00090117) auipc   sp, 0x90
+core   0: 0x00000000800012ac (0xd5810113) addi    sp, sp, -680
+core   0: 0x00000000800012b0 (0x00006305) c.lui   t1, 0x1
+core   0: 0x00000000800012b2 (0x6703031b) addiw   t1, t1, 1648
+core   0: 0x00000000800012b6 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i0000000351
+core   0: 0x00000000800012b8 (0xf1810583) lb      a1, -232(sp)
+core   0: >>>>  i0000000352
+core   0: 0x00000000800012bc (0xad85ce13) xori    t3, a1, -1320
+core   0: >>>>  i0000000353
+core   0: 0x00000000800012c0 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000354
+core   0: 0x00000000800012c4 (0x98215583) lhu     a1, -1662(sp)
+core   0: >>>>  i0000000355
+core   0: 0x00000000800012c8 (0x0000100f) fence.i
+core   0: >>>>  i0000000356
+core   0: 0x00000000800012cc (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000357
+core   0: 0x00000000800012d0 (0x02b464bb) remw    s1, s0, a1
+core   0: >>>>  i0000000358
+core   0: 0x00000000800012d4 (0x02fc5bbb) divuw   s7, s8, a5
+core   0: >>>>  i0000000359
+core   0: 0x00000000800012d8 (0x09752b17) auipc   s6, 0x9752
+core   0: >>>>  i000000035a
+core   0: 0x00000000800012dc (0x8b114383) lbu     t2, -1871(sp)
+core   0: >>>>  i000000035b
+core   0: 0x00000000800012e0 (0x037bd5bb) divuw   a1, s7, s7
+core   0: >>>>  i000000035c
+core   0: 0x00000000800012e4 (0x0ff0000f) fence   iorw,iorw
+core   0: 0x00000000800012e8 (0x00090117) auipc   sp, 0x90
+core   0: 0x00000000800012ec (0xd1810113) addi    sp, sp, -744
+core   0: 0x00000000800012f0 (0x00006309) c.lui   t1, 0x2
+core   0: 0x00000000800012f2 (0xcc83031b) addiw   t1, t1, -824
+core   0: 0x00000000800012f6 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i000000035d
+core   0: 0x00000000800012f8 (0x9f815c03) lhu     s8, -1544(sp)
+core   0: >>>>  i000000035e
+core   0: 0x00000000800012fc (0x0175a933) slt     s2, a1, s7
+core   0: >>>>  i000000035f
+core   0: 0x0000000080001300 (0x0329d93b) divuw   s2, s3, s2
+core   0: >>>>  i0000000360
+core   0: 0x0000000080001304 (0x41c35813) srai    a6, t1, 28
+core   0: >>>>  i0000000361
+core   0: 0x0000000080001308 (0x785beb93) ori     s7, s7, 1925
+core   0: >>>>  i0000000362
+core   0: 0x000000008000130c (0x01a75b93) srli    s7, a4, 26
+core   0: >>>>  i0000000363
+core   0: 0x0000000080001310 (0x407c8bb3) sub     s7, s9, t2
+core   0: >>>>  i0000000364
+core   0: 0x0000000080001314 (0xb2e15183) lhu     gp, -1234(sp)
+core   0: >>>>  i0000000365
+core   0: 0x0000000080001318 (0xdd7109a3) sb      s7, -557(sp)
+core   0: >>>>  i0000000366
+core   0: 0x000000008000131c (0x9c011b83) lh      s7, -1600(sp)
+core   0: >>>>  i0000000367
+core   0: 0x0000000080001320 (0x6dc00b37) lui     s6, 0x6dc00
+core   0: >>>>  i0000000368
+core   0: 0x0000000080001324 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000369
+core   0: 0x0000000080001328 (0x00af96b3) sll     a3, t6, a0
+core   0: >>>>  i000000036a
+core   0: 0x000000008000132c (0x03f06bbb) remw    s7, zero, t6
+core   0: >>>>  i000000036b
+core   0: 0x0000000080001330 (0x03fed5bb) divuw   a1, t4, t6
+core   0: >>>>  i000000036c
+core   0: 0x0000000080001334 (0x0000043a) c.slli  s0, 14
+core   0: >>>>  i000000036d
+core   0: 0x0000000080001336 (0x02a7843b) mulw    s0, a5, a0
+core   0: >>>>  i000000036e
+core   0: 0x000000008000133a (0x01739413) slli    s0, t2, 23
+core   0: >>>>  i000000036f
+core   0: 0x000000008000133e (0x03236d3b) remw    s10, t1, s2
+core   0: >>>>  i0000000370
+core   0: 0x0000000080001342 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000371
+core   0: 0x0000000080001346 (0x02bbf43b) remuw   s0, s7, a1
+core   0: >>>>  i0000000372
+core   0: 0x000000008000134a (0x017582b3) add     t0, a1, s7
+core   0: >>>>  i0000000373
+core   0: 0x000000008000134e (0x01bbdb93) srli    s7, s7, 27
+core   0: >>>>  i0000000374
+core   0: 0x0000000080001352 (0x0000100f) fence.i
+core   0: >>>>  i0000000375
+core   0: 0x0000000080001356 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i0000000376
+core   0: 0x000000008000135a (0x0000100f) fence.i
+core   0: >>>>  i0000000377
+core   0: 0x000000008000135e (0x6c8102a3) sb      s0, 1733(sp)
+core   0: >>>>  i0000000378
+core   0: 0x0000000080001362 (0x029c7f3b) remuw   t5, s8, s1
+core   0: >>>>  i0000000379
+core   0: 0x0000000080001366 (0x0252823b) mulw    tp, t0, t0
+core   0: >>>>  i000000037a
+core   0: 0x000000008000136a (0x008425b3) slt     a1, s0, s0
+core   0: >>>>  i000000037b
+core   0: 0x000000008000136e (0x8ac12a83) lw      s5, -1876(sp)
+core   0: >>>>  i000000037c
+core   0: 0x0000000080001372 (0x6a1ba593) slti    a1, s7, 1697
+core   0: >>>>  i000000037d
+core   0: 0x0000000080001376 (0x01f6f233) and     tp, a3, t6
+core   0: >>>>  i000000037e
+core   0: 0x000000008000137a (0x0000100f) fence.i
+core   0: >>>>  i000000037f
+core   0: 0x000000008000137e (0x032ad3bb) divuw   t2, s5, s2
+core   0: >>>>  i0000000380
+core   0: 0x0000000080001382 (0x02845a3b) divuw   s4, s0, s0
+core   0: >>>>  i0000000381
+core   0: 0x0000000080001386 (0x78d106a3) sb      a3, 1933(sp)
+core   0: >>>>  i0000000382
+core   0: 0x000000008000138a (0x8e814203) lbu     tp, -1816(sp)
+core   0: >>>>  i0000000383
+core   0: 0x000000008000138e (0x00b43433) sltu    s0, s0, a1
+core   0: >>>>  i0000000384
+core   0: 0x0000000080001392 (0x03d385bb) mulw    a1, t2, t4
+core   0: >>>>  i0000000385
+core   0: 0x0000000080001396 (0x012a35b3) sltu    a1, s4, s2
+core   0: >>>>  i0000000386
+core   0: 0x000000008000139a (0x0000058e) c.slli  a1, 3
+core   0: >>>>  i0000000387
+core   0: 0x000000008000139c (0xd5012c03) lw      s8, -688(sp)
+core   0: >>>>  i0000000388
+core   0: 0x00000000800013a0 (0x032ee43b) remw    s0, t4, s2
+core   0: >>>>  i0000000389
+core   0: 0x00000000800013a4 (0x0000100f) fence.i
+core   0: >>>>  i000000038a
+core   0: 0x00000000800013a8 (0x0000100f) fence.i
+core   0: >>>>  i000000038b
+core   0: 0x00000000800013ac (0x029e8bbb) mulw    s7, t4, s1
+core   0: >>>>  i000000038c
+core   0: 0x00000000800013b0 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000038d
+core   0: 0x00000000800013b4 (0x79e6f637) lui     a2, 0x79e6f
+core   0: >>>>  i000000038e
+core   0: 0x00000000800013b8 (0x028be9bb) remw    s3, s7, s0
+core   0: >>>>  i000000038f
+core   0: 0x00000000800013bc (0x0000100f) fence.i
+core   0: >>>>  i0000000390
+core   0: 0x00000000800013c0 (0x42712e23) sw      t2, 1084(sp)
+core   0: >>>>  i0000000391
+core   0: 0x00000000800013c4 (0x0093e5b3) or      a1, t2, s1
+core   0: >>>>  i0000000392
+core   0: 0x00000000800013c8 (0x78211403) lh      s0, 1922(sp)
+core   0: >>>>  i0000000393
+core   0: 0x00000000800013cc (0x51615b83) lhu     s7, 1302(sp)
+core   0: >>>>  i0000000394
+core   0: 0x00000000800013d0 (0x02b46ebb) remw    t4, s0, a1
+core   0: >>>>  i0000000395
+core   0: 0x00000000800013d4 (0x02a5653b) remw    a0, a0, a0
+core   0: >>>>  i0000000396
+core   0: 0x00000000800013d8 (0x0000100f) fence.i
+core   0: >>>>  i0000000397
+core   0: 0x00000000800013dc (0x0f215503) lhu     a0, 242(sp)
+core   0: >>>>  i0000000398
+core   0: 0x00000000800013e0 (0x02845b3b) divuw   s6, s0, s0
+core   0: >>>>  i0000000399
+core   0: 0x00000000800013e4 (0x00008f4e) c.mv    t5, s3
+core   0: >>>>  i000000039a
+core   0: 0x00000000800013e6 (0x00b5d433) srl     s0, a1, a1
+core   0: >>>>  i000000039b
+core   0: 0x00000000800013ea (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i000000039c
+core   0: 0x00000000800013ee (0x00008e68) unknown
+core   0: exception trap_illegal_instruction, epc 0x00000000800013ee
+core   0:           tval 0x0000000000008e68
+core   0: >>>>  trap_entry
+core   0: 0x0000000080000124 (0x0000716d) c.addi16sp sp, -272
+core   0: 0x0000000080000126 (0x0000e406) c.sdsp  ra, 8(sp)
+core   0: 0x0000000080000128 (0x0000e80a) c.sdsp  sp, 16(sp)
+core   0: 0x000000008000012a (0x0000ec0e) c.sdsp  gp, 24(sp)
+core   0: 0x000000008000012c (0x0000f012) c.sdsp  tp, 32(sp)
+core   0: 0x000000008000012e (0x0000f416) c.sdsp  t0, 40(sp)
+core   0: 0x0000000080000130 (0x0000f81a) c.sdsp  t1, 48(sp)
+core   0: 0x0000000080000132 (0x0000fc1e) c.sdsp  t2, 56(sp)
+core   0: 0x0000000080000134 (0x0000e0a2) c.sdsp  s0, 64(sp)
+core   0: 0x0000000080000136 (0x0000e4a6) c.sdsp  s1, 72(sp)
+core   0: 0x0000000080000138 (0x0000e8aa) c.sdsp  a0, 80(sp)
+core   0: 0x000000008000013a (0x0000ecae) c.sdsp  a1, 88(sp)
+core   0: 0x000000008000013c (0x0000f0b2) c.sdsp  a2, 96(sp)
+core   0: 0x000000008000013e (0x0000f4b6) c.sdsp  a3, 104(sp)
+core   0: 0x0000000080000140 (0x0000f8ba) c.sdsp  a4, 112(sp)
+core   0: 0x0000000080000142 (0x0000fcbe) c.sdsp  a5, 120(sp)
+core   0: 0x0000000080000144 (0x0000e142) c.sdsp  a6, 128(sp)
+core   0: 0x0000000080000146 (0x0000e546) c.sdsp  a7, 136(sp)
+core   0: 0x0000000080000148 (0x0000e94a) c.sdsp  s2, 144(sp)
+core   0: 0x000000008000014a (0x0000ed4e) c.sdsp  s3, 152(sp)
+core   0: 0x000000008000014c (0x0000f152) c.sdsp  s4, 160(sp)
+core   0: 0x000000008000014e (0x0000f556) c.sdsp  s5, 168(sp)
+core   0: 0x0000000080000150 (0x0000f95a) c.sdsp  s6, 176(sp)
+core   0: 0x0000000080000152 (0x0000fd5e) c.sdsp  s7, 184(sp)
+core   0: 0x0000000080000154 (0x0000e1e2) c.sdsp  s8, 192(sp)
+core   0: 0x0000000080000156 (0x0000e5e6) c.sdsp  s9, 200(sp)
+core   0: 0x0000000080000158 (0x0000e9ea) c.sdsp  s10, 208(sp)
+core   0: 0x000000008000015a (0x0000edee) c.sdsp  s11, 216(sp)
+core   0: 0x000000008000015c (0x0000f1f2) c.sdsp  t3, 224(sp)
+core   0: 0x000000008000015e (0x0000f5f6) c.sdsp  t4, 232(sp)
+core   0: 0x0000000080000160 (0x0000f9fa) c.sdsp  t5, 240(sp)
+core   0: 0x0000000080000162 (0x0000fdfe) c.sdsp  t6, 248(sp)
+core   0: 0x0000000080000164 (0x34202573) csrr    a0, mcause
+core   0: 0x0000000080000168 (0x341025f3) csrr    a1, mepc
+core   0: 0x000000008000016c (0x0005d603) lhu     a2, 0(a1)
+core   0: 0x0000000080000170 (0x00008a0d) c.andi  a2, 3
+core   0: 0x0000000080000172 (0x0000428d) c.li    t0, 3
+core   0: 0x0000000080000174 (0x00561563) bne     a2, t0, pc + 10
+core   0: 0x000000008000017e (0x00000589) c.addi  a1, 2
+core   0: 0x0000000080000180 (0x34159073) csrw    mepc, a1
+core   0: 0x0000000080000184 (0x00006289) c.lui   t0, 0x2
+core   0: 0x0000000080000186 (0x8002829b) addiw   t0, t0, -2048
+core   0: 0x000000008000018a (0x3002a073) csrs    mstatus, t0
+core   0: 0x000000008000018e (0x000060a2) c.ldsp  ra, 8(sp)
+core   0: 0x0000000080000190 (0x00006142) c.ldsp  sp, 16(sp)
+core   0: 0x0000000080000192 (0x000061e2) c.ldsp  gp, 24(sp)
+core   0: 0x0000000080000194 (0x00007202) c.ldsp  tp, 32(sp)
+core   0: 0x0000000080000196 (0x000072a2) c.ldsp  t0, 40(sp)
+core   0: 0x0000000080000198 (0x00007342) c.ldsp  t1, 48(sp)
+core   0: 0x000000008000019a (0x000073e2) c.ldsp  t2, 56(sp)
+core   0: 0x000000008000019c (0x00006406) c.ldsp  s0, 64(sp)
+core   0: 0x000000008000019e (0x000064a6) c.ldsp  s1, 72(sp)
+core   0: 0x00000000800001a0 (0x00006546) c.ldsp  a0, 80(sp)
+core   0: 0x00000000800001a2 (0x000065e6) c.ldsp  a1, 88(sp)
+core   0: 0x00000000800001a4 (0x00007606) c.ldsp  a2, 96(sp)
+core   0: 0x00000000800001a6 (0x000076a6) c.ldsp  a3, 104(sp)
+core   0: 0x00000000800001a8 (0x00007746) c.ldsp  a4, 112(sp)
+core   0: 0x00000000800001aa (0x000077e6) c.ldsp  a5, 120(sp)
+core   0: 0x00000000800001ac (0x0000680a) c.ldsp  a6, 128(sp)
+core   0: 0x00000000800001ae (0x000068aa) c.ldsp  a7, 136(sp)
+core   0: 0x00000000800001b0 (0x0000694a) c.ldsp  s2, 144(sp)
+core   0: 0x00000000800001b2 (0x000069ea) c.ldsp  s3, 152(sp)
+core   0: 0x00000000800001b4 (0x00007a0a) c.ldsp  s4, 160(sp)
+core   0: 0x00000000800001b6 (0x00007aaa) c.ldsp  s5, 168(sp)
+core   0: 0x00000000800001b8 (0x00007b4a) c.ldsp  s6, 176(sp)
+core   0: 0x00000000800001ba (0x00007bea) c.ldsp  s7, 184(sp)
+core   0: 0x00000000800001bc (0x00006c0e) c.ldsp  s8, 192(sp)
+core   0: 0x00000000800001be (0x00006cae) c.ldsp  s9, 200(sp)
+core   0: 0x00000000800001c0 (0x00006d4e) c.ldsp  s10, 208(sp)
+core   0: 0x00000000800001c2 (0x00006dee) c.ldsp  s11, 216(sp)
+core   0: 0x00000000800001c4 (0x00007e0e) c.ldsp  t3, 224(sp)
+core   0: 0x00000000800001c6 (0x00007eae) c.ldsp  t4, 232(sp)
+core   0: 0x00000000800001c8 (0x00007f4e) c.ldsp  t5, 240(sp)
+core   0: 0x00000000800001ca (0x00007fee) c.ldsp  t6, 248(sp)
+core   0: 0x00000000800001cc (0x00006151) c.addi16sp sp, 272
+core   0: 0x00000000800001ce (0x30200073) mret
+core   0: >>>>  i000000039d
+core   0: 0x00000000800013f0 (0x0000100f) fence.i
+core   0: >>>>  i000000039e
+core   0: 0x00000000800013f4 (0x12d7c7b7) lui     a5, 0x12d7c
+core   0: >>>>  i000000039f
+core   0: 0x00000000800013f8 (0x03c0763b) remuw   a2, zero, t3
+core   0: 0x00000000800013fc (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080001400 (0xc0410113) addi    sp, sp, -1020
+core   0: 0x0000000080001404 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x0000000080001406 (0x8403031b) addiw   t1, t1, -1984
+core   0: 0x000000008000140a (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000003a0
+core   0: 0x000000008000140c (0xfb811b83) lh      s7, -72(sp)
+core   0: >>>>  i00000003a1
+core   0: 0x0000000080001410 (0x0000100f) fence.i
+core   0: >>>>  i00000003a2
+core   0: 0x0000000080001414 (0x0000100f) fence.i
+core   0: >>>>  i00000003a3
+core   0: 0x0000000080001418 (0x7e615b83) lhu     s7, 2022(sp)
+core   0: >>>>  i00000003a4
+core   0: 0x000000008000141c (0x8fa10523) sb      s10, -1814(sp)
+core   0: >>>>  i00000003a5
+core   0: 0x0000000080001420 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000003a6
+core   0: 0x0000000080001424 (0x1ca0ec17) auipc   s8, 0x1ca0e
+core   0: >>>>  i00000003a7
+core   0: 0x0000000080001428 (0x002c9413) slli    s0, s9, 2
+core   0: >>>>  i00000003a8
+core   0: 0x000000008000142c (0x0000100f) fence.i
+core   0: >>>>  i00000003a9
+core   0: 0x0000000080001430 (0x03ac85bb) mulw    a1, s9, s10
+core   0: 0x0000000080001434 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080001438 (0xbcc10113) addi    sp, sp, -1076
+core   0: 0x000000008000143c (0x00006305) c.lui   t1, 0x1
+core   0: 0x000000008000143e (0xbf83031b) addiw   t1, t1, -1032
+core   0: 0x0000000080001442 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000003aa
+core   0: 0x0000000080001444 (0x72a15403) lhu     s0, 1834(sp)
+core   0: >>>>  i00000003ab
+core   0: 0x0000000080001448 (0x0000100f) fence.i
+core   0: >>>>  i00000003ac
+core   0: 0x000000008000144c (0x41a4dbb3) sra     s7, s1, s10
+core   0: >>>>  i00000003ad
+core   0: 0x0000000080001450 (0x0000100f) fence.i
+core   0: 0x0000000080001454 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080001458 (0xbac10113) addi    sp, sp, -1108
+core   0: 0x000000008000145c (0x00006309) c.lui   t1, 0x2
+core   0: 0x000000008000145e (0xe383031b) addiw   t1, t1, -456
+core   0: 0x0000000080001462 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000003ae
+core   0: 0x0000000080001464 (0x32812283) lw      t0, 808(sp)
+core   0: >>>>  i00000003af
+core   0: 0x0000000080001468 (0x0000100f) fence.i
+core   0: >>>>  i00000003b0
+core   0: 0x000000008000146c (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000003b1
+core   0: 0x0000000080001470 (0xc7c47713) andi    a4, s0, -900
+core   0: >>>>  i00000003b2
+core   0: 0x0000000080001474 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000003b3
+core   0: 0x0000000080001478 (0x12510a83) lb      s5, 293(sp)
+core   0: >>>>  i00000003b4
+core   0: 0x000000008000147c (0x4175dcb3) sra     s9, a1, s7
+core   0: >>>>  i00000003b5
+core   0: 0x0000000080001480 (0x0000100f) fence.i
+core   0: >>>>  i00000003b6
+core   0: 0x0000000080001484 (0x0161e833) or      a6, gp, s6
+core   0: >>>>  i00000003b7
+core   0: 0x0000000080001488 (0x0ff0000f) fence   iorw,iorw
+core   0: >>>>  i00000003b8
+core   0: 0x000000008000148c (0x73712c23) sw      s7, 1848(sp)
+core   0: >>>>  i00000003b9
+core   0: 0x0000000080001490 (0xeab12a23) sw      a1, -332(sp)
+core   0: >>>>  i00000003ba
+core   0: 0x0000000080001494 (0xd8215403) lhu     s0, -638(sp)
+core   0: >>>>  i00000003bb
+core   0: 0x0000000080001498 (0x77a10f03) lb      t5, 1914(sp)
+core   0: >>>>  i00000003bc
+core   0: 0x000000008000149c (0xe8bbcb93) xori    s7, s7, -373
+core   0: >>>>  i00000003bd
+core   0: 0x00000000800014a0 (0x01cb9313) slli    t1, s7, 28
+core   0: 0x00000000800014a4 (0x00090117) auipc   sp, 0x90
+core   0: 0x00000000800014a8 (0xb5c10113) addi    sp, sp, -1188
+core   0: 0x00000000800014ac (0x0000630d) c.lui   t1, 0x3
+core   0: 0x00000000800014ae (0x7383031b) addiw   t1, t1, 1848
+core   0: 0x00000000800014b2 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000003be
+core   0: 0x00000000800014b4 (0x86c12383) lw      t2, -1940(sp)
+core   0: >>>>  i00000003bf
+core   0: 0x00000000800014b8 (0x3d012403) lw      s0, 976(sp)
+core   0: >>>>  i00000003c0
+core   0: 0x00000000800014bc (0xc6b10623) sb      a1, -916(sp)
+core   0: >>>>  i00000003c1
+core   0: 0x00000000800014c0 (0x17615403) lhu     s0, 374(sp)
+core   0: >>>>  i00000003c2
+core   0: 0x00000000800014c4 (0xd4811623) sh      s0, -692(sp)
+core   0: >>>>  i00000003c3
+core   0: 0x00000000800014c8 (0x92514483) lbu     s1, -1755(sp)
+core   0: >>>>  i00000003c4
+core   0: 0x00000000800014cc (0x00a97b33) and     s6, s2, a0
+core   0: 0x00000000800014d0 (0x00090117) auipc   sp, 0x90
+core   0: 0x00000000800014d4 (0xb3010113) addi    sp, sp, -1232
+core   0: 0x00000000800014d8 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x00000000800014da (0x8603031b) addiw   t1, t1, -1952
+core   0: 0x00000000800014de (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000003c5
+core   0: 0x00000000800014e0 (0x75512a23) sw      s5, 1876(sp)
+core   0: >>>>  i00000003c6
+core   0: 0x00000000800014e4 (0x00858bb3) add     s7, a1, s0
+core   0: >>>>  i00000003c7
+core   0: 0x00000000800014e8 (0x0059feb3) and     t4, s3, t0
+core   0: >>>>  i00000003c8
+core   0: 0x00000000800014ec (0x26215803) lhu     a6, 610(sp)
+core   0: 0x00000000800014f0 (0x00090117) auipc   sp, 0x90
+core   0: 0x00000000800014f4 (0xb1010113) addi    sp, sp, -1264
+core   0: 0x00000000800014f8 (0x0000630d) c.lui   t1, 0x3
+core   0: 0x00000000800014fa (0x7903031b) addiw   t1, t1, 1936
+core   0: 0x00000000800014fe (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000003c9
+core   0: 0x0000000080001500 (0xe29105a3) sb      s1, -469(sp)
+core   0: >>>>  i00000003ca
+core   0: 0x0000000080001504 (0x01e295b3) sll     a1, t0, t5
+core   0: >>>>  $d
+core   0: 0x0000000080001508 (0x6d887f3b) unknown
+core   0: exception trap_illegal_instruction, epc 0x0000000080001508
+core   0:           tval 0x000000006d887f3b
+core   0: >>>>  trap_entry
+core   0: 0x0000000080000124 (0x0000716d) c.addi16sp sp, -272
+core   0: 0x0000000080000126 (0x0000e406) c.sdsp  ra, 8(sp)
+core   0: 0x0000000080000128 (0x0000e80a) c.sdsp  sp, 16(sp)
+core   0: 0x000000008000012a (0x0000ec0e) c.sdsp  gp, 24(sp)
+core   0: 0x000000008000012c (0x0000f012) c.sdsp  tp, 32(sp)
+core   0: 0x000000008000012e (0x0000f416) c.sdsp  t0, 40(sp)
+core   0: 0x0000000080000130 (0x0000f81a) c.sdsp  t1, 48(sp)
+core   0: 0x0000000080000132 (0x0000fc1e) c.sdsp  t2, 56(sp)
+core   0: 0x0000000080000134 (0x0000e0a2) c.sdsp  s0, 64(sp)
+core   0: 0x0000000080000136 (0x0000e4a6) c.sdsp  s1, 72(sp)
+core   0: 0x0000000080000138 (0x0000e8aa) c.sdsp  a0, 80(sp)
+core   0: 0x000000008000013a (0x0000ecae) c.sdsp  a1, 88(sp)
+core   0: 0x000000008000013c (0x0000f0b2) c.sdsp  a2, 96(sp)
+core   0: 0x000000008000013e (0x0000f4b6) c.sdsp  a3, 104(sp)
+core   0: 0x0000000080000140 (0x0000f8ba) c.sdsp  a4, 112(sp)
+core   0: 0x0000000080000142 (0x0000fcbe) c.sdsp  a5, 120(sp)
+core   0: 0x0000000080000144 (0x0000e142) c.sdsp  a6, 128(sp)
+core   0: 0x0000000080000146 (0x0000e546) c.sdsp  a7, 136(sp)
+core   0: 0x0000000080000148 (0x0000e94a) c.sdsp  s2, 144(sp)
+core   0: 0x000000008000014a (0x0000ed4e) c.sdsp  s3, 152(sp)
+core   0: 0x000000008000014c (0x0000f152) c.sdsp  s4, 160(sp)
+core   0: 0x000000008000014e (0x0000f556) c.sdsp  s5, 168(sp)
+core   0: 0x0000000080000150 (0x0000f95a) c.sdsp  s6, 176(sp)
+core   0: 0x0000000080000152 (0x0000fd5e) c.sdsp  s7, 184(sp)
+core   0: 0x0000000080000154 (0x0000e1e2) c.sdsp  s8, 192(sp)
+core   0: 0x0000000080000156 (0x0000e5e6) c.sdsp  s9, 200(sp)
+core   0: 0x0000000080000158 (0x0000e9ea) c.sdsp  s10, 208(sp)
+core   0: 0x000000008000015a (0x0000edee) c.sdsp  s11, 216(sp)
+core   0: 0x000000008000015c (0x0000f1f2) c.sdsp  t3, 224(sp)
+core   0: 0x000000008000015e (0x0000f5f6) c.sdsp  t4, 232(sp)
+core   0: 0x0000000080000160 (0x0000f9fa) c.sdsp  t5, 240(sp)
+core   0: 0x0000000080000162 (0x0000fdfe) c.sdsp  t6, 248(sp)
+core   0: 0x0000000080000164 (0x34202573) csrr    a0, mcause
+core   0: 0x0000000080000168 (0x341025f3) csrr    a1, mepc
+core   0: 0x000000008000016c (0x0005d603) lhu     a2, 0(a1)
+core   0: 0x0000000080000170 (0x00008a0d) c.andi  a2, 3
+core   0: 0x0000000080000172 (0x0000428d) c.li    t0, 3
+core   0: 0x0000000080000174 (0x00561563) bne     a2, t0, pc + 10
+core   0: 0x0000000080000178 (0x00000591) c.addi  a1, 4
+core   0: 0x000000008000017a (0x00000363) beqz    zero, pc + 6
+core   0: 0x0000000080000180 (0x34159073) csrw    mepc, a1
+core   0: 0x0000000080000184 (0x00006289) c.lui   t0, 0x2
+core   0: 0x0000000080000186 (0x8002829b) addiw   t0, t0, -2048
+core   0: 0x000000008000018a (0x3002a073) csrs    mstatus, t0
+core   0: 0x000000008000018e (0x000060a2) c.ldsp  ra, 8(sp)
+core   0: 0x0000000080000190 (0x00006142) c.ldsp  sp, 16(sp)
+core   0: 0x0000000080000192 (0x000061e2) c.ldsp  gp, 24(sp)
+core   0: 0x0000000080000194 (0x00007202) c.ldsp  tp, 32(sp)
+core   0: 0x0000000080000196 (0x000072a2) c.ldsp  t0, 40(sp)
+core   0: 0x0000000080000198 (0x00007342) c.ldsp  t1, 48(sp)
+core   0: 0x000000008000019a (0x000073e2) c.ldsp  t2, 56(sp)
+core   0: 0x000000008000019c (0x00006406) c.ldsp  s0, 64(sp)
+core   0: 0x000000008000019e (0x000064a6) c.ldsp  s1, 72(sp)
+core   0: 0x00000000800001a0 (0x00006546) c.ldsp  a0, 80(sp)
+core   0: 0x00000000800001a2 (0x000065e6) c.ldsp  a1, 88(sp)
+core   0: 0x00000000800001a4 (0x00007606) c.ldsp  a2, 96(sp)
+core   0: 0x00000000800001a6 (0x000076a6) c.ldsp  a3, 104(sp)
+core   0: 0x00000000800001a8 (0x00007746) c.ldsp  a4, 112(sp)
+core   0: 0x00000000800001aa (0x000077e6) c.ldsp  a5, 120(sp)
+core   0: 0x00000000800001ac (0x0000680a) c.ldsp  a6, 128(sp)
+core   0: 0x00000000800001ae (0x000068aa) c.ldsp  a7, 136(sp)
+core   0: 0x00000000800001b0 (0x0000694a) c.ldsp  s2, 144(sp)
+core   0: 0x00000000800001b2 (0x000069ea) c.ldsp  s3, 152(sp)
+core   0: 0x00000000800001b4 (0x00007a0a) c.ldsp  s4, 160(sp)
+core   0: 0x00000000800001b6 (0x00007aaa) c.ldsp  s5, 168(sp)
+core   0: 0x00000000800001b8 (0x00007b4a) c.ldsp  s6, 176(sp)
+core   0: 0x00000000800001ba (0x00007bea) c.ldsp  s7, 184(sp)
+core   0: 0x00000000800001bc (0x00006c0e) c.ldsp  s8, 192(sp)
+core   0: 0x00000000800001be (0x00006cae) c.ldsp  s9, 200(sp)
+core   0: 0x00000000800001c0 (0x00006d4e) c.ldsp  s10, 208(sp)
+core   0: 0x00000000800001c2 (0x00006dee) c.ldsp  s11, 216(sp)
+core   0: 0x00000000800001c4 (0x00007e0e) c.ldsp  t3, 224(sp)
+core   0: 0x00000000800001c6 (0x00007eae) c.ldsp  t4, 232(sp)
+core   0: 0x00000000800001c8 (0x00007f4e) c.ldsp  t5, 240(sp)
+core   0: 0x00000000800001ca (0x00007fee) c.ldsp  t6, 248(sp)
+core   0: 0x00000000800001cc (0x00006151) c.addi16sp sp, 272
+core   0: 0x00000000800001ce (0x30200073) mret
+core   0: >>>>  $x
+core   0: 0x000000008000150c (0x01747eb3) and     t4, s0, s7
+core   0: >>>>  i00000003cd
+core   0: 0x0000000080001510 (0x010cd293) srli    t0, s9, 16
+core   0: >>>>  i00000003ce
+core   0: 0x0000000080001514 (0x00009ba2) c.add   s7, s0
+core   0: >>>>  i00000003cf
+core   0: 0x0000000080001516 (0x01fc7433) and     s0, s8, t6
+core   0: >>>>  i00000003d0
+core   0: 0x000000008000151a (0xac8a7413) andi    s0, s4, -1336
+core   0: >>>>  i00000003d1
+core   0: 0x000000008000151e (0xff812b83) lw      s7, -8(sp)
+core   0: 0x0000000080001522 (0x00090117) auipc   sp, 0x90
+core   0: 0x0000000080001526 (0xade10113) addi    sp, sp, -1314
+core   0: 0x000000008000152a (0x00006309) c.lui   t1, 0x2
+core   0: 0x000000008000152c (0x9e03031b) addiw   t1, t1, -1568
+core   0: 0x0000000080001530 (0x0000911a) c.add   sp, t1
+core   0: >>>>  i00000003d2
+core   0: 0x0000000080001532 (0x98e12c23) sw      a4, -1640(sp)
+core   0: >>>>  i00000003d3
+core   0: 0x0000000080001536 (0xbd711123) sh      s7, -1086(sp)
+core   0: >>>>  i00000003d4
+core   0: 0x000000008000153a (0x25d14403) lbu     s0, 605(sp)
+core   0: >>>>  i00000003d5
+core   0: 0x000000008000153e (0x016f6db3) or      s11, t5, s6
+core   0: >>>>  i00000003d6
+core   0: 0x0000000080001542 (0x17a5fc93) andi    s9, a1, 378
+core   0: >>>>  i00000003d7
+core   0: 0x0000000080001546 (0xf2b10423) sb      a1, -216(sp)
+core   0: >>>>  i00000003d8
+core   0: 0x000000008000154a (0x26358a13) addi    s4, a1, 611
+core   0: >>>>  i00000003d9
+core   0: 0x000000008000154e (0x93bffb13) andi    s6, t6, -1733
+core   0: >>>>  i00000003da
+core   0: 0x0000000080001552 (0x408bdab3) sra     s5, s7, s0
+core   0: >>>>  i00000003db
+core   0: 0x0000000080001556 (0x7c710ba3) sb      t2, 2007(sp)
+core   0: >>>>  i00000003dc
+core   0: 0x000000008000155a (0x004875b3) and     a1, a6, tp
+core   0: >>>>  i00000003dd
+core   0: 0x000000008000155e (0x01745e33) srl     t3, s0, s7
+core   0: >>>>  i00000003de
+core   0: 0x0000000080001562 (0x00846e33) or      t3, s0, s0
+core   0: >>>>  i00000003df
+core   0: 0x0000000080001566 (0x557bca93) xori    s5, s7, 1367
+core   0: >>>>  i00000003e0
+core   0: 0x000000008000156a (0x583bff37) lui     t5, 0x583bf
+core   0: >>>>  i00000003e1
+core   0: 0x000000008000156e (0x2ef14783) lbu     a5, 751(sp)
+core   0: >>>>  i00000003e2
+core   0: 0x0000000080001572 (0x3c298593) addi    a1, s3, 962
+core   0: >>>>  i00000003e3
+core   0: 0x0000000080001576 (0xf8b100a3) sb      a1, -127(sp)
+core   0: >>>>  i00000003e4
+core   0: 0x000000008000157a (0x36015e03) lhu     t3, 864(sp)
+core   0: >>>>  i00000003e5
+core   0: 0x000000008000157e (0x61610e03) lb      t3, 1558(sp)
+core   0: >>>>  i00000003e6
+core   0: 0x0000000080001582 (0x8e410b03) lb      s6, -1820(sp)
+core   0: >>>>  i00000003e7
+core   0: 0x0000000080001586 (0x0034e433) or      s0, s1, gp
+core   0: >>>>  i00000003e8
+core   0: 0x000000008000158a (0x01747433) and     s0, s0, s7
+core   0: >>>>  i00000003e9
+core   0: 0x000000008000158e (0x40d45e13) srai    t3, s0, 13
+core   0: >>>>  i00000003ea
+core   0: 0x0000000080001592 (0x00541893) slli    a7, s0, 5
+core   0: >>>>  i00000003eb
+core   0: 0x0000000080001596 (0x0175e833) or      a6, a1, s7
+core   0: >>>>  i00000003ec
+core   0: 0x000000008000159a (0xc15be593) ori     a1, s7, -1003
+core   0: >>>>  i00000003ed
+core   0: 0x000000008000159e (0xb7240013) addi    zero, s0, -1166
+core   0: >>>>  i00000003ee
+core   0: 0x00000000800015a2 (0x00859a33) sll     s4, a1, s0
+core   0: >>>>  i00000003ef
+core   0: 0x00000000800015a6 (0x22a5e713) ori     a4, a1, 554
+core   0: >>>>  i00000003f0
+core   0: 0x00000000800015aa (0x0175f8b3) and     a7, a1, s7
+core   0: >>>>  i00000003f1
+core   0: 0x00000000800015ae (0x5f3dab97) auipc   s7, 0x5f3da
+core   0: >>>>  i00000003f2
+core   0: 0x00000000800015b2 (0x0123d413) srli    s0, t2, 18
+core   0: 0x00000000800015b6 (0x00000033) add     zero, zero, zero
+core   0: 0x00000000800015ba (0x0000a009) c.j     pc + 2
+core   0: >>>>  write_tohost
+core   0: 0x00000000800015bc (0x00004f05) c.li    t5, 1
+core   0: 0x00000000800015be (0x00097e97) auipc   t4, 0x97
+core   0: 0x00000000800015c2 (0xa5eea123) sw      t5, -1470(t4)
+core   0: >>>>  label
+core   0: 0x00000000800015c6 (0x0000a001) c.j     pc + 0

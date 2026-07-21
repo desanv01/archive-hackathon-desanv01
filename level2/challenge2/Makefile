@@ -12,7 +12,7 @@ compile:
 
 disass: compile
 	@echo '[UpTickPro] Test Disassembly ------'
-	riscv32-unknown-elf-objdump -D test.elf > test.disass
+	riscv64-unknown-elf-objdump -D test.elf > test.disass
 
 spike: compile
 	@echo '[UpTickPro] Spike Run ------'
