@@ -1,0 +1,32 @@
+[UpTickPro] Clean ------
+rm -rf work *.elf *.disass *.log *.dump *.ld *.S *.ini
+[UpTickPro] Test Generation ------
+aapg setup
+[92m[INFO]    - root                      : aapg started[0m
+[92m[INFO]    - root                      : (2.4.2) Automated Assembly Program Generator - aapg[0m
+[92m[INFO]    - root                      : Command received: setup[0m
+[92m[INFO]    - aapg.env.env_setup        : Build setup started[0m
+[92m[INFO]    - root                      : Setup directory built in /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work[0m
+aapg gen --config_file /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/rv32i.yaml --asm_name test --output_dir /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1 --arch rv32
+[92m[INFO]    - root                      : aapg started[0m
+[92m[INFO]    - root                      : (2.4.2) Automated Assembly Program Generator - aapg[0m
+[92m[INFO]    - root                      : Command received: gen[0m
+[92m[INFO]    - root                      : Number of programs to generate: 1[0m
+[92m[INFO]    - root                      : Linker script generation started[0m
+[92m[INFO]    - aapg.gen_random_program   : /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/rv32i.yaml[0m
+[92m[INFO]    - aapg.gen_random_program   : Creating a config file as : /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/rv32i.ini[0m
+[92m[INFO]    - aapg.gen_random_program   : /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/rv32i.ini[0m
+[92m[INFO]    - aapg.gen_random_program   : /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/rv32i.ini[0m
+[92m[INFO]    - aapg.gen_random_program   : Setting up the Makefile[0m
+[92m[INFO]    - root                      : Linker script generation completed[0m
+[92m[INFO]    - root                      : Program number: 0 started[0m
+[92m[INFO]    - aapg.gen_random_program   : Command [GEN] invoked. Random program generation started[0m
+[92m[INFO]    - aapg.gen_random_program   : Config file path: /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/rv32i.ini[0m
+[92m[INFO]    - aapg.gen_random_program   : Config filename: rv32i.ini[0m
+[92m[INFO]    - aapg.gen_random_program   : Output directory selected: /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1[0m
+[93m[WARNING] - aapg.gen_random_program   : Output directory exists[0m
+[92m[INFO]    - aapg.gen_random_program   : Output file path: /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/test.S[0m
+[92m[INFO]    - aapg.program_generator    : Adding pre-program macro[0m
+[92m[INFO]    - aapg.program_generator    : Creating Prelude[0m
+[92m[INFO]    - aapg.program_generator    : User functions received user-functions i_cache_thrash[0m
+[92m[INFO]    - aapg.gen_random_program   : Program generation completed[0m

@@ -1,0 +1,197 @@
+[UpTickPro] Test Compilation ------
+riscv32-unknown-elf-gcc -march=rv32i -mabi=ilp32 -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common -T/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/test.ld test.S /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common/crt.S -o test.elf
+test_template.S: Assembler messages:
+test_template.S:55: Error: unrecognized opcode `csrr a0,sstatus', extension `zicsr' required
+test_template.S:56: Error: unrecognized opcode `csrr a0,sepc', extension `zicsr' required
+test_template.S:57: Error: unrecognized opcode `csrr a0,stvec', extension `zicsr' required
+test_template.S:58: Error: unrecognized opcode `csrr a0,scause', extension `zicsr' required
+test_template.S:63: Error: unrecognized opcode `csrr a1,sepc', extension `zicsr' required
+test_template.S:78: Error: unrecognized opcode `csrw sepc,a1', extension `zicsr' required
+test_template.S:149: Error: unrecognized opcode `csrr a0,mstatus', extension `zicsr' required
+test_template.S:150: Error: unrecognized opcode `csrr a0,mepc', extension `zicsr' required
+test_template.S:151: Error: unrecognized opcode `csrr a0,mtvec', extension `zicsr' required
+test_template.S:152: Error: unrecognized opcode `csrr a0,mcause', extension `zicsr' required
+test_template.S:157: Error: unrecognized opcode `csrr a1,mepc', extension `zicsr' required
+test_template.S:172: Error: unrecognized opcode `csrw mepc,a1', extension `zicsr' required
+test.S:174: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:179: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:180: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:187: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:189: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:191: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:195: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:209: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:212: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:219: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:221: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:227: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:229: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:243: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:245: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:246: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:249: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:259: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:271: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:272: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:273: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:275: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:279: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:289: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:296: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:297: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:298: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:299: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:303: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:305: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:325: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:326: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:334: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:335: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:347: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:349: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:364: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:367: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:375: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:378: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:389: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:400: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:403: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:409: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:411: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:423: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:425: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:438: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:440: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:451: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:452: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:509: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:510: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:513: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:514: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:529: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:536: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:539: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:546: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:551: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:552: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:553: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:558: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:564: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:565: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:568: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:569: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:578: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:586: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:588: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:595: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:607: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:613: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:619: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:643: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:646: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:655: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:656: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:684: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:685: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:687: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:688: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:693: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:695: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:713: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:721: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:723: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:729: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:731: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:740: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:749: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:757: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:758: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:759: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:765: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:770: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:772: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:782: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:785: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:790: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:791: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:804: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:811: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:818: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:826: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:839: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:849: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:858: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:860: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:861: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:870: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:879: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:886: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:887: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:889: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:906: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:909: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:911: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:912: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:924: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:925: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:937: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:939: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:946: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:950: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:955: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:960: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:965: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:973: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:974: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:979: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:986: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:989: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:993: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1009: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1019: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1036: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1055: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1066: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1078: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1079: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1082: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1089: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1090: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1101: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1108: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1128: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1135: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1140: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1152: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1154: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1158: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1173: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1181: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1205: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1206: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1225: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1227: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1250: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1265: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1266: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1279: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1286: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1309: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1316: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1321: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1331: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1332: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1341: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1342: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1343: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1346: Error: unrecognized opcode `fence.i', extension `zifencei' required
+test.S:1351: Error: unrecognized opcode `fence.i', extension `zifencei' required
+/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common/crt.S: Assembler messages:
+/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common/crt.S:54: Error: unrecognized opcode `csrs mstatus,t0', extension `zicsr' required
+/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common/crt.S:114: Error: unrecognized opcode `csrw mtvec,t0', extension `zicsr' required
+/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common/crt.S:120: Error: unrecognized opcode `csrr a0,mhartid', extension `zicsr' required
+/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common/crt.S:171: Error: unrecognized opcode `csrr a0,mcause', extension `zicsr' required
+/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common/crt.S:172: Error: unrecognized opcode `csrr a1,mepc', extension `zicsr' required
+/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common/crt.S:188: Error: unrecognized opcode `csrw mepc,a1', extension `zicsr' required
+/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common/crt.S:194: Error: unrecognized opcode `csrs mstatus,t0', extension `zicsr' required
+make: *** [Makefile:11: compile] Error 1

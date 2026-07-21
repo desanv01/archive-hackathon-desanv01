@@ -1,0 +1,2 @@
+[UpTickPro] Test Compilation ------
+riscv32-unknown-elf-gcc -march=rv32i_zicsr_zifencei -mabi=ilp32 -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -I/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common -T/home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/test.ld test.S /home/vsysuser/workspace/hackathon-desanv01/level2/challenge1/work/common/crt.S -o test.elf
